@@ -1,3 +1,12 @@
+# 0. Disciplina e Membros
+Este é um projeto desenvolvido para a disciplina 'SCC0219 - Introdução ao Desenvolvimento Web (2023)' ministrada pelo professor Dilvan de Abreu Moreira do ICMC USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes alunos:
+
+|        **Nome**        | **NUSP** |
+|:----------------------:|:--------:|
+| Danielle Modesti       | 12543544 |
+| Hélio Nogueira Cardoso | 10310227 |
+| Laura Ferré Scotelari  | 12543436 |
+
 # 1. Requisitos 
 The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
 # 2. Descrição do Projeto
