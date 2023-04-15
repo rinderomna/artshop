@@ -22,7 +22,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 * O sistema deve permitir que o cliente edite suas informações de cadastro, como nome, endereço e telefone e senha.
 
 # 2. Descrição do Projeto
-Describe how your project implements the functionality in the requirements. Diagrams can help a lot here.
+Para descrever a implementação das funcionalidades descritas nos requisitos do projeto, utilizamos um diagrama de navegação feito com a ferramenta 'Marvel'. Adicionalmente, a tela principal e duas outras <<decidir quais>> foram desenvolvidas em HTML5 + CSS3, e estão disponíveis no repositório no projeto em <<caminhos>>.
 # 3. Comentários sobre o código
 Any comment you may want to add to help understand your code. This is good programming practice.
 # 4. Plano de Teste
