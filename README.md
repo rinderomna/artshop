@@ -33,7 +33,8 @@ Para descrever a implementação das funcionalidades descritas nos requisitos do
 > Text describing the test results. If an automatic test tool/framework is used, its output can be used.
   
 # 6. Procedimentos para execução
-> A step-by-step guide to run your code. You should start telling how to install whatever software you need, then how to download/build your program, and finally how to set up the environment to run it. Imagine that someone installing will just follow these commands (nothing more).
+* Para clonar o repositório, utilize o comando:
+```git clone https://github.com/rinderomna/artshop.git```
   
 # 7. Problemas
 > List any major problems you had.
