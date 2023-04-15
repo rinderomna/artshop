@@ -1,4 +1,4 @@
-# Jagua.jpg - Projeto de Web para Loja *Online*
+# Jagua.jpg - Projeto de Loja *Online* para Web
 <!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
 
 # 0. Informação da Disciplina, Membros da Equipe, Introdução e Índice
