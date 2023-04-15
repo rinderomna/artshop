@@ -1,4 +1,6 @@
-<!---teste---># 0. Disciplina e Membros
+# Jagua.jpg - Projeto de Loja *Online*
+<!---teste--->
+# 0. Disciplina e Membros
 Este é o repositório destinado ao projeto desenvolvido para a disciplina 'SCC0219 - Introdução ao Desenvolvimento Web (2023)' ministrada pelo professor Dilvan de Abreu Moreira do ICMC USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes alunos:
 
 |        **Nome**        | **NUSP** |
