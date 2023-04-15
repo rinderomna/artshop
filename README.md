@@ -1,13 +1,15 @@
-# Jagua.jpg - Projeto de Loja *Online*
-<!---teste--->
-# 0. Disciplina e Membros
-Este é o repositório destinado ao projeto desenvolvido para a disciplina 'SCC0219 - Introdução ao Desenvolvimento Web (2023)' ministrada pelo professor Dilvan de Abreu Moreira do ICMC USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes alunos:
+# Jagua.jpg - Projeto de Web para Loja *Online*
+<!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
 
-|        **Nome**        | **NUSP** |
+# 0. Informação da Disciplina, Membros da Equipe, Introdução e Índice
+Este é o repositório destinado ao projeto final desenvolvido para a disciplina '*SCC0219 - Introdução ao Desenvolvimento Web (2023)*', ministrada pelo professor Dilvan de Abreu Moreira, do ICMC-USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes estudantes:
+
+|        **Nome**        | **nUSP** |
 |:----------------------:|:--------:|
 | Danielle Modesti       | 12543544 |
 | Hélio Nogueira Cardoso | 10310227 |
 | Laura Ferré Scotelari  | 12543436 |
+
 
 # 1. Requisitos 
 Uma artista contratou nossos serviços para criar uma loja online para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos online e recebam em suas residências. Desenvolveremos, por tanto, uma aplicação Web para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
