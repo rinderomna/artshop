@@ -25,7 +25,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 * O sistema deve permitir que o cliente acompanhe o status de seus pedidos. O pedido pode estar 'pendente' ou 'enviado'. Caso o status seja 'enviado', o cliente terá disponível o código de envio e a transportadora utilizada, com os quais poderá acompanhar o envio em um sistema externo.
 * (Observação: estes dois últimos requisitos combinados, que configuram o acompanhamento de pedido pelo código da transportadora é considerada a <ins>funcionalidade extra de nosso sistema<ins>).
 * O sistema deve permitir que o cliente edite suas informações de cadastro, como nome, endereço e telefone e senha.
-* O sistema dev permitir que o administrador edite suas informações de cadastro.
+* O sistema deve permitir que o administrador edite suas informações de cadastro.
 
 # 2. Descrição do Projeto
 Para descrever a implementação das funcionalidades descritas nos requisitos do projeto, utilizamos um diagrama de navegação feito com a ferramenta 'Marvel'. Adicionalmente, a tela principal e duas outras <<decidir quais>> foram desenvolvidas em HTML5 + CSS3, e estão disponíveis no repositório no projeto em <<caminhos>>.
