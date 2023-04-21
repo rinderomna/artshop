@@ -1,0 +1,18 @@
+/* 
+ * ------------------------------------------------
+ * BANNER DE ITENS-DESTAQUE (usado na home)       ||
+ * ------------------------------------------------
+*/
+
+/* Banner de novidades */
+#newProductsHighlight {
+    background-color: #ff9052;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#newProductsHighlight h1 {
+    padding-top: 5%;
+}
