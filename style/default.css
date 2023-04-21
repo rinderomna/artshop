@@ -83,22 +83,31 @@ nav #highlightNavBar {
     padding-top: 5%;
 }
 
+/* Catalogo incluindo as categorias dos itens ('corpo' da pagina home)*/
+#bodyWrapper {
+    display: block;
+    padding-top: 50px;
+    margin: 20px;
+    border: 10px solid orange;
+}
+
+#bodyWrapper h1 {
+    font-size: 40px;
+    display: block;
+}
+
 /* Catalogo de produtos */
-#allProductsCatalog { /* Elemento pai */
+.allProductsCatalog { /* Elemento pai */
     background-color: #fff;
     display: grid;
     grid-template-columns: repeat(5, minmax(250px, 1fr));
     min-height: 70vh;
+    padding-top: 30px;
     border: 5px solid purple;
 }
 
-#allProductsCatalog h3 {
-    padding-top: 80px;
-    padding-bottom: 20px;
-}
-
-
-#allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
+/* Produto individual */
+.allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
     position: relative;
     height: 750px;
     overflow: hidden;
@@ -107,6 +116,7 @@ nav #highlightNavBar {
     text-align: center;
 } 
 
+/* Elementos internos ao produto */
 .productCard img {
     width: 80%;
     height: 55%;
@@ -158,7 +168,7 @@ nav #highlightNavBar {
     top: 100px;
 }
 
-
+/* Rodape do site */
 footer {
     background-color: #000;
     color: #fff;
