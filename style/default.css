@@ -84,8 +84,12 @@ nav #highlightNavBar {
 }
 
 /* Catalogo de produtos */
-#allProductsCatalog {
-    background-color: #ccc;
+#allProductsCatalog { /* Elemento pai */
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+    min-height: 70vh;
+    border: 5px solid purple;
 }
 
 #allProductsCatalog h3 {
@@ -93,26 +97,28 @@ nav #highlightNavBar {
     padding-bottom: 20px;
 }
 
-.productCard {
-    width: 320px;
-    height: 450px;
+
+#allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
     position: relative;
     overflow: hidden;
-}
-
-.productCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ff9052;
-}
+    border-radius: 30px 30px 0 0;
+    border: 5px solid red;
+} 
 
 .productCard img {
-    width: 15%;
+    width: 80%;
+    height: 55%;
     border-radius: 30px 30px 0 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.productCard .productNameOnGrid {
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    display: block;
 }
 
 .productCard .productPrice {
@@ -129,6 +135,17 @@ nav #highlightNavBar {
     border: 1px solid #999;
     border-radius: 100%;
 }
+
+.productCard .buyProductButton {
+    border: 10px solid #185424;
+    text-decoration: none;
+    color: #185424;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 50px;
+    padding: 10px;
+}
+
 
 footer {
     background-color: #000;
