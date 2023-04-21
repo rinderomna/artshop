@@ -9,43 +9,47 @@
     <meta name="keywords" content="Art, Online Store, Product, Poster, Print, Sale">
     <meta name="description" content="Online Store for selling art products from Laura Ferre">
     <meta name="author" content="co-authored by Danielle Modesti, Helio Nogueira Cardoso, Laura Ferre Scotelari">
-    <title>Jagua.jpg - Loja Online</title>
+    <title>Jagua.jpg</title>
       <!-- Incluir css -->
 		<link href="style/default.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="visual_identity/icon/jaguatirica.png">
   </head>  
 
   <body>
-    <header>
-      <figure>
-        <h1>Jagua.jpg</h1>
-      </figure>
-    </header>
-    <nav>
+    <header id="myHeader">
+      <img id="logoJagua" src="visual_identity/icon/jaguatirica.png" alt="Logo do site">
+      <nav>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutus">Sobre mim</a></li>
           <li><a href="#stickers">Adesivos</a></li>
           <li><a href="#prints">Prints</a></li>
           <li><a href="#shirts">Camisetas</a></li>
-        </ul>
-    </nav>
+          <div id="highlightNavBar"></div>
+          </ul>
+        </nav>
+        <a href="#login" id="loginButton"><button>Entrar</button></a>
+    </header>
     <section id="newProductsHighlight"><!-- Banner de novidades -->
       <h1>Banner de novidades</h1>
     </section>
     <article id="allProductsCatalog"><!-- Para os cards de produto -->
       <h3>Prints em Papel Couchê</h3>
       <article class="productCard">
-        <img src="visual_identity/prints/print_ovelha.png" alt="Imagem do Produto: Print Ovelha Negra">
-        <h4>Print Ovelha Negra</h4>
-        <p class="productPrice">R$ 8,50</p>
-        <p>Tamanhos disponíveis:</p>
-        <ul>
-          <li>A5</li>
-          <li>A4</li>
-          <li>A3</li>
-        </ul>
-        <p>Comprar</p>
+        <div class="imageBox">
+          <img src="visual_identity/prints/print_ovelha.png" alt="Imagem do Produto: Print Ovelha Negra">
+        </div>
+        <div class="contentBox">
+          <h4>Print Ovelha Negra</h4>
+          <p class="productPrice">R$ 8,50</p>
+          <div class="productSize">
+            <p>Tamanhos disponíveis:</p>
+              <span>A5</span>
+              <span>A4</span>
+              <span>A3</span>
+        </div>
+          <p>Comprar</p>
+      </div>
       </article><!-- Para cada produto -->
       <h3>Adesivos de Vinil</h3>
       <h3>Camisetas</h3>
@@ -58,7 +62,6 @@
         <li>Lista de Desejos</li>
       </ul>
     </footer>
-
-	  <script src="js/app.js" defer></script>
+	  <script src="js/app.js" type="text/javascript" defer></script>
   </body>
 </html>
