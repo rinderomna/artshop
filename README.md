@@ -34,7 +34,7 @@ Para descrever a implementação das funcionalidades descritas nos requisitos do
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
 ##### Figura 1: Diagrama de navegação do site.
 
-O diagrama de navegação possui retêngulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
+O diagrama de navegação possui retângulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
 * Deslogado
 * Transiente
 * Cliente logado
