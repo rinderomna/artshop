@@ -17,43 +17,38 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    /* text-align: center; */
-    /* padding: 30px 10% 5px; */
+    max-height: 100px;
     flex-direction: row;
-    border: 10px solid blue;
 }
 
 #logoJagua {
-    width: 20%;
-    height: 50%;
+    height: 100%;
     flex-basis: 0;
-    flex-grow: 1;
+    flex-grow: 0.5;
+    flex-flow: column;
+    margin: 0 auto;
+    position: relative;
+    
 }
 
 #logoJagua img {
     display: flex;
-    height: 30vh;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    border: 10px solid brown;
+    min-height: 95px;
 }
 
 nav {
-    display: flex;
-    background-color: #fff;
-    position: relative;
-    /* right: 25%; */
-    /* margin-left: 50px; */
-    z-index: 2;
-    border: 10px solid green;
+    position: relative; /* A animacao JS usa isso */
+    z-index: 2; /* A animacao JS usa isso */
     flex-basis: 0;
-    flex-grow: 3;
+    flex-grow: 2;
+    min-height: 95px;
 }
 
 nav ul li {
     list-style-type: none;
     display: inline-block;
-    border: 10px solid red;
 }
 
 nav ul li a {
@@ -77,14 +72,21 @@ nav #highlightNavBar {
     width: 0;
 }
 
+#loginButton {
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    min-height: 95px;
+}
+
 #loginButton button {
     padding: 10px 25px;
     background-color: rgba(44, 44, 44, 1);
     color: #fff;
+    font-size: 20px;
     border-radius: 10px;
     transition: all 0.3s ease 0s;
-    left: 100%;
-    border: 10px solid red;
+    margin: 0 20px;
 }
 
 #loginButton button:hover {
