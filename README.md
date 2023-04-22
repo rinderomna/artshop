@@ -29,7 +29,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 * O sistema deve permitir que tanto o usuário como o administrador possam deslogar de suas contas (sair).
 
 # 2. Descrição do Projeto
-Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema (clique neste link para ver; ele abre na mesma aba do navegador, por padrão)](https://marvelapp.com/prototype/884i1de/screen/91326238) Adicionalmente, a tela principal e duas outras <<decidir quais>> foram desenvolvidas em HTML5 + CSS3, e estão disponíveis no repositório do projeto em <<caminhos>>. Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
+Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema (clique neste link para ver; ele abre na mesma aba do navegador, por padrão)](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, a tela principal e duas outras <<decidir quais>> foram desenvolvidas em HTML5 + CSS3, e estão disponíveis no repositório do projeto em <<caminhos>>. Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
   
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
 ##### Figura 1: Diagrama de navegação do site.
