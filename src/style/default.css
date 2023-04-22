@@ -55,7 +55,7 @@ nav ul {
 nav ul li {
     list-style-type: none;
     display: inline-block;
-    /* border: 10px solid pink; */
+    border: 10px solid pink;
     display: inline;    
 }
 
@@ -64,7 +64,7 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 nav #highlightNavBar {
@@ -90,7 +90,7 @@ nav #highlightNavBar {
     padding: 10px 25px;
     background-color: rgba(44, 44, 44, 1);
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
     transition: all 0.3s ease 0s;
     margin: 0 20px;
@@ -98,6 +98,17 @@ nav #highlightNavBar {
 
 #loginButton button:hover {
     background-color: rgba(44, 44, 44, 0.5);
+}
+
+/* Alteracao nos tamanhos dos elementos da navbar para responsividade */
+@media (min-width: 1300px) {
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    #loginButton button {
+        font-size: 20px;
+    }
 }
 
 /* Rodape do site */
