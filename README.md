@@ -51,7 +51,7 @@ A página inicial do sistema, em estado deslogado, é a Homepage do site. Nela, 
 ![Bifurcação](images&diagrams/bifurcacao_no_diagrama.jpg)
 ##### Figura 2: Bifurcação no fluxo de navegação do site. As informações de login podem ser de um administrador ou de um cliente, levando a visões diferentes do sistema.
 
-Na tela de login, há uma bifurcação no fluxo de navegação, pois o login pode ser de um cliente ou de um administrador, o que levará a visões diferentes do sistema. No protótipo do Marvel, para que ambas as navegações fossem providas, o botão de 'entrar' na tela de login pode ser clicado em um de seus lados para seguir cada fluxo. Clicando do lado direito do botão 'entrar', o sistema vai para a visão de administradores. Clicando do lado esquerdo, o sistema vai para a visão do cliente.
+Na tela de login, há uma bifurcação no fluxo de navegação, pois o login pode ser de um cliente ou de um administrador, o que levará a visões diferentes do sistema. No protótipo do Marvel, para que ambas as navegações fossem providas, o botão de 'entrar' na tela de login pode ser clicado em um de seus lados para seguir cada fluxo. Clicando do lado direito do botão 'entrar', o sistema vai para a visão de administrador. Clicando do lado esquerdo, o sistema vai para a visão do cliente.
 
 ![EntrarAoMeio](images&diagrams/botao_entrar_ao_meio.png)
 #### Figura 3: No protótipo Marvel da aplicação, para representar a bifurcação do fluxo de navegação na tela de login, em que um cliente ou um administrador pode logar, o botão de 'Entrar' pode ser clicado em um dos lados. Se clicado do lado esquerdo, levará à visão de cliente. Se clicado do lado direito, levará à visão de administrador.
