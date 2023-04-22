@@ -9,12 +9,12 @@
     background-color: rgba(255, 144, 82, 0.5);
     background-image: url("../visual_identity/backgrounds/pawns.png");
     height: 220px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-content: center;
-    position: relative;
-    bottom: 40px;
     z-index: -1;
+    /* border: 10px solid seagreen; */
 }
 
 #newProductsHighlight h1 {
