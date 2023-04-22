@@ -37,7 +37,7 @@
     min-width: 100px;
 }
 
-nav {
+#homeNavBar {
     position: relative; /* A animacao JS usa isso */
     z-index: 2; /* A animacao JS usa isso */
     flex-basis: 0;
@@ -46,20 +46,19 @@ nav {
     /* border: 10px solid blue; */
 }
 
-nav ul {
+#homeNavBar ul {
     display: inline;
     position: relative;
     top: 50px; /* Aumente para descer a altura dos links da barra de navegacao */
 }
 
-nav ul li {
+#homeNavBar ul li {
     list-style-type: none;
     display: inline-block;
-    border: 10px solid pink;
     display: inline;    
 }
 
-nav ul li a {
+#homeNavBar ul li a {
     padding: 20px 20px 5px 20px;
     color: #000;
     text-decoration: none;
@@ -67,7 +66,11 @@ nav ul li a {
     font-size: 16px;
 }
 
-nav #highlightNavBar {
+#homeNavBar ul li a.icon {
+    display: none;
+}
+
+#homeNavBar #highlightNavBar {
     background-color: #ff9052;
     position: relative;
     height: 30px;
@@ -101,13 +104,56 @@ nav #highlightNavBar {
 }
 
 /* Alteracao nos tamanhos dos elementos da navbar para responsividade */
-@media (min-width: 1300px) {
+@media screen and (min-width: 1300px) {
     nav ul li a {
         font-size: 20px;
     }
 
     #loginButton button {
         font-size: 20px;
+    }
+}
+
+/* Layout responsivo para telas menores */
+
+@media screen and (max-width: 1050px) {
+    /* Para telas menores que 1050px, esconda todos os links e exiba apenas a logo.*/
+    #homeNavbar {
+        flex-grow: 0;
+    }
+
+    #homeNavBar .navLink, #loginButton, #highlightNavBar {
+        display: none;
+    }
+
+    #homeNavBar ul li a.icon {
+        float: right;
+        display: block;
+        width: 50px;
+    }
+
+    /* 
+     * A classe "responsive" class eh adicionada a barra de navegacao com JavaScript quando o 
+     * usuario clica no menu sanduiche. Essa classe faz a barra de navegacao melhor para telas
+     * pequenas, colocando os links em bloco e nao inline.
+    */
+
+    #homeNavBar.responsive {
+        height: 400px; /* Altura da barra de navegacao */
+        background-color: rgba(44, 44, 44, 0.9);
+    }
+
+    #homeNavBar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #homeNavBar.responsive a {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: #fff;
     }
 }
 

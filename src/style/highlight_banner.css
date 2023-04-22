@@ -11,7 +11,7 @@
     height: 220px;
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
     z-index: -1;
     /* border: 10px solid seagreen; */

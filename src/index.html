@@ -12,10 +12,10 @@
     <meta name="author" content="co-authored by Danielle Modesti, Helio Nogueira Cardoso, Laura Ferre Scotelari">
     <title>Jagua.jpg</title>
     <!-- Incluir css -->
+    <link rel="icon" type="image/x-icon" href="visual_identity/icon/jaguatirica.png">
 		<link href="style/default.css" rel="stylesheet">
 		<link href="style/highlight_banner.css" rel="stylesheet">
 		<link href="style/product_catalog.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="visual_identity/icon/jaguatirica.png">
   </head>  
 
   <body>
@@ -23,13 +23,15 @@
       <div id="logoJagua">
         <img src="../visual_identity/logo/jagua_pawn.png" alt="Logo do site">
       </div>
-      <nav>
+      <nav id="homeNavBar">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#aboutus">Sobre mim</a></li>
-          <li><a href="#stickers">Adesivos</a></li>
-          <li><a href="#prints">Prints</a></li>
-          <li><a href="#shirts">Camisetas</a></li>
+          <li><a href="#home" class="navLink">Home</a></li>
+          <li><a href="#aboutus" class="navLink">Sobre mim</a></li>
+          <li><a href="#stickers" class="navLink">Adesivos</a></li>
+          <li><a href="#prints" class="navLink">Prints</a></li>
+          <li><a href="#shirts" class="navLink">Camisetas</a></li>
+          <li><a href="javascript:void(0);" class="icon" onclick="toggleResponsiveMenu()"><i class="fa fa-bars"></i></a></li>
+          <li><a href="#login" class="icon"><i class="fas fa-sign-in-alt"></i></a></li>
           <div id="highlightNavBar"></div>
           </ul>
         </nav>
@@ -40,7 +42,7 @@
     <section id="newProductsHighlight"><!-- Banner de novidades -->
       <h1>Banner de novidades</h1>
     </section>
-    <section id="bodyWrapper">
+    <main id="bodyWrapper">
       <h1>Prints em Papel Couchê</h1>
       <article class="allProductsCatalog" id="printsCatalog"><!-- Para os cards de produto -->
           <article class="productCard">
@@ -227,7 +229,7 @@
           </div>
         </article><!-- Para cada produto -->
       </article>
-  </section>
+  </main>
     <footer>
       <ul>
         <li>Sobre Mim</li>
@@ -236,6 +238,10 @@
         <li>Lista de Desejos</li>
       </ul>
     </footer>
+
+    <!-- Scripts JS -->
+    <script src="https://kit.fontawesome.com/5d21835bde.js" crossorigin="anonymous" defer></script>    <!-- Font Awesome -> para usar icones -->
 	  <script src="js/navbar_selection_animation.js" type="text/javascript" defer></script>
+	  <script src="js/responsive_navbar.js" type="text/javascript" defer></script>
   </body>
 </html>
