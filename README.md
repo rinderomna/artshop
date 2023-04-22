@@ -16,7 +16,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 
 * O sistema deve possuir uma conta padrão de administrador inicial (nome de usuário 'admin' com senha 'admin'). O administrador poderá alterar suas informações, como nome, CPF, telefone, e e-mail, assim como seu nome de usuário e sua senha.
 * O sistema deve permitir que o administrador cadastre, remova e edite produtos.
-* O sistema deve permitir que os clientes se cadastrem com suas informações (nome, CPF, endereço, telefone, e-mail, além nome de usuário e senha para login).
+* O sistema deve permitir que os clientes se cadastrem com suas informações (nome, CPF, endereço, telefone, e-mail, além de nome de usuário e senha para login).
 * O sistema deve permitir que os clientes e os administradores entrem no sistema com os seus cadastros (nome de usuário e senha). Cada um deles possuirá visões diferentes.
 * O sistema deve permitir que os clientes visualizem os produtos disponíveis para compra, com imagem, descrição e preço. O sistema também mostrará para os clientes, de forma distinta, os produtos que existem mas estão fora de estoque, também com imagem, descrição e preço.
 * O sistema deve permitir que o cliente adicione produtos disponíveis em seu carrinho de compras, cada produto em determinada quantidade e tipo. O cliente também poderá remover itens do carrinho e alterar suas quantidades. Para usar o carrinho, o cliente deve estar logado em sua conta.
