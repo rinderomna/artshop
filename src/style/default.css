@@ -93,6 +93,7 @@
     padding: 10px 25px;
     background-color: rgba(44, 44, 44, 1);
     color: #fff;
+    stroke-width: 1px;
     font-size: 16px;
     border-radius: 10px;
     transition: all 0.3s ease 0s;
@@ -132,6 +133,11 @@
         width: 50px;
     }
 
+    #homeNavBar .fa-sign-in-alt {
+        display: block;
+        position: relative;
+    }
+
     /* 
      * A classe "responsive" class eh adicionada a barra de navegacao com JavaScript quando o 
      * usuario clica no menu sanduiche. Essa classe faz a barra de navegacao melhor para telas
@@ -143,7 +149,7 @@
         background-color: rgba(44, 44, 44, 0.9);
     }
 
-    #homeNavBar.responsive a.icon {
+    #homeNavBar.responsive a.icon .fa .fa-bars{
         position: absolute;
         right: 0;
         top: 0;
