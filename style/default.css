@@ -14,28 +14,46 @@
 
 /* --- Barra de navegacao do site --- */
 #myHeader {
-    margin-top: 80px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px 10% 5px;
+    justify-content: space-between;
+    align-items: baseline;
+    /* text-align: center; */
+    /* padding: 30px 10% 5px; */
+    flex-direction: row;
+    border: 10px solid blue;
 }
 
 #logoJagua {
-    height: 15vh;
-    margin-top: -50px;
+    width: 20%;
+    height: 50%;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#logoJagua img {
+    display: flex;
+    height: 30vh;
+    width: 50%;
+    height: 100%;
+    border: 10px solid brown;
 }
 
 nav {
     display: flex;
     background-color: #fff;
     position: relative;
+    /* right: 25%; */
+    /* margin-left: 50px; */
     z-index: 2;
+    border: 10px solid green;
+    flex-basis: 0;
+    flex-grow: 3;
 }
 
 nav ul li {
     list-style-type: none;
     display: inline-block;
+    border: 10px solid red;
 }
 
 nav ul li a {
@@ -43,6 +61,7 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
+    font-size: 20px;
 }
 
 nav #highlightNavBar {
@@ -62,8 +81,10 @@ nav #highlightNavBar {
     padding: 10px 25px;
     background-color: rgba(44, 44, 44, 1);
     color: #fff;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: all 0.3s ease 0s;
+    left: 100%;
+    border: 10px solid red;
 }
 
 #loginButton button:hover {
