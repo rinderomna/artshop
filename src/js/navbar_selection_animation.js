@@ -1,4 +1,7 @@
 // NavBar com destaque laranja quando passa o mouse
+
+"use strict";
+
 let highlight = document.querySelector("#highlightNavBar");
 let item = document.querySelectorAll("a.navLink");
 
