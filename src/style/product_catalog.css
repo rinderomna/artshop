@@ -55,7 +55,7 @@ hr.rulerStyle::before {
 }
 
 /* Separacao dos cards */
-#printsCatalog, #stickersCatalog, #shirtCatalog {
+.printsCatalog, .stickersCatalog, .shirtsCatalog {
     margin-bottom: 2.5em;
     box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);
 }

@@ -53,6 +53,7 @@ body {
     flex-basis: 0;
     flex-grow: 2;
     min-height: 95px;
+    width: 1920px;
     /* border: 10px solid blue; */
 }
 
