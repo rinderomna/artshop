@@ -11,11 +11,6 @@
     /* border: 10px solid orange; */ /* <=== NÃO APAGAR! ESTOU USANDO PARA DEBUGAR O LAYOUT */
 }
 
-#bodyWrapper h1 {
-    font-size: 40px;
-    display: block;
-}
-
 /* Catalogo de produtos */
 .allProductsCatalog { /* Elemento pai do grid */
     background-color: #fff;
@@ -23,6 +18,46 @@
     min-height: 70vh;
     padding-top: 30px;
     /* border: 5px solid purple; */
+}
+
+#bodyWrapper h1 {
+    padding-top: 5px;
+}
+
+#bodyWrapper h1 {
+    font-size: 3em;
+    display: block;
+    font-family: "Tangerine";
+    color: #222;
+    /* border: 10px solid black; */
+    background-color: #fff;
+}
+
+hr.rulerStyle {
+    overflow: visible; /* IE */
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    z-index: 4;
+    position: relative;
+}
+
+hr.rulerStyle::before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+/* Separacao dos cards */
+#printsCatalog, #stickersCatalog, #shirtCatalog {
+    margin-bottom: 2.5em;
+    box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);
 }
 
 /* Responsividade */
@@ -34,7 +69,7 @@
     
     /* margem do corpo do site */
     #bodyWrapper {
-        margin: 20px;
+        margin: -1px 20px;
     }
 }
 
@@ -46,7 +81,7 @@
     
     /* margem do corpo do site */
     #bodyWrapper {
-        margin: 40px;
+        margin: -1px 40px;
     }
 }
 
@@ -58,7 +93,7 @@
     
     /* margem do corpo do site */
     #bodyWrapper {
-        margin: 60px;
+        margin: -1px 60px;
     }
 }
 
@@ -70,14 +105,14 @@
     
     /* margem do corpo do site */
     #bodyWrapper {
-        margin: 20px 100px 20px 100px;
+        margin: -1px 100px 20px 100px;
     }
 }
 
 /* Produto individual */
 .allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
     position: relative;
-    min-height: 750px;
+    min-height: 700px;
     max-height: 900px;
     overflow: hidden;
     border-radius: 30px 30px 0 0;
@@ -100,6 +135,22 @@
     position: relative;
     top: 20px;
     display: block;
+    font-family: 'Zilla Slab', serif; 
+}
+
+.productRuler {
+    background-color: purple;
+    position: relative;
+    height: 2px;
+    width: 250px;
+    margin: auto;
+    top: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+    .productRuler {
+        width: 150px;
+    }
 }
 
 .productCard .productPrice {
@@ -107,13 +158,20 @@
     font-size: 25px;
     font-weight: bold;
     position: relative;
-    top: 30px;
+    top: 40px;
     display: block;
+    font-family: 'Zilla Slab', serif; 
 }
 
 .productCard .productSize {
     position: relative;
     top: 60px;
+}
+
+.productCard .productSize p {
+    font-family: 'Zilla Slab', serif; 
+    font-size: 22px;
+    top: 20px;
 }
 
 .productCard .productSize span {
@@ -125,15 +183,23 @@
     position: relative;
     display: inline-block;
     top: 5px;
+    font-family: 'Zilla Slab', serif; 
+    font-size: 22px;
 }
 
 .productCard .buyProductButton {
     border: 5px solid #185424;
-    text-decoration: none;
     color: #185424;
-    font-weight: 800;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 10px 60px;
     position: relative;
     top: 100px;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Zilla Slab', serif; 
+    font-weight: 800;
+}
+
+.productCard .buyProductButton:hover {
+    background-color: rgba(24, 84, 36, 0.3);
 }

@@ -12,17 +12,25 @@
     font-family: Georgia, Serif;
 }
 
+body {
+    background-image: url("../visual_identity/backgrounds/background.png");
+    background-color: rgba(255, 144, 82, 0.7);;
+    z-index: -3;
+}
+
 /* --- Barra de navegacao do site --- */
+
 #myHeader {
     display: flex;
-    max-height: 100px;
+    max-height: 105px;
     /* border: 10px solid red; */
     padding-left: 200px;
+    background-color: #fff;
 }
 
 #logoJagua {
     flex-basis: 0;
-    flex-grow: 0.3;
+    flex-grow: 0.25;
     position: relative;
     /* border: 10px solid purple; */
     height: 100%;
@@ -35,6 +43,8 @@
     height: 100%;
     min-height: 95px;
     min-width: 100px;
+    position: relative;
+    z-index: 3;
 }
 
 #homeNavBar {
@@ -63,7 +73,8 @@
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 22px;
+    font-family: 'Zilla Slab', serif; 
 }
 
 #homeNavBar ul li a.icon {
@@ -74,7 +85,7 @@
     background-color: #ff9052;
     position: relative;
     height: 30px;
-    top: -25px;
+    top: -30px;
     z-index: -1;
     transition: 0.5s;
     border-radius: 10px;
@@ -94,10 +105,11 @@
     background-color: rgba(44, 44, 44, 1);
     color: #fff;
     stroke-width: 1px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 10px;
     transition: all 0.3s ease 0s;
     margin: 0 20px;
+    font-family: 'Zilla Slab', serif; 
 }
 
 #loginButton button:hover {

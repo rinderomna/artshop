@@ -6,17 +6,35 @@
 
 /* Banner de novidades */
 #newProductsHighlight {
-    background-color: rgba(255, 144, 82, 0.5);
-    background-image: url("../visual_identity/backgrounds/pawns.png");
-    height: 220px;
+    display: flex;
+    background-color: #fff;
+    background-repeat: repeat-x;
+    height: 450px;
     margin-top: 50px;
     display: flex;
     justify-content: left;
     align-content: center;
-    z-index: -1;
-    /* border: 10px solid seagreen; */
+    z-index: 0;
+    position: relative;
+    box-shadow: 2px 1px 1px 1px #bbb;
 }
 
 #newProductsHighlight h1 {
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-left: 5%;
+    align-self: center;
+    font-size: 5em;
+    width: 40%;
+}
+
+/* Responsividade do Banner */
+@media screen and (max-width: 1050px) {
+    #newProductsHighlight {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    #newProductsHighlight h1 {
+        font-size: 3em;
+    }
 }
