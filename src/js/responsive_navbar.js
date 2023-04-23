@@ -1,5 +1,5 @@
 function toggleResponsiveMenu() {
-    let x = document.getElementsByClassName("homeNavBar")[0];
+    let x = document.getElementById("homeNavBar");
     if (x.className === "homeNavBar") { // Habilitar menu
       x.className += " responsive";
     } else { // Desabilitar menu
