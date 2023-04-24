@@ -18,6 +18,7 @@
     <link href="../style/default.css" rel="stylesheet">
     <link href="../style/highlight_banner.css" rel="stylesheet">
     <link href="../style/product_catalog.css" rel="stylesheet">
+    <link href="../style/login_page.css" rel="stylesheet">
 
     <!-- Incluir fontes -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -41,13 +42,21 @@
           <div id="highlightNavBar"></div>
         </ul>
       </nav>
-      <div id="loginButton">
-        <a href="login.html"><button>Entrar</button></a>
-      </div>
     </header>
   
     <main id="bodyWrapper">
-        <!-- Colocar info aqui -->
+        <div class="login-box">
+            <div class="user-icon">
+              <img src="../visual_identity/icon/login_user_icon.png" alt="User Icon">
+            </div>
+            <p class="purple-text spaced-text">Entre suas informações de login:</p>
+            <form>
+              <input type="text" id="username" name="username" placeholder="Nome de usuário">
+              <input type="password" id="password" name="password" placeholder="Senha">
+              <a href="#" class="spaced-text">Não possuo conta, preciso me cadastrar</a>
+              <button type="submit">Entrar</button>
+            </form>
+          </div>
       
     </main>
 
