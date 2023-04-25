@@ -1,3 +1,5 @@
+
+
 .login-box {
     position: absolute;
     min-width: 600px;
@@ -28,11 +30,13 @@
     color: #6C63FF;
     font-weight: bold;
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
 .spaced-text {
     margin-top: 30px;
     margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
 }
 
 form {
@@ -57,6 +61,7 @@ input[type="password"] {
     margin-bottom: 20px;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
 button[type="submit"] {
@@ -68,6 +73,7 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
 }
 
 button[type="submit"]:hover {

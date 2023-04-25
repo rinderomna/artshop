@@ -21,8 +21,8 @@ html{
 }
 
 body {
-    background-image: url("../visual_identity/backgrounds/background.png");
-    background-color: rgba(255, 144, 82, 0.7);
+    background-image: url("../visual_identity/backgrounds/fundo_menor_gray_maior.png");
+    background-color: white;
     z-index: -3;
 }
 
@@ -48,8 +48,8 @@ body {
 
 #logoJagua img {
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 1.8vw;
+    height: 1.8vw;
     min-height: 95px;
     min-width: 100px;
     position: relative;
@@ -107,7 +107,7 @@ body {
 #loginButton {
     /* border: 10px solid yellow; */
     position: relative;
-    top: 45px; /* Aumente para descer o botao */
+    top: 1.6vw; /* Aumente para descer o botao */
 }
 
 #loginButton button {
