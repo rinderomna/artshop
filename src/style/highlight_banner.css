@@ -4,19 +4,25 @@
  * ------------------------------------------------
 */
 
+body{
+    width: 100vw;
+}
 /* Banner de novidades */
 #newProductsHighlight {
     display: flex;
     background-color: #fff;
     background-repeat: repeat-x;
-    height: 450px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     display: flex;
     justify-content: left;
     align-content: center;
     z-index: 0;
     position: relative;
     box-shadow: 2px 1px 1px 1px #bbb;
+}
+
+#newProductImg{
+    width: 100vw;
 }
 
 #newProductsHighlight h1 {

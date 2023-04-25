@@ -148,7 +148,7 @@ hr.rulerStyle::before {
     color:var(--dark_gray_font);
     top: 20px;
     display: block;
-    font-family: 'Bree Serif', serif;; 
+    font-family: 'Bree Serif', serif;
 }
 
 .productRuler {
