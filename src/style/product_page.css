@@ -15,8 +15,8 @@ html{
     --div_height: 100vw;
 
 
-    --card_margin: 4vw;
-    --card_padding: 2.5vw;
+    --card_margin: 3vw 6vw;
+    --card_padding: 3.5vw;
     --card_width: calc(50vw-(2*var(--card_margin)));
 
     --size_span_margin:2vw 2vw 1vw 2vw;
@@ -68,11 +68,28 @@ body{
 }
 
 h4, h3, h1{
+    font-family: 'Bree Serif', serif;
+}
+
+h4, h3{
+    font-weight: 200;
     margin-top: 2vw;
+}
+
+h1{
+    font-weight: 600;
+}
+
+label{
+    font-family: 'Arvo', serif;
+    color: var(--dark_gray_font);
+    font-size: 1.3vw;
 }
 
 #price{
     color: var(--purple);
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5vw;
 }
 
 .productSize{
@@ -91,7 +108,7 @@ h4, h3, h1{
     border-radius: 100%;
     top: 5px;
     
-    font-family: 'Zilla Slab', serif; 
+    font-family: 'Bree Serif', serif;
     font-size: var(--size_span_font_size);
     font-weight:600;
     
@@ -116,9 +133,9 @@ h4, h3, h1{
     background-color: var(--purple);
 
     text-decoration: none;
-    font-size: 2vw;
-    font-family: 'Zilla Slab', serif; 
-    font-weight: 700;
+    font-size: 1.8vw;
+    font-family: 'Bree Serif', serif;
+    font-weight: 200;
     
     position: relative;
     text-align: center;

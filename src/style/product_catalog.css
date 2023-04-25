@@ -11,6 +11,15 @@
     /* border: 10px solid orange; */ /* <=== NÃO APAGAR! ESTOU USANDO PARA DEBUGAR O LAYOUT */
 }
 
+html{
+    --bkg_color_gray: #EEEAE7;
+    --purple: #9B64AC;
+    --dark_gray_font: #47525E;
+    --light_gray: #999;
+    --coral:#FE8F5F;
+}
+
+
 /* Catalogo de produtos */
 .allProductsCatalog { /* Elemento pai do grid */
     background-color: #fff;
@@ -25,10 +34,12 @@
 }
 
 #bodyWrapper h1 {
-    font-size: 3em;
+    font-size: 2vw;
     display: block;
-    font-family: "Tangerine";
-    color: #222;
+    font-family: 'Bree Serif', serif;
+    font-weight: 100;
+    color: var(--dark_gray_font);
+    padding: 1.5vw;
     /* border: 10px solid black; */
     background-color: #fff;
 }
@@ -57,7 +68,7 @@ hr.rulerStyle::before {
 /* Separacao dos cards */
 .printsCatalog, .stickersCatalog, .shirtsCatalog {
     margin-bottom: 2.5em;
-    box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);
+    /*box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);*/
 }
 
 /* Responsividade */
@@ -131,11 +142,13 @@ hr.rulerStyle::before {
 }
 
 .productCard .productNameOnGrid {
-    font-size: 25px;
     position: relative;
+    font-size: 1.4vw;
+    font-weight: 100;
+    color:var(--dark_gray_font);
     top: 20px;
     display: block;
-    font-family: 'Zilla Slab', serif; 
+    font-family: 'Bree Serif', serif;; 
 }
 
 .productRuler {
@@ -154,13 +167,13 @@ hr.rulerStyle::before {
 }
 
 .productCard .productPrice {
-    color: #000;
-    font-size: 25px;
-    font-weight: bold;
+    color: var(--dark_gray_font);
+    font-size: 1.8vw;
+    font-weight: 600;
     position: relative;
     top: 40px;
     display: block;
-    font-family: 'Zilla Slab', serif; 
+    font-family: 'Oswald', sans-serif;
 }
 
 .productCard .productSize {
@@ -169,35 +182,36 @@ hr.rulerStyle::before {
 }
 
 .productCard .productSize p {
-    font-family: 'Zilla Slab', serif; 
-    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: var(--dark_gray_font);
     top: 20px;
 }
 
 .productCard .productSize span {
-    margin: 5px;
-    padding: 10px;
+    margin: 0.5vw;
+    padding: 0.6vw;
     background-color: #fff;
-    border: 1px solid #999;
+    color: var(--dark_gray_font);
+    border: 0.21vw solid var(--dark_gray_font);
     border-radius: 100%;
     position: relative;
     display: inline-block;
-    top: 5px;
-    font-family: 'Zilla Slab', serif; 
-    font-size: 22px;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2vw;
 }
 
 .productCard .buyProductButton {
-    border: 5px solid #185424;
+    border: 0.21vw solid #185424;
     color: #185424;
     border-radius: 50px;
-    padding: 10px 60px;
+    padding: 0.5vw 2.7vw;
     position: relative;
-    top: 100px;
-    font-size: 1.5em;
+    top: 80px;
+    font-size: 1.5vw;
     text-decoration: none;
-    font-family: 'Zilla Slab', serif; 
-    font-weight: 800;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
 }
 
 .productCard .buyProductButton:hover {
