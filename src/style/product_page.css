@@ -20,7 +20,7 @@ html{
     --card_width: calc(50vw-(2*var(--card_margin)));
 
     --size_span_margin:2vw 2vw 1vw 2vw;
-    --size_span_padding:2vw;
+    --size_span_padding:0.6vw 2vw 0.6vw 2vw;
     --size_span_font_size: 2vw;
 
     --button_padding:1vw;
@@ -105,12 +105,12 @@ label{
     padding: var(--size_span_padding);
     background-color: #fff;
     border: 0.25vw solid #999;
-    border-radius: 100%;
+    border-radius: 3vw;
     top: 5px;
     
     font-family: 'Bree Serif', serif;
     font-size: var(--size_span_font_size);
-    font-weight:600;
+    font-weight:500;
     
     display: inline-block;
     position: relative;
@@ -120,11 +120,23 @@ label{
 #product_info .productSize .sizeType {
     font-size: 1.5vw;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 /*botao de adicionar ao carrinho*/
+
+/*secao com botoes de adicionar ao carrinho e num de itens*/
+.numAndCartContainer{
+    width: var(--card_width);
+    margin: var(--button_margin);
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
 #product_info #addToCart {
-    height: 5vw;
+    height: 4vw;
+    width:100%;
     margin-left: var(--button_margin);
     padding: var(--button_padding);
     border-radius: 5vw;
@@ -133,47 +145,52 @@ label{
     background-color: var(--purple);
 
     text-decoration: none;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     font-family: 'Bree Serif', serif;
     font-weight: 200;
     
     position: relative;
     text-align: center;
-}
 
-/*secao com botoes de adicionar ao carrinho e num de itens*/
-.numAndCartContainer{
-    width: 100%;
-    margin: var(--button_margin);
-    display: grid;
-    grid-template-columns: auto auto auto;
 }
 
 /*botao de adicionar num de itens*/
 #numProducts{
-    width:auto;
-    height: 5vw;
+    width:10vw;
+    height: 4vw;
     padding: 0.5vw;
     margin-right: var(--button_margin);
     text-align: center;
 
     border: 0.2vw solid var(--light_gray);
     border-radius: 0.5vw;
+
 }
+
 
 #numProducts #btn_more, #numProducts #btn_less{
     border: none;
     color:var(--purple);
     background-color: white;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: bold;
+}
+
+#numProducts #btn_more{
+    float: right;
+    margin-right: 0.7vw;
+}
+
+#numProducts #btn_less{
+    float: left;
+    margin-left: 0.7vw;
 }
 
 /*label com o numero de itens*/
 #numProducts #lbl_num{
     margin: 0.5vw;
     color:var(--dark_gray_font);
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 

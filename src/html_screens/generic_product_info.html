@@ -18,6 +18,7 @@
     <link href="../style/default.css" rel="stylesheet">
     <link href="../style/highlight_banner.css" rel="stylesheet">
     <link href="../style/product_catalog.css" rel="stylesheet">
+    <link href="../style/product_page.css" rel="stylesheet">
 
     <!-- Incluir fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,8 +48,53 @@
       </div>
     </header>
   
-    <main id="bodyWrapper">
+    <main>
       <!-- Inicio Informacoes do produto -->
+      <div class="grid_container">
+
+        <div class="img_section">
+          <img id="img_product" src="../visual_identity/prints/print_ovelha.png" alt="Imagem do Produto: Print Ovelha Negra">
+        </div>
+
+        <div class="info_section">
+          
+
+          <article id="product_info">
+
+            <h1 id="product_title">Nome do Produto</h1>
+            <h1 id="price">Preço</h1>
+
+            <h4>Descrição:</h4>
+
+            <label id="description">Descrição detalhada do produto.</label>
+
+            <h4>Selecione o tamanho:</h4>
+
+            <div class="productSize">
+              <div class="sizeType">
+                <span>Tam</span>
+                <label>Tam. Específico</label>
+              </div>
+              <div class="sizeType">
+                <span>Tam</span>
+                <label>Tam. Específico</label>
+              </div>
+            </div>
+            
+            <section class="numAndCartContainer">
+              <div id="numProducts">
+                <button data-control="less" id="btn_less">-</button>
+                <label data-display class="display" id="lbl_num">1</label>
+                <button data-control="plus" id="btn_more">+</button>
+              </div>
+              
+              <a href="html_screens/generic_product_info.html" id="addToCart">Adicionar ao Carrinho</a>
+            </section>
+
+          </article>
+
+        </div>
+      </div>
 
       <!-- Fim Informacoes do produto -->
 
