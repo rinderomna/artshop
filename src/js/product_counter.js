@@ -12,7 +12,7 @@ function manipulateValue(control, operation) {
     let value = parseInt(counter.innerText);
 
     if (value === 1 && operation === "less") return;
-    if (value === 999 && operation === "plus") return;
+    if (value === 10 && operation === "plus") return; // Pela aplicacao
 
     if (operation === "plus") {
         counter.innerText = String(value + 1);
