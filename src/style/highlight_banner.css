@@ -6,7 +6,9 @@
 
 body{
     width: 100vw;
+    font-size:16px;
 }
+
 /* Banner de novidades */
 #newProductsHighlight {
     display: flex;
@@ -34,10 +36,51 @@ body{
 }
 
 /* Responsividade do Banner */
-@media screen and (max-width: 1050px) {
+
+@media screen and (min-width: 300px) { /* mobile */
     #newProductsHighlight {
-        height: 300px;
-        margin-top: 20px;
+        height: 10em;
+    }
+
+    #newProductsHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 500px) { /* tablet */
+    #newProductsHighlight {
+        height: 15em;
+    }
+
+    #newProductsHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 700px) { /* tablet */
+    #newProductsHighlight {
+        height: 20em;
+    }
+
+    #newProductsHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+
+@media screen and (min-width: 900px) { /* desktops */
+    #newProductsHighlight {
+        height: 24em;
+    }
+
+    #newProductsHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #newProductsHighlight {
+        height: 34em;
     }
 
     #newProductsHighlight h1 {

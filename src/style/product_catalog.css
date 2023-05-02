@@ -8,6 +8,7 @@
 #bodyWrapper {
     display: block;
     padding-top: 50px;
+    font-size: 16px;
     /* border: 10px solid orange; */ /* <=== NÃO APAGAR! ESTOU USANDO PARA DEBUGAR O LAYOUT */
 }
 
@@ -31,12 +32,9 @@ html{
     /* border: 5px solid purple; */
 }
 
-#bodyWrapper h1 {
-    padding-top: 5px;
-}
 
 #bodyWrapper h1 {
-    font-size: 2vw;
+    font-size: 1.5em;
     display: block;
     font-family: 'Bree Serif', serif;
     font-weight: 100;
@@ -44,7 +42,7 @@ html{
     padding: 1.5vw;
     /* border: 10px solid black; */
     background-color: #fff;
-    max-width: 45vw;
+    max-width: 48em;
     border-radius: 1vw;
 }
 
@@ -55,61 +53,13 @@ html{
     /*box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);*/
 }
 
-/* Responsividade */
-@media screen and (min-width: 300px) { /* mobile */
-    /* grid */
-    .allProductsCatalog {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    /* margem do corpo do site */
-    #bodyWrapper {
-        margin: -1px 20px;
-    }
-}
-
-@media screen and (min-width: 800px) { /* tablet */
-    /* grid */
-    .allProductsCatalog {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* margem do corpo do site */
-    #bodyWrapper {
-        margin: -1px 40px;
-    }
-}
-
-@media screen and (min-width: 1000px) { /* desktops */
-    /* grid */
-    .allProductsCatalog {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    /* margem do corpo do site */
-    #bodyWrapper {
-        margin: -1px 60px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    /* grid */
-    .allProductsCatalog {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    
-    /* margem do corpo do site */
-    #bodyWrapper {
-        margin: -1px 100px 20px 100px;
-    }
-}
 
 /* Produto individual */
 .allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
     position: relative;
-    min-height: 45vw;
+    /*min-height: 44.5em;*/
     /*min-height: 700px; -> mudei para tentar padronizar (não sei se funcionou)*/
-    max-height: 900px;
+    max-height: 47em;
     overflow: hidden;
     border-radius: 30px 30px 0 0;
     /* border: 5px solid red; */
@@ -128,7 +78,7 @@ html{
 
 .productCard .productNameOnGrid {
     position: relative;
-    font-size: 1.4vw;
+    font-size: 1.2em;
     font-weight: 100;
     color:var(--dark_gray_font);
     top: 20px;
@@ -145,15 +95,10 @@ html{
     top: 30px;
 }
 
-@media screen and (max-width: 1500px) {
-    .productRuler {
-        width: 150px;
-    }
-}
 
 .productCard .productPrice {
     color: var(--dark_gray_font);
-    font-size: 1.8vw;
+    font-size: 1.6em;
     font-weight: 600;
     position: relative;
     top: 40px;
@@ -163,37 +108,38 @@ html{
 
 .productCard .productSize {
     position: relative;
-    top: 60px;
+    top: 3.3em;
 }
 
 .productCard .productSize p {
     font-family: 'Lato', sans-serif;
-    font-size: 1.2vw;
+    font-size: 1em;
     color: var(--dark_gray_font);
-    top: 20px;
 }
 
 .productCard .productSize span {
-    margin: 0.5vw;
-    padding: 0.6vw;
+    width: 2em;
+    height: 2em;
+    margin: 0.35em;
+    padding: 0.2em;
     background-color: #fff;
     color: var(--dark_gray_font);
-    border: 0.21vw solid var(--dark_gray_font);
+    border: 0.13em solid var(--dark_gray_font);
     border-radius: 100%;
     position: relative;
     display: inline-block;
     font-family: 'Bree Serif', serif;
-    font-size: 1.2vw;
+    font-size: 1.2em;
 }
 
 .productCard .buyProductButton {
-    border: 0.21vw solid #185424;
+    border: 0.13em solid #185424;
     color: #185424;
     border-radius: 50px;
-    padding: 0.5vw 2.7vw;
+    padding: 0.4em 2em;
     position: relative;
     top: 80px;
-    font-size: 1.5vw;
+    font-size: 1.3em;
     text-decoration: none;
     font-family: 'Bree Serif', serif;
     font-weight: 500;
@@ -201,4 +147,109 @@ html{
 
 .productCard .buyProductButton:hover {
     background-color: rgba(24, 84, 36, 0.3);
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1500px) {
+    .productRuler {
+        width: 150px;
+    }
+}
+
+
+@media screen and (min-width: 200px) { /* mobile */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .allProductsCatalog .productCard {
+        min-height: 35em;
+    }
+
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 20px;
+    }
+}
+
+
+/*aplicar essas propriedades se a tela tiver pelo menos 300px de largura*/
+@media screen and (min-width: 300px) { /* mobile */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .allProductsCatalog .productCard {
+        min-height: 44.5em;
+    }
+
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 20px;
+    }
+}
+
+@media screen and (min-width: 500px) { /* tablet */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .allProductsCatalog .productCard {
+        min-height: 35em;
+    }
+
+    
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 40px;
+    }
+}
+
+@media screen and (min-width: 650px) { /* tablet */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .allProductsCatalog .productCard {
+        min-height: 44.5em;
+    }
+
+    
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 40px;
+    }
+}
+
+@media screen and (min-width: 900px) { /* desktops */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .allProductsCatalog .productCard {
+        min-height: 44.5em;
+    }
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .allProductsCatalog .productCard {
+        min-height: 40em;
+    }
+    
+    /* margem do corpo do site */
+    #bodyWrapper {
+        margin: -1px 100px 20px 100px;
+    }
 }
