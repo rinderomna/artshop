@@ -51,7 +51,7 @@ Seguem imagens de cada uma destas telas:
 ##### Figura 3: Print da Tela de Produto (Mockup inicial).
 ![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
  
-O código destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. 
+Os códigos destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. 
 
 ### 2.1.3. Diagrama de Navegação
 Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
