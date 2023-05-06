@@ -37,6 +37,7 @@ Para descrever a implementação das funcionalidades listadas nos requisitos do 
   * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
  
 Seguem imagens de cada uma destas telas:
+ 
 ![Print da Tela Principal](images&diagrams/print_da_tela_principal.jpg)
 ##### Figura 1: Print da Tela Principal (Mockup inicial). 
 
