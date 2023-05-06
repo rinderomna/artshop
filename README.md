@@ -69,7 +69,8 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
 * Para a primeira entrega, a fim de comprir requisitos de acessibilidade,foram utilizadas tags HTML semânticas (main, header, nav, ...), pois elas auxiliam mecanismos de busca e screnn readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
   
 # 4. Plano de Teste
-> Text describing the tests that will be performed. If an automatic test tool/framework is used (ex: Selenium, JUnit, Spock), the code for the tests can be used.
+# 4.1. Plano de teste para o esquema de navegação
+Para testar o esquema de navegação, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). Obs.: Lembra-se de que, na tela de login do protótipo, o botão de entrar foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador.
   
 # 5. Resultados dos Testes
 > Text describing the test results. If an automatic test tool/framework is used, its output can be used.
