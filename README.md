@@ -12,7 +12,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. As orientações para análise do Milestone 1 estão principalmente nas seções 1, 2, 4 e 6. No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
-# 1. Requisitos 
+# 1. Requisitos de Software
 Uma artista contratou nossos serviços para criar uma loja online para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos online e recebam em suas residências. Desenvolveremos, por tanto, uma aplicação Web para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
 
 * O sistema deve possuir uma conta padrão de administrador inicial (nome de usuário 'admin' com senha 'admin'). O administrador poderá alterar suas informações, como nome, CPF, telefone, e e-mail, assim como seu nome de usuário e sua senha.
