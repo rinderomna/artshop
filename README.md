@@ -30,7 +30,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 * O sistema deve permitir que tanto o usuário como o administrador possam deslogar de suas contas (sair).
 
 # 2. Descrição do Projeto
-Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema (clique neste link para ver; ele abre na mesma aba do navegador, por padrão)](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
+Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
   * A tela principal ([src/index.html](src/index.html)); 
   * A tela de login ([src/html_screens/login.html](src/html_screens/login.html)) e;
   * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
