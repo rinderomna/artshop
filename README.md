@@ -10,7 +10,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 |   Hélio Nogueira Cardoso  |  10310227 |    helionc1999@usp.br      |
 |   Laura Ferré Scotelari   |  12543436 |   laura.scotelari@usp.br   |
 
-
+Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. As orientações para análise estão principalmente na seção 4 (Plano de Teste) e na seção 6 (Procedimentos para execução). No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
 # 1. Requisitos 
 Uma artista contratou nossos serviços para criar uma loja online para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos online e recebam em suas residências. Desenvolveremos, por tanto, uma aplicação Web para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
