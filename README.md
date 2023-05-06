@@ -156,6 +156,15 @@ Pedido:
 # 6. Procedimentos para execução
 * Para clonar o repositório, utilize o comando:
 ```git clone https://github.com/rinderomna/artshop.git```
+* Dentro da pasta 'artshop' do projeto (a qual será considerada a raiz '/' em todo o documento), encontra-se a seguinte estrutura:
+ * Pasta 'src': aqui se encontra todo o código desenvolvido, incluindo o arquivo 'index.html', que é a homepage da aplicação. Dentro da pasta 'src' há outros 4 diretórios importantes:
+  * 'html_screens': aqui você pode acessar o código HTML das outras telas do sistema;
+  * 'js': arquivos de script JavaScript;
+  * 'style': folhas de estilo CSS;
+  * 'visual_identity': imagens utilizadas nas páginas.
+ * Pasta 'images&diagrams': aqui há imagens e diagramas pertinentes ao projeto e seu arquivo README.md de descrição.
+ * Pasta 'especification': aqui há apenas o arquivo de especificação do projeto da disciplina, com as descrições de cada entrega (Milestones 1, 2 e 3) e as metodologias de avaliação.
+ * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
 > List any major problems you had.
