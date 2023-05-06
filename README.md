@@ -30,6 +30,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 * O sistema deve permitir que tanto o usuário como o administrador possam deslogar de suas contas (sair).
 
 # 2. Descrição do Projeto
+## 2.1. Elementos da primeira entrega: Protótipo, 3 telas HTML + CSS de Mockup e Diagrama de Navegação
 Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
   * A tela principal ([src/index.html](src/index.html)); 
   * A tela de login ([src/html_screens/login.html](src/html_screens/login.html)) e;
@@ -39,6 +40,8 @@ Estas telas estão disponíveis no repositório do projeto. Todo o código desen
   
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
 ##### Figura 1: Diagrama de navegação do site.
+ 
+## 2.2. Explicação textual da navegação
 
 O diagrama de navegação possui retângulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
 * Deslogado
@@ -69,11 +72,17 @@ Estando logado, o cliente pode clicar na opção de 'comprar' de algum produto, 
 Na tela transiente de login, caso as informações sejam de um administrador, o usuário é levado para a Homepage do site com a visão de um administrador. O administrador pode, nesta Homepage, clicar na opção 'novo item' para cadastrar um novo produto. Na tela de cadatro de produto, o administrador preenche as informações do novo produto, clica em 'ok' e, em caso de cadastro bem-sucedido, é levado de volta à Homepage com visão de administrador. Na Homepage, o administrador possui uma listagem de todos os produtos, podendo, pela navbar, também acessar as seções com filtragens por tipo de produto. Ao clicar em 'ver mais' em algum produto, o administrador é direcionado a uma tela com detalhes daquele produto com duas opções: 'excluir' e 'editar'. Selecionando 'editar', o sistema passa para uma tela de edição do produto, em que o administrador pode alterar os detalhes do item. Ao concluir a edição com 'ok', o administrador é levado de volta à tela de detalhes do produto (aquela com as opções 'editar' e 'excluir'). Caso o administrador opte pela opção 'excluir', e confirme esta sua opção, o item é excluído e o sistema passa para a tela de cadastro de um novo produto.
 
 Clicando em seu ícone de usuário, será aberta para o administrador um menu lateral com as seguintes opções: editar perfil e pedidos. Clicando em 'editar perfil', o administrador irá para uma tela em que poderá alterar as informações de seu perfil. Clicando em 'pedidos', o administrador irá para uma tela crucial para sua loja, em que pode visualizar uma listagem dos pedidos, tantos os em status 'pendente', como os em status 'enviado'. Para os pedidos em status 'pendente', pode o administrador nesta mesma tela cadastrar o nome da transportadora e o código de envio para que o cliente acompanhe a entrega no sistema externo da transportadora. Após este cadastro, o pedido em questão muda seu status de 'pendente' para 'enviado'. Para os pedidos em status 'enviado', é possível também editar as informações de transportadora e código de envio na mesma tela. Por fim, no menu lateral, o administrador também pode selecionar a opção 'sair', para a qual será direcionado à Homepage do site em status 'deslogado'. (Observação: cadastro e edição de transportadora e código de envio foram implementador com abas laterais no protótipo, apesar de não estarem representadas como abas laterais no diagrama de navegação para não poluí-lo).
+ 
+## 2.3. Análise dos elementos que deverão ser guardados no Banco de Dados
+> Incluir estes elementos.
 
 # 3. Comentários sobre o código
 * Um comentário sobre os mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
 * Outro comentário sobre as telas do protótipo Marvel: fez-se o mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se por exemplo as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas os suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais especifico foi trabalhado nas tela de prototipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstraído, mas que não perte em representatividade da aplicaç
 * Para a primeira entrega, a fim de cumprir requisitos de acessibilidade,foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screnn readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
+* Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
+ ![Responsividade 1](images&diagrams/responsividade1.jpg)
+ ![Responsividade 2](images&diagrams/responsividade2.jpg)
   
 # 4. Plano de Teste
 # 4.1. Plano de teste para o esquema de navegação
