@@ -35,7 +35,7 @@ Para descrever a implementação das funcionalidades listadas nos requisitos do 
   * A tela de login ([src/html_screens/login.html](src/html_screens/login.html)) e;
   * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
  
-Estas telas estão disponíveis no repositório do projeto. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acime foram escolhidas para representar as telas para a entrega do milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
+Estas telas estão disponíveis no repositório do projeto. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
   
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
 ##### Figura 1: Diagrama de navegação do site.
