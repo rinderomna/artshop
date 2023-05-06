@@ -39,7 +39,6 @@ html{
     color: var(--dark_gray_font);
     padding: 1.5vw;
     background-color: #fff;
-    max-width: 48em;
     border-radius: 1vw;
 }
 
@@ -241,7 +240,7 @@ html{
     }
 
     .allProductsCatalog .productCard {
-        min-height: 40em;
+        min-height: 45em;
     }
     
     /* margem do corpo do site */

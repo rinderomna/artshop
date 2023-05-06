@@ -80,7 +80,7 @@ body{
 
 @media screen and (min-width: 1200px) {
     #newProductsHighlight {
-        height: 34em;
+        height: auto;
     }
 
     #newProductsHighlight h1 {
