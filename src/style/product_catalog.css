@@ -9,7 +9,6 @@
     display: block;
     padding-top: 50px;
     font-size: 16px;
-    /* border: 10px solid orange; */ /* <=== NÃO APAGAR! ESTOU USANDO PARA DEBUGAR O LAYOUT */
 }
 
 html{
@@ -29,7 +28,6 @@ html{
     padding-top: 30px;
     border-radius: 2vw;
     box-shadow: 5px 5px 20px var(--light_gray);
-    /* border: 5px solid purple; */
 }
 
 
@@ -40,7 +38,6 @@ html{
     font-weight: 100;
     color: var(--dark_gray_font);
     padding: 1.5vw;
-    /* border: 10px solid black; */
     background-color: #fff;
     max-width: 48em;
     border-radius: 1vw;
@@ -50,7 +47,6 @@ html{
 /* Separacao dos cards */
 .printsCatalog, .stickersCatalog, .shirtsCatalog {
     margin-bottom: 2.5em;
-    /*box-shadow: 0 5px 0px 0px #f0f1f5, 0 -10px 0px 0px #f0f1f5, 1px 0 10px -4px rgba(0, 0, 0, 0.97), 1px 0 15px -4px rgba(0, 0, 0, 0.97);*/
 }
 
 
