@@ -62,7 +62,7 @@ O diagrama de navegação possui retângulos que representam as telas do sistema
 
 As caixas destes contextos possuem seu nome em negrito e sublinhado no canto superior direito de cada respectiva caixa de contexto. Telas em contexto 'deslogado' possuem a opção de 'Entrar' disponível, para que se possa passar para a tela de login. Telas em contexto 'transiente' não possuem a opção 'Entrar' disponível, e são as telas de login e a de cadastro. As telas em contexto de 'Cliente logado' possuem as funcionalidades para o cliente que está logado e as telas em contexto 'Administrador logado' possuem as funcionalidades para o administrador.
 
-As telas em contexto 'Telas de Navbar' são telas target de opções na navbar (barra de navegação). Telas em contexto de 'navbar habilitada' têm acesso à navbar. Abas laterais, como a aba lateral de carrinho e os menus laterais de cliente e de administrador, são representadas por retêngulos com as laterais listradas. Toda aba lateral é chamada a partir de uma outra tela e, quando fechada, retorna para a tela original pela que foi chamada.
+As telas em contexto 'Telas de Navbar' são telas target de opções na navbar (barra de navegação). Telas em contexto de 'navbar habilitada' têm acesso à navbar. Abas laterais, como a aba lateral de carrinho e os menus laterais de cliente e de administrador, são representadas por retângulos com as laterais listradas. Toda aba lateral é chamada a partir de uma outra tela e, quando fechada, retorna para a tela original pela que foi chamada.
 
 Dadas as explicações de notação do diagrama, explica-se a seguir a navegação em si, explicação a qual pode ser seguida com auxílio do diagrama de navegação disponível.
 
