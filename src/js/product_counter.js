@@ -1,3 +1,5 @@
+"use strict";
+
 const controlAdjusters = document.querySelectorAll("[data-control]");
 
 controlAdjusters.forEach(controlAdjuster => {
@@ -16,7 +18,7 @@ function manipulateValue(control, operation) {
 
     if (operation === "plus") {
         counter.innerText = String(value + 1);
-    } else if (operation == "less") {
+    } else if (operation === "less") {
         counter.innerText = String(value - 1);
     }
 }

@@ -1,6 +1,6 @@
 /* 
  * --------------------------------
- * CSS PARA O DETALHE DO PRODUTO ||
+ * CSS PARA VISAO DETALHADA DO PRODUTO ||
  * --------------------------------
 */
 html{
@@ -22,37 +22,32 @@ html{
     --button_margin:1vw;
 }
 
-body{
+body {
     width: 100vw;
     font-size: 16px;
 }
 
-/*contem a imagem e a secao de informacoes do produto*/
-.grid_container{
+/* Contem a imagem e a secao de informacoes do produto */
+.grid_container {
     display: grid;
 }
 
 
-/*Secao de imagem */
-.img_section{
-    /*width:var(--img_width);
-    height: var(--div_height);*/
+/* Secao de imagem */
+.img_section {
     background-color: var(--coral);
 }
 
-#img_product{
-    width:100%;
+#img_product {
+    width: 100%;
 }
 
-/*secao de informacoes do produto*/
-.info_section{
-    /*width:var(--info_width);
-    height: var(--div_height);*/
+/* secao de informacoes do produto */
+.info_section {
     background-color: var(--bkg_color_gray);
 }
 
-#product_info{
-    /*width:var(--card_width);*/
+#product_info {
     padding: var(--card_padding);
     background-color: white;
     border-radius: 3vw;
@@ -60,20 +55,20 @@ body{
     color: var(--dark_gray_font);
 }
 
-h4, h3, h1{
+h4, h3, h1 {
     font-family: 'Bree Serif', serif;
 }
 
-h4, h3{
+h4, h3 {
     font-weight: 200;
     margin-top: 2vw;
 }
 
-h1{
+h1 {
     font-weight: 600;
 }
 
-label{
+label {
     font-family: 'Arvo', serif;
     color: var(--dark_gray_font);
     font-size: 0.65em;
@@ -85,20 +80,20 @@ label{
     font-size: 0.5em;
 }
 
-#price{
+#price {
     color: var(--purple);
     font-family: 'Oswald', sans-serif;
     font-size: 1.3em;
 }
 
-.productSize{
+.productSize {
     width: 100%;
     padding-bottom: 2vw;
     display: flex;
     justify-content: center;
 }
 
-/*Circulos com os tipos de tamanho*/
+/* Circulos com os tipos de tamanho */
 #product_info .productSize span {
     margin: 0.8em 0.8em 0.3em 0.8em;
     padding: 0.3em 0.9em 0.3em 0.9em;
@@ -115,7 +110,7 @@ label{
     position: relative;
 }
 
-/*label com descricao detalhada do tamanho*/
+/* label com descricao detalhada do tamanho */
 #product_info .productSize .sizeType {
     font-size: 1em;
     text-align: center;
@@ -123,9 +118,9 @@ label{
     grid-template-columns: 1fr;
 }
 
-/*botao de adicionar ao carrinho*/
+/* botao de adicionar ao carrinho */
 
-/*secao com botoes de adicionar ao carrinho e num de itens*/
+/* secao com botoes de adicionar ao carrinho e num de itens */
 .numAndCartContainer{
     width: var(--card_width);
     margin: 0.5em;
@@ -153,21 +148,19 @@ label{
 
 }
 
-/*botao de adicionar num de itens*/
+/* botao de adicionar num de itens */
 #numProducts{
     width:4em;
     height: 2em;
     padding: 0.2em 0.1em;
-    /*margin-right: var(--button_margin);*/
     text-align: center;
 
     border: 0.1em solid var(--light_gray);
     border-radius: 0.3em;
-
 }
 
 
-#numProducts #btn_more, #numProducts #btn_less{
+#numProducts #btn_more, #numProducts #btn_less {
     border: none;
     color:var(--purple);
     background-color: white;
@@ -175,24 +168,24 @@ label{
     font-weight: bold;
 }
 
-#numProducts #btn_more{
+#numProducts #btn_more {
     float: right;
     margin-right: 0.3em;
 }
 
-#numProducts #btn_less{
+#numProducts #btn_less {
     float: left;
     margin-left: 0.3em;
 }
 
-/*label com o numero de itens*/
-#numProducts #lbl_num{
+/* label com o numero de itens */
+#numProducts #lbl_num {
     margin: 0.2em;
     color:var(--dark_gray_font);
     font-size: 1em;
 }
 
-/*Hover atributes*/
+/* Hover attributes */
 
 #product_info #addToCart:hover{
     background-color: var(--light_gray);
@@ -203,7 +196,7 @@ label{
     color: white;
 }
 
-/*Responsividade*/
+/* Responsividade */
 @media screen and (min-width: 300px) { /* mobile */
     /* grid */
     .grid_container {
@@ -225,8 +218,6 @@ label{
 
 }
 
-
-/*Responsividade*/
 @media screen and (min-width: 750px) { /* mobile */
     /* grid */
     .grid_container {
@@ -248,7 +239,6 @@ label{
 
 }
 
-/*Responsividade*/
 @media screen and (min-width: 1300px) { /* mobile */
     /* grid */
     .grid_container {

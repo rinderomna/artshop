@@ -52,12 +52,9 @@ html{
 /* Produto individual */
 .allProductsCatalog .productCard { /* Elemento pai dos elementos do card */
     position: relative;
-    /*min-height: 44.5em;*/
-    /*min-height: 700px; -> mudei para tentar padronizar (não sei se funcionou)*/
     max-height: 47em;
     overflow: hidden;
     border-radius: 30px 30px 0 0;
-    /* border: 5px solid red; */
     text-align: center;
 } 
 
@@ -68,7 +65,6 @@ html{
     border-radius: 30px 30px 0 0;
     margin: 0 auto;
     display: block;
-    /*box-shadow: -5px 3px 20px #888888*/
 }
 
 .productCard .productNameOnGrid {
@@ -152,7 +148,6 @@ html{
     }
 }
 
-
 @media screen and (min-width: 200px) { /* mobile */
     /* grid */
     .allProductsCatalog {
@@ -170,7 +165,7 @@ html{
 }
 
 
-/*aplicar essas propriedades se a tela tiver pelo menos 300px de largura*/
+/* Aplicar essas propriedades se a tela tiver pelo menos 300px de largura */
 @media screen and (min-width: 300px) { /* mobile */
     /* grid */
     .allProductsCatalog {
