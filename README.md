@@ -4,11 +4,12 @@
 # 0. Informação da Disciplina, Membros da Equipe, Introdução e Índice
 Este é o repositório destinado ao projeto final desenvolvido para a disciplina '*SCC0219 - Introdução ao Desenvolvimento Web (2023)*', ministrada pelo professor Dilvan de Abreu Moreira, do ICMC-USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes estudantes:
 
-|        **Nome**        | **NUSP** |
-|:----------------------:|:--------:|
-| Danielle Modesti       | 12543544 |
-| Hélio Nogueira Cardoso | 10310227 |
-| Laura Ferré Scotelari  | 12543436 |
+|        Nome               |    NUSP   |           E-mail           |
+|:-------------------------:|:---------:|:--------------------------:|
+|     Danielle Modesti      |  12543544 |    dani.modesti@usp.br     |
+|   Hélio Nogueira Cardoso  |  10310227 |    helionc1999@usp.br      |
+|   Laura Ferré Scotelari   |  12543436 |   laura.scotelari@usp.br   |
+
 
 
 # 1. Requisitos 
