@@ -56,7 +56,7 @@ Os códigos destas telas estão disponíveis no repositório do projeto sob os c
 ### 2.1.3. Diagrama de Navegação
 Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
   
-##### Figura 4: Diagrama de navegação do site. Você pode acessar o [arquivo pdf do diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) na pasta 'images&diagrams' para melhor visualização dos detalhes. Para tanto, baixe o arquivo para fazer a visualização local com seu visualizador de pdf preferido.
+##### Figura 4: Diagrama de navegação do site. Você pode acessar o [arquivo pdf do diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) na pasta '/images&diagrams' para melhor visualização dos detalhes. Para tanto, baixe o arquivo para fazer a visualização local com seu visualizador de pdf preferido.
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
  
 ## 2.2. Descrição textual detalhada da lógica de navegação
