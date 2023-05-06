@@ -146,12 +146,13 @@ Pedido:
  ![Responsividade 2](images&diagrams/responsividade2.jpg)
  
 # 4. Plano de Teste
-# 4.1. Plano de teste para o esquema de navegação
+## 4.1. Plano de teste para o esquema de navegação
 * Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). <ins> Obs.: Lembre-se de que, na tela de login do protótipo, o botão 'Entrar' foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o login de um cliente. Clicando do lado direito do botão 'Entrar', você estará simulando o login de um administrador. </ins>
 * Quando o conjunto total de telas estiver implementado em código (segundo milestone do projeto), a mesma ideia de utilizar o diagrama de navegação como referência para testar o fluxo de navegação pode ser utilizada.
   
 # 5. Resultados dos Testes
-> Text describing the test results. If an automatic test tool/framework is used, its output can be used.
+## 5.1. Teste manual da navegação no protótipo Marvel
+Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigí-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
   
 # 6. Procedimentos para execução
 * Para clonar o repositório, utilize o comando:
