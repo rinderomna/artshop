@@ -37,11 +37,19 @@ Para descrever a implementação das funcionalidades listadas nos requisitos do 
   * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
  
 Seguem imagens de cada uma destas telas:
+![Print da Tela Principal](images&diagrams/print_da_tela_principal.jpg)
+##### Figura 1: Print da Tela Principal (Mockup inicial). 
+
+![Print da Tela de Login](images&diagrams/print_da_tela_de_login.jpg)
+##### Figura 2: Print da Tela de Login (Mockup inicial).
+ 
+![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
+##### Figura 3: Print da Tela de Produto (Mockup inicial).
  
 Estas telas estão disponíveis no repositório do projeto. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
   
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
-##### Figura 1: Diagrama de navegação do site.
+##### Figura 4: Diagrama de navegação do site.
  
 ## 2.2. Explicação textual da navegação
 
@@ -60,12 +68,12 @@ Dadas as explicações de notação do diagrama, explica-se a seguir a navegaç�
 A página inicial do sistema, em estado deslogado, é a Homepage do site. Nela, o usuário pode visualizar uma listagem de todos os produtos da loja. Utilizando a navbar, o usuário pode também filtrar os produtos pelo seu tipo, que podem ser prints, adesivos ou camisetas. É possível pela navbar também acessar uma página 'About Us', com informações sobre a artista e a loja. Ao clicar em um produto para 'comprar', o usuário é levado para uma tela do produto, na qual pode selecionar as opções do produto e apertar o botão para 'adicionar ao carrinho'. Porém, como o usuário está deslogado, ele é levado a uma tela de login para entrar no sistema (nesta situação, o item que o usuário tentou adicionar ao carrinho é salvo para que, após um login bem-sucedido como cliente, tal produto já esteja no carrinho deste cliente). Em qualquer uma das telas deslogadas, na verdade, o usuário pode clicar na opção 'entrar', para ir para a tela de login. Se o usuário não possuir cadastro, ele pode selecionar a opção 'não possuo conta, preciso me cadastrar', para ser levado a uma tela de cadastro. Caso faça um cadastro bem-sucedido, o usuário é direcionado novamente à tela de login, em que poderá utilizar seu novo cadastro para entrar no sistema como cliente. 
   
 ![Bifurcação](images&diagrams/bifurcacao_no_diagrama.jpg)
-##### Figura 2: Bifurcação no fluxo de navegação do site. As informações de login podem ser de um administrador ou de um cliente, levando a visões diferentes do sistema.
+##### Figura 5: Bifurcação no fluxo de navegação do site. As informações de login podem ser de um administrador ou de um cliente, levando a visões diferentes do sistema.
 
 Na tela de login, há uma bifurcação no fluxo de navegação, pois o login pode ser de um cliente ou de um administrador, o que levará a visões diferentes do sistema. No protótipo do Marvel, para que ambas as navegações fossem providas, o botão de 'entrar' na tela de login pode ser clicado em um de seus lados para seguir cada fluxo. Clicando do lado direito do botão 'entrar', o sistema vai para a visão de administrador. Clicando do lado esquerdo, o sistema vai para a visão do cliente.
 
 ![EntrarAoMeio](images&diagrams/botao_entrar_ao_meio.png)
-#### Figura 3: No protótipo Marvel da aplicação, para representar a bifurcação do fluxo de navegação na tela de login, em que um cliente ou um administrador pode logar, o botão de 'Entrar' pode ser clicado em um dos lados. Se clicado do lado esquerdo, levará à visão de cliente. Se clicado do lado direito, levará à visão de administrador.
+#### Figura 6: No protótipo Marvel da aplicação, para representar a bifurcação do fluxo de navegação na tela de login, em que um cliente ou um administrador pode logar, o botão de 'Entrar' pode ser clicado em um dos lados. Se clicado do lado esquerdo, levará à visão de cliente. Se clicado do lado direito, levará à visão de administrador.
 
 Entrando as informações de login como cliente na tela de login e clicando em 'entrar', o cliente irá para a Homepage do site, que é muito semelhante à Homepage que tinha disponível no contexto deslogado, com a listagem de todos os produtos e as opções de navegação na navbar. Porém, agora, há duas funcionalidades a mais: o ícone de usuário e o ícone de carrinho. Clicando no ícone de carrinho, a aba lateral de carrinho é mostrada com os itens que foram adicionados até então. Clicando no ícone de usuário, é aberto um menu lateral com as seguintes opções: editar perfil, meus pedidos e sair. Selecionando 'editar perfil', o cliente irá para uma tela em que pode alterar suas informações. Em 'meus pedidos', o cliente obtém uma tela com uma listagem dos pedidos que já fez, com seus status 'pendente' ou 'enviado' (caso em que tem a transportadora e o código de envio para acompanhar a entrega no sistema externo da transportadora). Clicando em 'sair' no menu lateral de cliente, o cliente é deslogado do sistema e levado para a Homepage em contexto 'deslogado'.
 
@@ -84,8 +92,11 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
 * Para a primeira entrega, a fim de cumprir requisitos de acessibilidade,foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screnn readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
 * Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
  ![Responsividade 1](images&diagrams/responsividade1.jpg)
+ ##### Figura 7: primeira imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
+ 
  ![Responsividade 2](images&diagrams/responsividade2.jpg)
-  
+ ##### Figura 8: segunda imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
+ 
 # 4. Plano de Teste
 # 4.1. Plano de teste para o esquema de navegação
 * Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). Obs.: Lembra-se de que, na tela de login do protótipo, o botão de entrar foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador.
