@@ -41,8 +41,12 @@ Seguem imagens de cada uma destas telas:
 ![Print da Tela Principal](images&diagrams/print_da_tela_principal.jpg)
 ##### Figura 1: Print da Tela Principal (Mockup inicial). 
 
+ 
+ 
 ![Print da Tela de Login](images&diagrams/print_da_tela_de_login.jpg)
 ##### Figura 2: Print da Tela de Login (Mockup inicial).
+ 
+ 
  
 ![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
 ##### Figura 3: Print da Tela de Produto (Mockup inicial).
@@ -94,6 +98,8 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
 * Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
  ![Responsividade 1](images&diagrams/responsividade1.jpg)
  ##### Figura 7: primeira imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
+ 
+ 
  
  ![Responsividade 2](images&diagrams/responsividade2.jpg)
  ##### Figura 8: segunda imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
