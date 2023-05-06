@@ -93,6 +93,8 @@ Na tela transiente de login, caso as informações sejam de um administrador, o 
 Clicando em seu ícone de usuário, será aberta para o administrador um menu lateral com as seguintes opções: 'editar perfil' e 'pedidos'. Clicando em 'editar perfil', o administrador irá para uma tela em que poderá alterar as informações de seu perfil. Nesta tela de edição de perfil, ao o administrador clicar em 'confirmar', ele é levado para a Homepage. Clicando em 'pedidos', o administrador irá para uma tela crucial para sua loja, em que pode visualizar uma listagem dos pedidos, tantos os em status 'pendente', como os em status 'enviado'. Para os pedidos em status 'pendente', pode o administrador nesta mesma tela cadastrar o nome da transportadora e o código de envio para que o cliente acompanhe a entrega no sistema externo da transportadora. Após este cadastro, o pedido em questão muda seu status de 'pendente' para 'enviado'. Para os pedidos em status 'enviado', é possível também editar as informações de transportadora e código de envio na mesma tela. Por fim, no menu lateral, o administrador também pode selecionar a opção 'sair', para a qual será direcionado à Homepage do site em status 'deslogado'. (Observação: cadastro e edição de transportadora e código de envio foram implementador com abas laterais no protótipo, apesar de não estarem representadas como abas laterais no diagrama de navegação para não poluí-lo).
  
 ## 2.3. Análise dos elementos que deverão ser guardados no Banco de Dados
+Para o pleno funcionamento da aplicação, será necessário armazenar algumas informações numa base de dados. Para criar clareza sobre tais elementos que deveremos armazenar no futuro, foi feito uma listagem de possíveis entidades e seus atributos abaixo:
+
 Cliente:
 * ID do cliente
 * Nome de usuário do cliente
@@ -131,13 +133,12 @@ Pedido:
 * Transportadora (ex: Correios, JadLog, etc.)
 * Código de Rastreio
 
-
-# 3. Comentários sobre o código
-* Um comentário sobre os Mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
-* Outro comentário sobre as telas do protótipo Marvel: fez-se o Mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se por exemplo as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas os suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais especifico foi trabalhado nas tela de prototipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstraído, mas que não perte em representatividade da aplicaç
-* Para a primeira entrega, a fim de cumprir requisitos de acessibilidade,foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screnn readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
+#3. Comentários sobre o código
+* Um comentário sobre os mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos, no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
+* Outro comentário sobre as telas do protótipo Marvel: fez-se o mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se, por exemplo, as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas o suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais específico foi trabalhado nas telas de protótipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstrato, mas que não perde em representatividade da aplicação.
+* Para a primeira entrega, a fim de cumprir requisitos de acessibilidade, foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screen readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
 * Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
- 
+
  ##### Figura 7: primeira imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
  ![Responsividade 1](images&diagrams/responsividade1.jpg)
  
