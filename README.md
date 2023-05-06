@@ -1,10 +1,3 @@
-<style>
-  body {
-    text-align: justify;
-  }
-</style>
-
-
 # Jagua.jpg - Projeto de Loja *Online* para Web
 <!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
 
