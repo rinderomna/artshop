@@ -168,7 +168,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
-> List any major problems you had.
+* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: o menu responsivo. Ao reduzir o tamanho da tela, as opções de navbar colaçam para opções reduzidas de menu. Uma destas opções é um "menu sanduíche", que expande ao ser clicado para mostrar as opções de navbar em telas menores. O desafio consiste em dois pontos: o menu requer dois cliques para ser aberto; o menu (continuar descrevendo o problema melhor)
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
