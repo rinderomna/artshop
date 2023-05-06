@@ -1,7 +1,7 @@
 # Jagua.jpg - Projeto de Loja *Online* para Web
 <!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
 
-# 0. Informação da Disciplina, Membros da Equipe, Introdução e Índice
+# 0. Informações Gerais
 Este é o repositório destinado ao projeto final desenvolvido para a disciplina '*SCC0219 - Introdução ao Desenvolvimento Web (2023)*', ministrada pelo professor Dilvan de Abreu Moreira, do ICMC-USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes estudantes:
 
 |        Nome               |    NUSP   |           E-mail           |
