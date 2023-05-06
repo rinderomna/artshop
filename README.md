@@ -31,7 +31,7 @@ Uma artista contratou nossos serviços para criar uma loja online para ela. Nest
 
 # 2. Descrição do Projeto
 ## 2.1. Elementos da primeira entrega: Protótipo, 3 telas HTML + CSS de Mockup e Diagrama de Navegação
-Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com mockups das telas do sistema](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
+Para descrever a implementação das funcionalidades listadas nos requisitos do projeto, utilizamos a ferramenta 'Marvel' para construir [um protótipo da aplicação com Mockups das telas do sistema](https://marvelapp.com/prototype/884i1de/screen/91326238). Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
   * A tela principal ([src/index.html](src/index.html)); 
   * A tela de login ([src/html_screens/login.html](src/html_screens/login.html)) e;
   * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
@@ -77,8 +77,8 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
 > Incluir estes elementos.
 
 # 3. Comentários sobre o código
-* Um comentário sobre os mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
-* Outro comentário sobre as telas do protótipo Marvel: fez-se o mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se por exemplo as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas os suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais especifico foi trabalhado nas tela de prototipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstraído, mas que não perte em representatividade da aplicaç
+* Um comentário sobre os Mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
+* Outro comentário sobre as telas do protótipo Marvel: fez-se o Mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se por exemplo as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas os suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais especifico foi trabalhado nas tela de prototipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstraído, mas que não perte em representatividade da aplicaç
 * Para a primeira entrega, a fim de cumprir requisitos de acessibilidade,foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screnn readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
 * Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
  ![Responsividade 1](images&diagrams/responsividade1.jpg)
