@@ -1,6 +1,12 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
+
+
 # Jagua.jpg - Projeto de Loja *Online* para Web
 <!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
-<div style="text-align: justify">
 
 # 0. Informações Gerais
 Este é o repositório destinado ao projeto final desenvolvido para a disciplina '*SCC0219 - Introdução ao Desenvolvimento Web (2023)*', ministrada pelo professor Dilvan de Abreu Moreira, do ICMC-USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes estudantes:
@@ -88,5 +94,3 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
-  
-</div>
