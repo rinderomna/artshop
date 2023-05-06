@@ -93,7 +93,44 @@ Na tela transiente de login, caso as informações sejam de um administrador, o 
 Clicando em seu ícone de usuário, será aberta para o administrador um menu lateral com as seguintes opções: 'editar perfil' e 'pedidos'. Clicando em 'editar perfil', o administrador irá para uma tela em que poderá alterar as informações de seu perfil. Nesta tela de edição de perfil, ao o administrador clicar em 'confirmar', ele é levado para a Homepage. Clicando em 'pedidos', o administrador irá para uma tela crucial para sua loja, em que pode visualizar uma listagem dos pedidos, tantos os em status 'pendente', como os em status 'enviado'. Para os pedidos em status 'pendente', pode o administrador nesta mesma tela cadastrar o nome da transportadora e o código de envio para que o cliente acompanhe a entrega no sistema externo da transportadora. Após este cadastro, o pedido em questão muda seu status de 'pendente' para 'enviado'. Para os pedidos em status 'enviado', é possível também editar as informações de transportadora e código de envio na mesma tela. Por fim, no menu lateral, o administrador também pode selecionar a opção 'sair', para a qual será direcionado à Homepage do site em status 'deslogado'. (Observação: cadastro e edição de transportadora e código de envio foram implementador com abas laterais no protótipo, apesar de não estarem representadas como abas laterais no diagrama de navegação para não poluí-lo).
  
 ## 2.3. Análise dos elementos que deverão ser guardados no Banco de Dados
-> Incluir estes elementos.
+Cliente:
+* ID do cliente
+* Nome de usuário do cliente
+* Nome completo
+* E-mail
+* Telefone celular
+* Endereço
+* CEP
+* Complemento
+* Senha
+
+Administrador:
+* ID do administrador
+* Nome de usuário do administrador
+* Nome completo
+* E-mail
+* Telefone celular
+* Senha
+
+Produto:
+* Nome do produto
+* Descrição
+* Categoria do produto
+* Categoria de tamanho (ex: A5, A4, A3, etc)
+* Tamanho específico (ex: 27x31cm)
+* Quantidade no estoque
+* Quantidade vendida
+
+Pedido:
+* Produto
+* Comprador 
+* Endereço de envio
+* CEP de envio
+* Complemento de envio
+* Status (se foi enviado ou não)
+* Transportadora (ex: Correios, JadLog, etc.)
+* Código de Rastreio
+
 
 # 3. Comentários sobre o código
 * Um comentário sobre os Mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
