@@ -61,7 +61,8 @@ Para auxílio da compreensão da proposta de navegação na aplicação, foi des
  
 ## 2.2. Descrição textual detalhada da lógica de navegação
 
-O diagrama de navegação possui retângulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
+O diagrama de navegação possui retângulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Há contextos de diversos tipos, representados por caixas azuis com texto descritivo no canto superior direito englobando os elementos de cada um destes contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
+ 
 * Deslogado
 * Transiente
 * Cliente logado
