@@ -1,3 +1,4 @@
+<div style="text-align: justify">
 # Jagua.jpg - Projeto de Loja *Online* para Web
 <!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
 
@@ -88,3 +89,4 @@ Clicando em seu ícone de usuário, será aberta para o administrador um menu la
 # 8. Comentários Adicionais
 > Any comments you wish to add.
   
+</div>
