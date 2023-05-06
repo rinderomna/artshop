@@ -147,7 +147,9 @@ Pedido:
  
 # 4. Plano de Teste
 # 4.1. Plano de teste para o esquema de navegação
-* Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). Obs.: Lembre-se de que, na tela de login do protótipo, o botão de entrar foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o login de um cliente. Clicando do lado direito do botão de 'Entrar', você estará simulando o login de um administrador.
+* Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238).
+ 
+Obs.: Lembre-se de que, na tela de login do protótipo, o botão de entrar foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o login de um cliente. Clicando do lado direito do botão de 'Entrar', você estará simulando o login de um administrador.
 * Quando o conjunto total de telas estiver implementado em código (segundo milestone do projeto), a mesma ideia de utilizar o diagrama de navegação como referência para testa o fluxo de navegação pode ser utilizada.
   
 # 5. Resultados dos Testes
