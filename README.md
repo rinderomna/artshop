@@ -52,7 +52,7 @@ Estas telas estão disponíveis no repositório do projeto. Todo o código desen
 ##### Figura 4: Diagrama de navegação do site. Você pode acessar o [arquivo pdf do diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) na pasta 'images&diagrams' para melhor visualização dos detalhes. Para tanto, baixe o arquivo para fazer a visualização local com seu visualizador de pdf preferido.
 ![Diagrama de navegação do site](images&diagrams/DiagramaDeNavegacao_Jaguar.png)
  
-## 2.2. Explicação textual da navegação
+## 2.2. Descrição textual detalhada da lógica de navegação
 
 O diagrama de navegação possui retângulos que representam as telas do sistema, que estão organizadas hieraquicamente em contextos. Em relação ao status de login no sistema, há 4 contextos distintos:
 * Deslogado
