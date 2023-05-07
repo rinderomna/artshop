@@ -149,7 +149,7 @@ Pedido:
  ##### Figura 8: segunda imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
  ![Responsividade 2](images&diagrams/responsividade2.jpg)
  
-* Outro ponto em que pensamos na responsividade do menu de navbar em telas menores. Neste caso, ele se contrai em um "menu sanduíche", o qual pode ser aberto e fechado. Seguem imagens do menu fechado e aberto:
+* Outro ponto em que pensamos na responsividade foi no menu de navbar em telas menores. Neste caso, ele se contrai em um "menu sanduíche", o qual pode ser aberto e fechado. Seguem imagens do menu fechado e aberto:
 
  ##### Figura 9: imagem mostrando o menu de navbar colapsado em "menu sanduíche". Observe que o botão de login também foi contraído.
  ![Responsividade 3](images&diagrams/smartphone_view.jpg)
