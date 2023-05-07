@@ -181,4 +181,4 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
 * Estamos buscando corrigir alguns pequenos detalhes de resposividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes.
   
 # 8. Comentários Adicionais
-> Any comments you wish to add.
+* Decidimos retirar os footers das telas em código, pois achamos desnecessário. No entanto, o footer ainda está presente no protótipo. Simplesmente desconsiderar.
