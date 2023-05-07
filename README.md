@@ -1,5 +1,7 @@
 # Jagua.jpg - Projeto de Loja *Online* para Web
-<!--- Colocar aqui uma especie de 'wallpaper' com a identidade visual da loja? Poderia ser uma jaguatirica ou uma pata felina, por exemplo? --->
+<p align="center">
+  <img width="460" height="300" src="src/visual_identity/logo/jagua_logo.png">
+</p>
 
 # 0. Informações Gerais
 Este é o repositório destinado ao projeto final desenvolvido para a disciplina '*SCC0219 - Introdução ao Desenvolvimento Web (2023)*', ministrada pelo professor Dilvan de Abreu Moreira, do ICMC-USP São Carlos. O desenvolvimento conta com a colaboração dos seguintes estudantes:
