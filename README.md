@@ -133,7 +133,7 @@ Pedido:
 * Transportadora (ex: Correios, JadLog, etc.)
 * Código de Rastreio
 
-#3. Comentários sobre o código
+# 3. Comentários sobre o código
 * Um comentário sobre os mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos, no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
 * Outro comentário sobre as telas do protótipo Marvel: fez-se o mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se, por exemplo, as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas o suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais específico foi trabalhado nas telas de protótipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstrato, mas que não perde em representatividade da aplicação.
 * Para a primeira entrega, a fim de cumprir requisitos de acessibilidade, foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screen readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
