@@ -53,7 +53,6 @@ body {
     color: #000;
     line-height: 80px;
     margin-right: 40px;
-    cursor: pointer;
 
     display: none; /* nos desktops e tablets, nao aparece */
 }
@@ -133,12 +132,9 @@ nav #highlightNavBar {
     opacity: 0;
 }
 
-/* elementos ativos da barra de navegacao */
-nav ul li.active {
-    background-color: #ff9052;
-}
-
+/* --------------------------------------*/
 /* Layout responsivo para telas menores */
+/* --------------------------------------*/
 
 @media screen and (max-width: 1300px) {
     nav ul {
@@ -202,7 +198,6 @@ nav ul li.active {
     }
     
     ul {
-        position: fixed; /* qdo usuario desce pagina, continua ocupando o mesmo espaco, nao fica invisivel */
         width: 100%;
         height: 100vh;
         background: var(--coral);
@@ -212,6 +207,7 @@ nav ul li.active {
         text-align: center;
         transition: all .5s;
         z-index: 5;
+        border-radius: 1%;
     }
     
     nav ul li { /* deixando um link embaixo do outro */

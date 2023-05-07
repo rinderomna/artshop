@@ -1,9 +1,10 @@
 /* 
- * --------------------------------
+ * --------------------------------------
  * CSS PARA VISAO DETALHADA DO PRODUTO ||
- * --------------------------------
+ * --------------------------------------
 */
-html{
+
+html {
     --bkg_color_gray: #EEEAE7;
     --purple: #9B64AC;
     --dark_gray_font: #47525E;
@@ -31,7 +32,6 @@ body {
 .grid_container {
     display: grid;
 }
-
 
 /* Secao de imagem */
 .img_section {
@@ -166,6 +166,7 @@ label {
     background-color: white;
     font-size: 1.1em;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #numProducts #btn_more {
@@ -176,6 +177,11 @@ label {
 #numProducts #btn_less {
     float: left;
     margin-left: 0.3em;
+}
+
+.productSize .selectedSize {
+    background-color: var(--light_gray);
+    color: white;
 }
 
 /* label com o numero de itens */
@@ -194,9 +200,13 @@ label {
 #product_info .productSize span:hover{
     background-color: var(--light_gray);
     color: white;
+    cursor: pointer;
 }
 
+/* ----------------*/
 /* Responsividade */
+/* ----------------*/
+
 @media screen and (min-width: 300px) { /* mobile */
     /* grid */
     .grid_container {

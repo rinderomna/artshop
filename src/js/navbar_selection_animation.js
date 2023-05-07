@@ -53,6 +53,7 @@ item.forEach(link => {
     });
 });
 
+// Para que ao redimensionar nao pareca 'bugado'
 window.addEventListener("resize", function() {
     let activeLink = document.querySelector(".navLink.active"); // Volte o destaque, devagar, a este item
     if (activeLink) {

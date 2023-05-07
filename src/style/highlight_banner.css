@@ -4,7 +4,7 @@
  * ------------------------------------------------
 */
 
-body{
+body {
     width: 100vw;
     font-size:16px;
 }
@@ -14,7 +14,6 @@ body{
     display: flex;
     background-color: #fff;
     background-repeat: repeat-x;
-    display: flex;
     justify-content: left;
     align-content: center;
     z-index: 0;
@@ -35,7 +34,6 @@ body{
 }
 
 /* Responsividade do Banner */
-
 @media screen and (min-width: 300px) { /* mobile */
     #newProductsHighlight {
         height: 10em;

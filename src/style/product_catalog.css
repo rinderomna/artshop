@@ -11,7 +11,7 @@
     font-size: 16px;
 }
 
-html{
+html {
     --bkg_color_gray: #EEEAE7;
     --purple: #9B64AC;
     --dark_gray_font: #47525E;
@@ -140,7 +140,9 @@ html{
     background-color: rgba(24, 84, 36, 0.3);
 }
 
+/* ---------------*/
 /* Responsividade */
+/* ---------------*/
 
 @media screen and (max-width: 1500px) {
     .productRuler {

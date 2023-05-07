@@ -1,3 +1,5 @@
+// Para decidir quantos daquele produto usuario vai comprar
+
 "use strict";
 
 const controlAdjusters = document.querySelectorAll("[data-control]");

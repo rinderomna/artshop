@@ -99,7 +99,8 @@
                 <button data-control="plus" id="btn_more">+</button>
               </div>
               
-              <a href="html_screens/generic_product_info.html" id="addToCart">Adicionar ao Carrinho</a>
+              <!-- Depende do status do usuario (logado ou deslogado) -->
+              <a href="#loginOrCart.html" id="addToCart">Adicionar ao Carrinho</a>
             </section>
 
           </article>
@@ -119,5 +120,8 @@
 
     <!-- Interação com contagem de produto -->
     <script src="../js/product_counter.js" type="text/javascript" defer></script>
+
+    <!-- Interação com seletor de tamanho de produto -->
+    <script src="../js/produt_select_size.js" type="text/javascript" defer></script>
   </body>
 </html>
