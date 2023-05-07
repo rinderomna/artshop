@@ -179,70 +179,67 @@ nav #highlightNavBar {
 /* Resolucao para smartphone */
 @media (max-width: 858px) {
     nav ul {
-        top: 100px;
-        margin-left: 0;
-        position: absolute; /* essencial para que a logo fique no centro e os icones nos cantos */
+      top: 100px;
+      margin-left: 0;
+      position: absolute;
     }
-
+  
     nav #highlightNavBar {
-        display: none;
+      display: none;
     }
-
-    .toggleResponsiveMenu { /*  menu sanduiche aparece no canto superior direito */
-        display: block;
-        margin-left: 1em;
+  
+    .toggleResponsiveMenu {
+      display: block;
+      margin-left: 1em;
     }
-
+  
     #loginButton {
-        display: none;
+      display: none;
     }
-    
+  
     ul {
-        width: 100%;
-        height: auto;
-        background: var(--coral);
-        top: 0;
-        /* 0 -110% foi colocado para evitar que a transicao aparecesse ao redimensionar a tela */
-        left: -110%; /* transicao entre 0 e 100% para que menu seja exibido somente ao clicar no checkbox */
-        text-align: center;
-        transition: all .5s;
-        z-index: 5;
-        border-radius: 1%;
+      width: 100%;
+      height: auto;
+      background: var(--coral);
+      top: 0;
+      left: -110%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 5;
+      border-radius: 1%;
     }
-    
-    nav ul li { /* deixando um link embaixo do outro */
-        display: block;
-        margin-bottom: 1em 0;
-        line-height: 30px;
-        font-size: 2em;
-        padding: 1em;
-        transition: all .5s;
-        margin: 0;
-        position: relative;
+  
+    nav ul li {
+      display: block;
+      margin-bottom: 1em 0;
+      line-height: 30px;
+      font-size: 2em;
+      padding: 1em;
+      transition: all .5s;
+      margin: 0;
+      position: relative;
     }
-    
+  
     nav ul li a {
-        font-size: 20px;
+      font-size: 20px;
     }
-    
+  
     li:hover {
-        background-color: rgb(194, 92, 55);
+      background-color: rgb(194, 92, 55);
     }
-    
+  
     .smartphoneLogin {
-        display: block;
-        font-size: 30px;
-        color: #000;
+      display: block;
+      font-size: 30px;
+      color: #000;
     }
-
+  
     .fa-sign-in-alt {
-        color: #000;
+      color: #000;
     }
-
-    /* interacao com clique - tornar funcional */
-    /* verificar se checkbox esta checked */
+  
     #check:checked ~ ul {
-        left: 0; /* para aparecer a partir da esquerda */
-        z-index: 10;
+      left: 0;
+      z-index: 10;
     }
-}
+  }
