@@ -154,7 +154,7 @@ Pedido:
  ##### Figura 9: imagem mostrando o menu de navbar colapsado em "menu sanduíche". Observe que o botão de login também foi contraído.
  ![Responsividade 3](images&diagrams/smartphone_view.jpg)
  
- ##### Figura 10: imagem mostrando agora mostrando o menu aberto.
+ ##### Figura 10: imagem mostrando agora o menu aberto.
  ![Responsividade 4](images&diagrams/toggle_menu_on.jpg)
  
 # 4. Plano de Teste
