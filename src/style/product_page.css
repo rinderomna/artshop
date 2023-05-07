@@ -118,8 +118,6 @@ label {
     grid-template-columns: 1fr;
 }
 
-/* botao de adicionar ao carrinho */
-
 /* secao com botoes de adicionar ao carrinho e num de itens */
 .numAndCartContainer{
     width: var(--card_width);
@@ -129,6 +127,7 @@ label {
     align-items: center;
 }
 
+/* botao de adicionar ao carrinho */
 #product_info #addToCart {
     height: 2.5em;
     width:100%;
@@ -145,7 +144,6 @@ label {
     
     position: relative;
     text-align: center;
-
 }
 
 /* botao de adicionar num de itens */
@@ -207,7 +205,7 @@ label {
 /* Responsividade */
 /* ----------------*/
 
-@media screen and (min-width: 300px) { /* mobile */
+@media screen and (min-width: 350px) { /* mobile */
     /* grid */
     .grid_container {
         grid-template-columns: repeat(1, 1fr);
@@ -224,6 +222,7 @@ label {
 
     #product_info #addToCart {
         margin-left: 1em;
+        margin-top: 1em;
     }
 
 }
