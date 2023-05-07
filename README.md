@@ -52,6 +52,8 @@ Seguem imagens de cada uma destas telas:
 ![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
  
 Os códigos destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. 
+ 
+* Ao revisar o trabalho do Milestone 1, o revisor poderá se deparar com links que se direcionam ainda a uma mesma página e com páginas ainda em desenvolvimento (como a de 'sobre mim'). Pretende-se desenvolvê-las até a próxima entrega (milestone 2), visto que não eram requeridas mais que três telas com HTML5 e CSS3 funcionais em um primeiro momento.
 
 ### 2.1.3. Diagrama de Navegação
 Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
@@ -133,11 +135,11 @@ Pedido:
 * Transportadora (ex: Correios, JadLog, etc.)
 * Código de Rastreio
 
-#3. Comentários sobre o código
+# 3. Comentários sobre o código
 * Um comentário sobre os mockups e o diagrama de navegação desenvolvidos é que eles servem como documentação do projeto e base para o desenvolvimento. Contudo, não esperamos que o desenvolvimento fique amarrado a eles. Logo, podemos, no decorrer do projeto, realizar dinamicamente alterações e complementos ao sistema.
 * Outro comentário sobre as telas do protótipo Marvel: fez-se o mockup de praticamente todas as telas do sistema e a representação de toda a lógica de navegação da aplicação. No entanto, omitiu-se, por exemplo, as telas referentes à seção de camisetas, pois acredita-se que as seções de prints e de adesivos já são representativas o suficiente para as telas com produtos filtrados por tipo. Ademais, o design mais específico foi trabalhado nas telas de protótipo das telas mais perto da homepage inicial. As telas mais distantes possuem um design mais abstrato, mas que não perde em representatividade da aplicação.
 * Para a primeira entrega, a fim de cumprir requisitos de acessibilidade, foram utilizadas tags HTML semânticas (main, header, nav, etc.), pois elas auxiliam mecanismos de busca e screen readers. Almejando boa usabilidade, procurou-se utilizar cores chamativas, letras grandes e um design mais limpo.
-* Preocupou-se com a responsividade das páginas. Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
+* Preocupou-se com a responsividade das páginas, em dispositivos e em navegadores diferentes (a saber: Edge, Firefox, Chrome). Seguem imagens que mostram a disposição de alguns componentes em diferentes telas:
 
  ##### Figura 7: primeira imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
  ![Responsividade 1](images&diagrams/responsividade1.jpg)
@@ -152,7 +154,7 @@ Pedido:
   
 # 5. Resultados dos Testes
 ## 5.1. Teste manual da navegação no protótipo Marvel
-Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigí-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
+Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigi-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
   
 # 6. Procedimentos para execução
 * Para clonar o repositório, utilize o comando:
@@ -168,7 +170,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
-* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: o menu responsivo. Ao reduzir o tamanho da tela, as opções de navbar colaçam para opções reduzidas de menu. Uma destas opções é um "menu sanduíche", que expande ao ser clicado para mostrar as opções de navbar em telas menores. O desafio consiste em fazer este menu ficar completamente funcional. Estamos trabalhando para isso.
+* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: a responsividade de alguns elementos da página web. Ao redimensionar o tamanho da tela, os cards do catálogo de produto não estão dispostos de forma tão satisfatória quanto gostaríamos (sua altura ainda está, de certa forma, imprevisível). O desafio consiste em fazer esse catálogo ficar mais agradável para a maioria dos dispositivos. Estamos trabalhando para isso.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
