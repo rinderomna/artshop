@@ -205,6 +205,21 @@ label {
 /* Responsividade */
 /* ----------------*/
 
+@media screen and (max-width: 349px) {
+    .numAndCartContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #numProducts {
+        flex-grow: 2;
+    }
+
+    #numProducts #btn_more {
+        margin-right: 0;
+    }
+}
+
 @media screen and (min-width: 350px) { /* mobile */
     /* grid */
     .grid_container {
@@ -218,13 +233,13 @@ label {
 
     .numAndCartContainer{
         grid-template-columns: auto auto auto;
+        justify-content: space-between;
     }
 
     #product_info #addToCart {
         margin-left: 1em;
         margin-top: 1em;
     }
-
 }
 
 @media screen and (min-width: 750px) { /* mobile */
