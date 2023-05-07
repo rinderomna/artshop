@@ -149,6 +149,14 @@ Pedido:
  ##### Figura 8: segunda imagem mostrando a disposição de alguns componentes da aplicação em diferentes telas.
  ![Responsividade 2](images&diagrams/responsividade2.jpg)
  
+* Outro ponto em que pensamos na responsividade do menu de navbar em telas menores. Neste caso, ele se contrai em um "menu sanduíche", o qual pode ser aberto e fechado. Seguem imagens do menu fechado e aberto:
+
+ ##### Figura 9: imagem mostrando o menu de navbar colapsado em "menu sanduíche". Observe que o botão de login também foi contraído.
+ ![Responsividade 3](images&diagrams/smartphone_view.jpg)
+ 
+ ##### Figura 10: imagem mostrando agora mostrando o menu aberto.
+ ![Responsividade 4](images&diagrams/toggle_menu_on.jpg)
+ 
 # 4. Plano de Teste
 ## 4.1. Plano de teste para o esquema de navegação
 * Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). <ins> Obs.: Lembre-se de que, na tela de login do protótipo, o botão 'Entrar' foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o login de um cliente. Clicando do lado direito do botão 'Entrar', você estará simulando o login de um administrador. </ins>
