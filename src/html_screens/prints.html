@@ -14,7 +14,7 @@
     <title>Prints - Jagua.jpg</title>
 
     <!-- Incluir css -->
-    <link rel="icon" type="image/x-icon" href="../visual_identity/icon/jaguatirica.png">
+    <link rel="icon" type="image/x-icon" href="../visual_identity/icon/icon_spark.ico">
     <link href="../style/default.css" rel="stylesheet">
     <link href="../style/highlight_banner.css" rel="stylesheet">
     <link href="../style/product_catalog.css" rel="stylesheet">
@@ -27,24 +27,33 @@
 
   <body>
     <header id="myHeader">
-      <div id="logoJagua">
-        <a href="../index.html"><img src="../visual_identity/logo/jagua_logo_gray.png" alt="Logo do site"></a>
-      </div>
-      <nav id="homeNavBar">
+      <nav>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="toggleResponsiveMenu">
+          <i class="fas fa-bars"></i>
+        </label>
+        <div id="logoJagua">
+          <a href="../index.html"><img src="../visual_identity/logo/jagua_logo_gray.png" alt="Logo do site"></a>
+        </div>
+
         <ul>
           <li><a href="../index.html" class="navLink">Home</a></li>
           <li><a href="aboutme.html" class="navLink">Sobre mim</a></li>
           <li><a href="stickers.html" class="navLink">Adesivos</a></li>
           <li><a href="prints.html" class="navLink">Prints</a></li>
           <li><a href="shirts.html" class="navLink">Camisetas</a></li>
-          <li><a href="javascript:void(0);" class="icon" onclick="toggleResponsiveMenu()"><i class="fa fa-bars"></i></a></li>
-          <li><a href="login.html" class="icon"><i class="fas fa-sign-in-alt"></i></a></li>
+
+          <!-- Destaque no evento de passar do mouse com JS -->
           <div id="highlightNavBar"></div>
         </ul>
+
+        <a id="loginButton" href="login.html">Entrar</a>
+        <div class="smartphoneLogin">
+          <a href="login.html"><i class="fas fa-sign-in-alt"></i></a>
+        </div>
+        
       </nav>
-      <div id="loginButton">
-        <a href="login.html"><button>Entrar</button></a>
-      </div>
     </header>
     
     <section id="newProductsHighlight"><!-- Banner de novidades -->
@@ -159,6 +168,5 @@
     
     <!-- Animacoes da barra de navegacao -->
     <script src="../js/navbar_selection_animation.js" type="text/javascript" defer></script>
-    <script src="../js/responsive_navbar.js" type="text/javascript" defer></script>
   </body>
 </html>
