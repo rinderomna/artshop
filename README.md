@@ -52,6 +52,8 @@ Seguem imagens de cada uma destas telas:
 ![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
  
 Os códigos destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. 
+ 
+* Ao revisar o trabalho do Milestone 1, o revisor poderá se deparar com links que se direcionam ainda a uma mesma página e com páginas ainda em desenvolvimento (como a de 'sobre mim'). Pretende-se desenvolvê-las até a próxima entrega (milestone 2), visto que não eram requeridas mais que três telas com HTML5 e CSS3 funcionais em um primeiro momento.
 
 ### 2.1.3. Diagrama de Navegação
 Para auxílio da compreensão da proposta de navegação na aplicação, foi desenhado um [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf).
@@ -168,7 +170,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
-* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: o menu responsivo. Ao reduzir o tamanho da tela, as opções de navbar colaçam para opções reduzidas de menu. Uma destas opções é um "menu sanduíche", que expande ao ser clicado para mostrar as opções de navbar em telas menores. O desafio consiste em fazer este menu ficar completamente funcional. Estamos trabalhando para isso.
+* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: a responsividade de alguns elementos da página web. Ao redimensionar o tamanho da tela, os cards do catálogo de produto não estão dispostos de forma tão satisfatória quanto gostaríamos (sua altura ainda está, de certa forma, imprevisível). O desafio consiste em fazer esse catálogo ficar mais agradável para a maioria dos dispositivos. Estamos trabalhando para isso.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
