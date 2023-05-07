@@ -178,7 +178,8 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
-* Estamos buscando corrigir alguns pequenos detalhes de resposividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes.
+* Estamos buscando corrigir alguns pequenos detalhes de responsividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes que podem ter passado despercebidos, principalmente para dispositivos de tamanhos unusuais (i.e. telas muito pequenas...).
   
 # 8. Comentários Adicionais
-* Decidimos retirar os footers das telas em código, pois achamos desnecessário. No entanto, o footer ainda está presente no protótipo. Simplesmente desconsiderar.
+* Decidimos retirar os footers das telas em código, pois, durante o desenvolvimento, as consideramos desnecessárias. No entanto, o footer ainda está presente no protótipo. Simplesmente desconsiderar.
+* Alguns códigos foram feitos em JS para modelar alguns estilos CSS em relação a determinados eventos de usuário, principalmente no que diz respeito ao menu de navegação e na seleção de quantidade de produtos para compra. Para esta primeira entrega, no entanto, não foi feita a lógica de selecionar tamanho de produto (na página detalhada de produto) ao clique do usuário, pois faltou tempo para isso e não compromete o escopo da entrega.
