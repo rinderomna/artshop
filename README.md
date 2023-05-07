@@ -159,8 +159,14 @@ Pedido:
 Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigi-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
   
 # 6. Procedimentos para execução
-* Para clonar o repositório, utilize o comando:
+* Para clonar o repositório, se estiver usando git, utilize o comando:
 ```git clone https://github.com/rinderomna/artshop.git```
+
+* Caso queira baixar os arquivos do repositório direto da página do Github, baixe o '.zip' a partir do botão 'code', na parte superior da página. Segue imagem ilustrativa deste procedimento:
+
+##### Figura 9: clique em 'Download ZIP' para baixar a pasta compactada com todos os arquivos do projeto.
+ ![Baixar ZIP](images&diagrams/baixar_zip.jpg)
+
 * Dentro da pasta 'artshop' do projeto (a qual será considerada a raiz '/' em todo o documento), encontra-se a seguinte estrutura:
  * Pasta 'src': aqui se encontra todo o código desenvolvido, incluindo o arquivo 'index.html', que é a homepage da aplicação. Dentro da pasta 'src' há outros 4 diretórios importantes:
   * 'html_screens': aqui você pode acessar o código HTML das outras telas do sistema;
@@ -172,7 +178,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
   
 # 7. Problemas
-* Propusemos-nos a desenvolver uma aplicação responsiva. Muito foi feito para que na primeira entrega cumprissemos este requisito não-funcional. Há, porém, um ponto em que estamos enfrentando um desafio inicial para alcançar um maior nível maior de aperfeiçoamento: a responsividade de alguns elementos da página web. Ao redimensionar o tamanho da tela, os cards do catálogo de produto não estão dispostos de forma tão satisfatória quanto gostaríamos (sua altura ainda está, de certa forma, imprevisível). O desafio consiste em fazer esse catálogo ficar mais agradável para a maioria dos dispositivos. Estamos trabalhando para isso.
+* Estamos buscando corrigir alguns pequenos detalhes de resposividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
