@@ -1,4 +1,5 @@
 import React from "react";
+import './Navbar.scss';
 
 const Navbar: React.FC = () => {
   return (
@@ -10,33 +11,33 @@ const Navbar: React.FC = () => {
 
     <div id="logoJagua">
         <a href="index.html">
-        <img src="visual_identity/logo/jagua_logo_gray.png" alt="Logo do site" />
+        <img src="../../assets/visual_identity/logo/jagua_logo_gray.png" alt="Logo do site" />
         </a>
     </div>
 
     <ul>
         <li>
-        <a href="index.html" className="navLink">
+        <a href="#" className="navLink">
             Home
         </a>
         </li>
         <li>
-        <a href="html_screens/aboutme.html" className="navLink">
+        <a href="#" className="navLink">
             Sobre mim
         </a>
         </li>
         <li>
-        <a href="html_screens/stickers.html" className="navLink">
+        <a href="#" className="navLink">
             Adesivos
         </a>
         </li>
         <li>
-        <a href="html_screens/prints.html" className="navLink">
+        <a href="#" className="navLink">
             Prints
         </a>
         </li>
         <li>
-        <a href="html_screens/shirts.html" className="navLink">
+        <a href="#" className="navLink">
             Camisetas
         </a>
         </li>
@@ -44,11 +45,11 @@ const Navbar: React.FC = () => {
         <div id="highlightNavBar"></div>
     </ul>
 
-    <a id="loginButton" href="html_screens/login.html">
+    <a id="loginButton" href="#">
         Entrar
     </a>
     <div className="smartphoneLogin">
-        <a href="html_screens/login.html">
+        <a href="#">
         <i className="fas fa-sign-in-alt"></i>
         </a>
     </div>
