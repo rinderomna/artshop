@@ -1,0 +1,12 @@
+.logo {
+    color: #fff;
+    display: inline;
+    margin-left: 4%; 
+    margin-top: -.5em;
+}
+
+/* acertando imagem na navbar */
+.logo img {
+    height: 130px;
+    z-index: 0;
+}
