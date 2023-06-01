@@ -4,7 +4,7 @@ import logo from '../../assets/visual_identity/logo/jagua_logo.png';
 function LogoLink() {
   return (
     <div className="logo">
-      <a href="#">
+      <a href="#home">
         <img
           src={logo}
           alt="Logo do site"
