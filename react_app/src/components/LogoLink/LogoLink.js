@@ -1,5 +1,5 @@
 import './LogoLink.css'
-import logo from '../../assets/visual_identity/logo/jagua_logo.png';
+import logo from '../../assets/visual_identity/logo/jagua_logo_gray.png';
 
 function LogoLink() {
   return (
