@@ -1,11 +1,12 @@
 import './LogoLink.css'
+import logo from '../../assets/visual_identity/logo/jagua_logo.png';
 
 function LogoLink() {
   return (
     <div  className="logo">
       <a href="#">
         <img
-          src="../../assets/visual_identity/logo/jagua_logo.png"
+          src={logo}
           alt="Logo do site"
         />
       </a>
