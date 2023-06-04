@@ -1,14 +1,13 @@
+import React, { useState, useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 import jaguaLogoGray from '../../assets/visual_identity/logo/jagua_logo_gray.png';
 
 import "./Navbar.css";
 
 const Navbar = () => {
-  const location = useLocation(); // Obtenha a localização atual usando o hook useLocation do React Router
+  const location = useLocation();
   const [highlightStyle, setHighlightStyle] = useState({
-    // Estado para armazenar o estilo do destaque
     left: 0,
     width: 0,
     opacity: 0,
@@ -26,7 +25,7 @@ const Navbar = () => {
         link.classList.remove("active");
       }
     });
-  }, [location]);
+  }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateHighlight = (link, fastTransition) => {
     const { offsetLeft, offsetWidth } = link;
@@ -73,12 +72,12 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <header className="myHeader">
       <nav>
-        <input type="checkbox" className="check" />
+        <input type="checkbox" id="check" className="check" />
         <label htmlFor="check" className="toggleResponsiveMenu">
           <i className="fas fa-bars"></i>
         </label>
@@ -143,7 +142,6 @@ const Navbar = () => {
               Camisetas
             </Link>
           </li>
-
           <div id="highlightNavBar" style={highlightStyle}></div>
         </ul>
 
