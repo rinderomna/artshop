@@ -1,7 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import LogoLink from "./LogoLink.js";
+import jaguaLogoGray from '../../assets/visual_identity/logo/jagua_logo_gray.png';
 
 import "./Navbar.css";
 
@@ -21,17 +21,18 @@ const Navbar = () => {
     navLinks.forEach((link) => {
       if (link.pathname === location.pathname) {
         link.classList.add("active");
-        updateHighlight(link); // Atualize o destaque quando a localização muda
+        updateHighlight(link, true); // Atualize o destaque quando a localização muda
       } else {
         link.classList.remove("active");
       }
     });
   }, [location]);
 
-  const updateHighlight = (link) => {
+  const updateHighlight = (link, fastTransition) => {
     const { offsetLeft, offsetWidth } = link;
     const newHighlightStyle = {
       ...highlightStyle,
+      transition: fastTransition ? "0.3s" : "1.2s",
       left: offsetLeft + "px",
       width: offsetWidth + "px",
       opacity: 0.7,
@@ -40,13 +41,13 @@ const Navbar = () => {
   };
 
   const handleMouseOver = (e) => {
-    updateHighlight(e.target);
+    updateHighlight(e.target, true);
   };
 
   const handleMouseOut = () => {
     const activeLink = document.querySelector(".navLink.active");
     if (activeLink) {
-      updateHighlight(activeLink);
+      updateHighlight(activeLink, false);
     } else {
       setHighlightStyle((prevStyle) => ({
         ...prevStyle,
@@ -58,7 +59,7 @@ const Navbar = () => {
   const handleResize = () => {
     const activeLink = document.querySelector(".navLink.active");
     if (activeLink) {
-      updateHighlight(activeLink);
+      updateHighlight(activeLink, true);
     } else {
       setHighlightStyle((prevStyle) => ({
         ...prevStyle,
@@ -82,7 +83,14 @@ const Navbar = () => {
           <i className="fas fa-bars"></i>
         </label>
 
-        <LogoLink />
+        <div className="logoJagua">
+          <Link to="/">
+            <img
+              src={jaguaLogoGray}
+              alt="Logo do site"
+            />
+          </Link>
+        </div>
 
         <ul>
           <li>
