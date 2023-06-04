@@ -1,37 +1,38 @@
-/* --- Barra de navegacao do site --- */
+/* 
+ * ------------------------------------------------
+ * CSS DA BARRA DE NAVEGACAO                      ||
+ * ------------------------------------------------
+*/
 
 /* Para menu responsivo */
-.toggleResponsiveMenu {
+.toggleResponsiveMenu { 
     font-size: 30px;
     color: #000;
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
 
-    display: none;
-    /* nos desktops e tablets, nao aparece */
+    display: none; /* nos desktops e tablets, nao aparece */
 }
 
 
 /* Caixinha do checkbox que ativa ou desativa o menu sanduiche */
-#check {
-    display: none;
-    /* nos desktops e tablets, nao aparece */
+.check { 
+    display: none; /* nos desktops e tablets, nao aparece */
     float: right;
 }
 
 /* Para menu responsivo */
-.smartphoneLogin {
+.smartphoneLogin { 
     color: #000;
     line-height: 80px;
     margin-right: 40px;
 
-    display: none;
-    /* nos desktops e tablets, nao aparece */
+    display: none; /* nos desktops e tablets, nao aparece */
 }
 
 /* Flex container das divs (1: com a logo e o menu; 2: do botao de entrar) */
-nav {
+nav { 
     background-color: #fff;
     height: 100px;
     width: 100%;
@@ -39,26 +40,24 @@ nav {
     justify-content: space-between;
 }
 
-#logoJagua {
+.logoJagua {
     color: #fff;
     display: inline;
-    margin-left: 4%;
+    margin-left: 4%; 
     margin-top: -.5em;
 }
 
 /* acertando imagem na navbar */
-#logoJagua img {
+.logoJagua img {
     height: 130px;
     z-index: 0;
 }
 
 nav ul {
     margin-left: 1em;
-    flex-grow: 2;
-    /* Evitar sobreposicao na logo, mas manter distancia */
+    flex-grow: 2; /* Evitar sobreposicao na logo, mas manter distancia */
     position: relative;
-    top: 25px;
-    /* Aumente para descer a altura dos links da barra de navegacao */
+    top: 25px; /* Aumente para descer a altura dos links da barra de navegacao */
 }
 
 nav ul li {
@@ -73,12 +72,11 @@ a.navLink {
     font-weight: 550;
     font-size: 1.6vw;
     font-family: 'Lato', sans-serif;
-    position: relative;
-    /* Para aplicar z-index */
+    position: relative; /* Para aplicar z-index */
     z-index: 1;
 }
 
-#loginButton {
+.loginButton {
     padding: 0 50px;
     background-color: rgba(44, 44, 44, 1);
     stroke-width: 1px;
@@ -90,15 +88,14 @@ a.navLink {
     margin-top: 1%;
     margin-bottom: 1%;
     color: #fff;
-    line-height: 60px;
-    /* Posicionar texto verticalmente */
+    line-height: 60px; /* Posicionar texto verticalmente */
 }
 
-#loginButton:hover {
+.loginButton:hover {
     background-color: rgba(44, 44, 44, 0.5);
 }
 
-nav #highlightNavBar {
+nav .highlightNavBar {
     background-color: #ff9052;
     position: absolute;
     height: 4em;
@@ -118,17 +115,17 @@ nav #highlightNavBar {
         top: 40px;
     }
 
-    nav #highlightNavBar {
+    nav .highlightNavBar {
         height: 2.5em;
     }
 
-    #loginButton {
+    .loginButton {
         line-height: 75px;
     }
 }
 
 @media screen and (max-width: 1150px) {
-    #loginButton {
+    .loginButton {
         padding: 0 20px;
         line-height: 50px;
         margin-top: 3%;
@@ -137,7 +134,7 @@ nav #highlightNavBar {
 }
 
 @media screen and (max-width: 1000px) {
-    #loginButton {
+    .loginButton {
         padding: 0 10px;
         margin-bottom: 3%;
         margin-top: 3%;
@@ -147,7 +144,7 @@ nav #highlightNavBar {
 }
 
 /* Resolucao para tablet */
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 952px) {    
     a.navLink {
         font-size: 1em;
     }
@@ -156,67 +153,67 @@ nav #highlightNavBar {
 /* Resolucao para smartphone */
 @media (max-width: 858px) {
     nav ul {
-        top: 100px;
-        margin-left: 0;
-        position: absolute;
+      top: 100px;
+      margin-left: 0;
+      position: absolute;
     }
-
-    nav #highlightNavBar {
-        display: none;
+  
+    nav .highlightNavBar {
+      display: none;
     }
-
+  
     .toggleResponsiveMenu {
-        display: block;
-        margin-left: 1em;
+      display: block;
+      margin-left: 1em;
     }
-
-    #loginButton {
-        display: none;
+  
+    .loginButton {
+      display: none;
     }
-
+  
     ul {
-        width: 100%;
-        height: auto;
-        background: var(--coral);
-        top: 0;
-        left: -110%;
-        text-align: center;
-        transition: all .5s;
-        z-index: 5;
-        border-radius: 1%;
+      width: 100%;
+      height: auto;
+      background: var(--coral);
+      top: 0;
+      left: -110%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 5;
+      border-radius: 1%;
     }
-
+  
     nav ul li {
-        display: block;
-        margin-bottom: 1em 0;
-        line-height: 30px;
-        font-size: 2em;
-        padding: 1em;
-        transition: all .5s;
-        margin: 0;
-        position: relative;
+      display: block;
+      margin-bottom: 1em 0;
+      line-height: 30px;
+      font-size: 2em;
+      padding: 1em;
+      transition: all .5s;
+      margin: 0;
+      position: relative;
     }
-
+  
     nav ul li a {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     li:hover {
-        background-color: rgb(194, 92, 55);
+      background-color: rgb(194, 92, 55);
     }
-
+  
     .smartphoneLogin {
-        display: block;
-        font-size: 30px;
-        color: #000;
+      display: block;
+      font-size: 30px;
+      color: #000;
     }
-
+  
     .fa-sign-in-alt {
-        color: #000;
+      color: #000;
     }
-
-    #check:checked~ul {
-        left: 0;
-        z-index: 10;
+  
+    .check:checked ~ ul {
+      left: 0;
+      z-index: 10;
     }
-}
+  }

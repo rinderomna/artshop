@@ -1,0 +1,12 @@
+/* 
+ * ---------------------------
+ * CATALOGO/GRID DE PRODUTOS ||
+ * ---------------------------
+ */
+
+ /* Catalogo incluindo as categorias dos itens ('corpo' da pagina) */
+.bodyWrapper {
+    display: block;
+    padding-top: 50px;
+    font-size: 16px;
+}

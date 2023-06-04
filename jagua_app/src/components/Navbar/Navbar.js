@@ -1,55 +1,50 @@
+import { Outlet, Link } from "react-router-dom";
+
+import LogoLink from "./LogoLink.js";
+
 import "./Navbar.css";
-import LogoLink from "../LogoLink/LogoLink";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav>
-      <input type="checkbox" id="check" />
-      <label htmlFor="check" className="toggleResponsiveMenu">
-        <i className="fas fa-bars"></i>
-      </label>
+    <header className="myHeader">
+      <nav>
+        <input type="checkbox" className="check" />
+        <label htmlFor="check" className="toggleResponsiveMenu">
+          <i className="fas fa-bars"></i>
+        </label>
 
-      <LogoLink />
+        <LogoLink />
 
-      <ul>
-        <li>
-          <a href="#" className="navLink">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" className="navLink">
-            Sobre mim
-          </a>
-        </li>
-        <li>
-          <a href="#" className="navLink">
-            Adesivos
-          </a>
-        </li>
-        <li>
-          <a href="#" className="navLink">
-            Prints
-          </a>
-        </li>
-        <li>
-          <a href="#" className="navLink">
-            Camisetas
-          </a>
-        </li>
+        <ul>
+          <li>
+            <Link to="/" className="navLink">Home</Link>
+          </li>
+          <li>
+            <Link to="/aboutMe" className="navLink">Sobre mim</Link>
+          </li>
+          <li>
+            <Link to="/stickers" className="navLink">Adesivos</Link>
+          </li>
+          <li>
+            <Link to="/prints" className="navLink">Prints</Link>
+          </li>
+          <li>
+            <Link to="/shirts" className="navLink">Camisetas</Link>
+          </li>
 
-        <div id="highlightNavBar"></div>
-      </ul>
+          <div className="highlightNavBar"></div>
+        </ul>
 
-      <a id="loginButton" href="#">
-        Entrar
-      </a>
-      <div className="smartphoneLogin">
-        <a href="#">
-          <i className="fas fa-sign-in-alt"></i>
-        </a>
-      </div>
-    </nav>
+        <Link to="/login" className="loginButton">Entrar</Link>
+        <div className="smartphoneLogin">
+          <Link to="/login">
+            <i className="fas fa-sign-in-alt"></i>
+          </Link>
+        </div>
+      </nav>
+
+      <Outlet />
+    </header>
   );
 }
 
