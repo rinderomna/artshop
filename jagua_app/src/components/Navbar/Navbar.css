@@ -95,7 +95,7 @@ a.navLink {
     background-color: rgba(44, 44, 44, 0.5);
 }
 
-nav .highlightNavBar {
+nav #highlightNavBar {
     background-color: #ff9052;
     position: absolute;
     height: 4em;
@@ -115,7 +115,7 @@ nav .highlightNavBar {
         top: 40px;
     }
 
-    nav .highlightNavBar {
+    nav #highlightNavBar {
         height: 2.5em;
     }
 
@@ -158,7 +158,7 @@ nav .highlightNavBar {
       position: absolute;
     }
   
-    nav .highlightNavBar {
+    nav #highlightNavBar {
       display: none;
     }
   

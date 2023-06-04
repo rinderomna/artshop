@@ -32,7 +32,7 @@ const Navbar = () => {
             <Link to="/shirts" className="navLink">Camisetas</Link>
           </li>
 
-          <div className="highlightNavBar"></div>
+          <div id="highlightNavBar"></div>
         </ul>
 
         <Link to="/login" className="loginButton">Entrar</Link>
