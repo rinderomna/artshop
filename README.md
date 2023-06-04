@@ -1,6 +1,6 @@
 # Jagua.jpg - Projeto de Loja *Online* para Web
 <p align="center">
-  <img width="460" height="300" src="src/visual_identity/logo/jagua_logo.png">
+  <img width="460" height="300" src="mockups/visual_identity/logo/jagua_logo.png">
 </p>
 
 # 0. Informações Gerais
@@ -39,9 +39,9 @@ Para descrever a implementação das funcionalidades listadas nos requisitos do 
 
 ### 2.1.2. Mockup de 3 telas em HTML e CSS
 Adicionalmente, 3 telas foram desenvolvidas em HTML5 + CSS3:
-  * A tela principal ([src/index.html](src/index.html)); 
-  * A tela de login ([src/html_screens/login.html](src/html_screens/login.html)) e;
-  * A tela de produto ([src/html_screens/sheep_print_info.html](src/html_screens/sheep_print_info.html)).
+  * A tela principal ([mockups/index.html](mockups/index.html)); 
+  * A tela de login ([mockups/html_screens/login.html](mockups/html_screens/login.html)) e;
+  * A tela de produto ([mockups/html_screens/sheep_print_info.html](mockups/html_screens/sheep_print_info.html)).
  
 Seguem imagens de cada uma destas telas:
  
@@ -54,7 +54,7 @@ Seguem imagens de cada uma destas telas:
 ##### Figura 3: Print da Tela de Produto (Mockup inicial).
 ![Print da Tela de Produto](images&diagrams/print_da_tela_de_produto.jpg)
  
-Os códigos destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/src'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/src'. 
+Os códigos destas telas estão disponíveis no repositório do projeto sob os caminhos listados acima. Todo o código desenvolvido está dentro da pasta '/mockups'. Outras telas também foram desenvolvidas em código, mas apenas as 3 listadas acima foram escolhidas para representar as telas para a entrega do Milestone 1. Importante observar que as telas foram desenvolvidas em integração com outros arquivos CSS e JS. Portanto, elas devem ser executadas dentro da estrutura de arquivos da pasta '/mockups'. 
  
 * Ao revisar o trabalho do Milestone 1, o revisor poderá se deparar com links que se direcionam ainda a uma mesma página e com páginas ainda em desenvolvimento (como a de 'sobre mim'). Pretende-se desenvolvê-las até a próxima entrega (milestone 2), visto que não eram requeridas mais que três telas com HTML5 e CSS3 funcionais em um primeiro momento.
 
@@ -178,7 +178,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
  ![Baixar ZIP](images&diagrams/baixar_zip.jpg)
 
 * Dentro da pasta 'artshop' do projeto (a qual será considerada a raiz '/' em todo o documento), encontra-se a seguinte estrutura:
- * Pasta 'src': aqui se encontra todo o código desenvolvido, incluindo o arquivo 'index.html', que é a homepage da aplicação. Dentro da pasta 'src' há outros 4 diretórios importantes:
+ * Pasta 'mockups': aqui se encontra todo o código desenvolvido, incluindo o arquivo 'index.html', que é a homepage da aplicação. Dentro da pasta 'mockups' há outros 4 diretórios importantes:
   * 'html_screens': aqui você pode acessar o código HTML das outras telas do sistema;
   * 'js': arquivos de script JavaScript;
   * 'style': folhas de estilo CSS;
