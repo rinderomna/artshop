@@ -1,7 +1,9 @@
 import HighlightBanner from "../components/HighlightBanner/HighlightBanner";
 import bannerNovidades from "../assets/visual_identity/banners/banner_novidades.png";
 import BodyWrapper from "../components/BodyWrapper/BodyWrapper";
+import ProductCard from "../components/ProductCard/ProductCard";
 
+import print from "../assets/visual_identity/prints/print_ovelha.png";
 
 const Home = () => {
     return (
@@ -9,6 +11,12 @@ const Home = () => {
             <HighlightBanner imageSrc={bannerNovidades} altText="novidades" />
             <BodyWrapper />
             <h1>Home</h1>;
+            <ProductCard 
+                image={print}
+                name="Print Ovelha"
+                price="8,50"
+                sizes={['A5', 'A4', 'A3']}
+            />
         </>
     );
 };
