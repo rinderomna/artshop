@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './LoginBox.css';
 
 import loginIcon from '../../assets/visual_identity/icon/login_user_icon.png';
@@ -12,7 +14,7 @@ function LoginBox(props) {
             <form action="" method="POST">
                 <input type="text" id="username" name="username" placeholder="Nome de usuário" />
                 <input type="password" id="password" name="password" placeholder="Senha" />
-                <a href="#Cadastro" className="spaced-text">Não possuo conta, preciso me cadastrar</a>
+                <Link to="/signUp" className="spaced-text">Não possuo conta, preciso me cadastrar</Link>
                 <button type="submit">Entrar</button>
             </form>
         </div>

@@ -5,6 +5,8 @@ import jaguaLogoGray from '../../assets/visual_identity/logo/jagua_logo_gray.png
 
 import "./Navbar.css";
 
+import RightNavWrapper from "../RightNavWrapper/RightNavWrapper.js";
+
 const Navbar = () => {
   const location = useLocation();
   const [highlightStyle, setHighlightStyle] = useState({
@@ -68,11 +70,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    handleMouseOut();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <header className="myHeader">
@@ -145,14 +148,8 @@ const Navbar = () => {
           <div id="highlightNavBar" style={highlightStyle}></div>
         </ul>
 
-        <Link to="/login" className="loginButton">
-          Entrar
-        </Link>
-        <div className="smartphoneLogin">
-          <Link to="/login">
-            <i className="fas fa-sign-in-alt"></i>
-          </Link>
-        </div>
+      <RightNavWrapper />
+
       </nav>
 
       <Outlet />

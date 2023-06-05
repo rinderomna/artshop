@@ -1,9 +1,12 @@
-import { buildTimeValue } from '@testing-library/user-event/dist/utils';
+import { Link } from 'react-router-dom';
+
 import './BuyButton.css';
 
 function BuyButton(props) {
     return (
-        <a href="#" className="buyProductButton">Comprar</a>
+        <Link to="/productDetails" className="buyProductButton">
+        Comprar
+        </Link>
     );
 }
 

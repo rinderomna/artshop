@@ -7,6 +7,9 @@ import Prints from "./pages/Prints.js";
 import Stickers from "./pages/Stickers.js";
 import Shirts from "./pages/Shirts.js";
 import Login from "./pages/Login.js";
+import SignUp from "./pages/SignUp.js";
+import ProductDetails from "./pages/ProductDetails.js";
+
 import NoPage from "./pages/NoPage.js";
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Route path="stickers" element={<Stickers />} />
           <Route path="shirts" element={<Shirts />} />
           <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp />} />
+          <Route path="productDetails" element={<ProductDetails />} />
+
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
