@@ -12,35 +12,35 @@ import printAbducao from "../assets/visual_identity/prints/print_irmas.png";
 const Prints = () => {
     const products = [
         {
-            id: 1,
+            id: 7,
             image: printOvelhaNegra,
             name: "Print Ovelha Negra",
             price: "8,50",
             sizes: ["A5", "A4", "A3"]
         },
         {
-            id: 2,
+            id: 8,
             image: printBesouro,
             name: "Print Besouro",
             price: "8,50",
             sizes: ["A5", "A4", "A3"]
         },
         {
-            id: 3,
+            id: 9,
             image: printFundoDoMar,
             name: "Print Fundo do Mar",
             price: "8,50",
             sizes: ["A5", "A4", "A3"]
         },
         {
-            id: 4,
+            id: 10,
             image: printEspelho,
             name: "Print Espelho",
             price: "8,50",
             sizes: ["A5", "A4", "A3"]
         },
         {
-            id: 5,
+            id: 11,
             image: printAbducao,
             name: "Print Abdução",
             price: "8,50",
