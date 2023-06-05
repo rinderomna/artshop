@@ -1,5 +1,9 @@
+import LoginBox from "../components/LoginBox/LoginBox";
+
 const Login = () => {
-    return <h1>Tela de Login</h1>;
+    return (
+        <LoginBox />
+    );
 };
 
 export default Login;

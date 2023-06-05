@@ -1,0 +1,93 @@
+/* 
+ * ----------------------
+ * TELA DE LOGIN       ||
+ * ----------------------
+*/
+
+.login-box {
+    position: relative;
+    width: 37.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    padding: 3.125em;
+    border-radius: 1.25em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 2em;
+}
+
+.user-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.25em;
+}
+
+.user-icon h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.purple-text {
+    color: #6C63FF;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+.spaced-text {
+    margin-top: 1.875em;
+    margin-bottom: 1.875em;
+    font-family: 'Lato', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3125em;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.625em;
+    border: 0.0625em solid #D3D3D3;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+button[type="submit"] {
+    background-color: #6C63FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1.25em;
+    padding: 0.625em 1.25em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #4E47D2;
+}
+
+/* 
+ * A opcao de login nao deve aparecer, pois ja eh esta pagina. Mas os itens devem ocupar o espaco por causa
+ * do comportamento do flexbox 
+*/
+.hideItems {
+    visibility: hidden;
+}
