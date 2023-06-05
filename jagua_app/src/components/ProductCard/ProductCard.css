@@ -1,0 +1,137 @@
+/* Produto individual */
+.productCard { /* Elemento pai dos elementos do card */
+    position: relative;
+    max-height: 47em;
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+} 
+
+/* Elementos internos ao produto */
+.productCard img {
+    width: 80%;
+    height: 55%;
+    border-radius: 30px 30px 0 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.productCard .productNameOnGrid {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 100;
+    color:var(--dark_gray_font);
+    top: 20px;
+    display: block;
+    font-family: 'Bree Serif', serif;
+}
+
+.productRuler {
+    background-color: purple;
+    position: relative;
+    height: 2px;
+    width: 250px;
+    margin: auto;
+    top: 30px;
+}
+
+
+.productCard .productPrice {
+    color: var(--dark_gray_font);
+    font-size: 1.6em;
+    font-weight: 600;
+    position: relative;
+    top: 40px;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+}
+
+.productCard .productSize {
+    position: relative;
+    top: 3.3em;
+}
+
+.productCard .productSize p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: var(--dark_gray_font);
+}
+
+.productCard .productSize span {
+    width: 2em;
+    height: 2em;
+    margin: 0.35em;
+    padding: 0.2em;
+    background-color: #fff;
+    color: var(--dark_gray_font);
+    border: 0.13em solid var(--dark_gray_font);
+    border-radius: 100%;
+    position: relative;
+    display: inline-block;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2em;
+}
+
+.productCard .buyProductButton {
+    border: 0.13em solid #185424;
+    color: #185424;
+    border-radius: 50px;
+    padding: 0.4em 2em;
+    position: relative;
+    top: 80px;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+}
+
+.productCard .buyProductButton:hover {
+    background-color: rgba(24, 84, 36, 0.3);
+}
+
+/* ---------------*/
+/* Responsividade */
+/* ---------------*/
+
+@media screen and (max-width: 1500px) {
+    .productRuler {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 200px) { /* mobile */
+    .productCard {
+        min-height: 35em;
+    }
+}
+
+/* Aplicar essas propriedades se a tela tiver pelo menos 300px de largura */
+@media screen and (min-width: 300px) { /* mobile */
+    .productCard {
+        min-height: 44.5em;
+    }
+}
+
+@media screen and (min-width: 450px) { /* tablet */
+    .productCard {
+        min-height: 35em;
+    }
+}
+
+@media screen and (min-width: 600px) { /* tablet */
+    .productCard {
+        min-height: 44.5em;
+    }
+}
+
+@media screen and (min-width: 850px) { /* desktops */
+    .productCard {
+        min-height: 44.5em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .productCard {
+        min-height: 45em;
+    }
+}

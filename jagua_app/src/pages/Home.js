@@ -1,6 +1,5 @@
 import HighlightBanner from "../components/HighlightBanner/HighlightBanner";
 import bannerNovidades from "../assets/visual_identity/banners/banner_novidades.png";
-import BodyWrapper from "../components/BodyWrapper/BodyWrapper";
 import ProductCard from "../components/ProductCard/ProductCard";
 
 import print from "../assets/visual_identity/prints/print_ovelha.png";
@@ -9,7 +8,6 @@ const Home = () => {
     return (
         <>
             <HighlightBanner imageSrc={bannerNovidades} altText="novidades" />
-            <BodyWrapper />
             <h1>Home</h1>;
             <ProductCard 
                 image={print}
