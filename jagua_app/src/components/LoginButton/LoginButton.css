@@ -1,0 +1,80 @@
+/* Para menu responsivo */
+.smartphoneLogin { 
+    color: #000;
+    line-height: 80px;
+    margin-right: 40px;
+  
+    display: none; /* nos desktops e tablets, nao aparece */
+  }
+
+.loginButton {
+    padding: 0 50px;
+    background-color: rgba(44, 44, 44, 1);
+    stroke-width: 1px;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    font-family: 'Arvo', serif;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #fff;
+    line-height: 60px; /* Posicionar texto verticalmente */
+}
+  
+.loginButton:hover {
+    background-color: rgba(44, 44, 44, 0.5);
+}
+  
+/* 
+ * A opcao de login nao deve aparecer em certas paginas (como a de login). Mas os itens devem ocupar o espaco por causa
+ * do comportamento do flexbox 
+ */
+.hideItems {
+    visibility: hidden;
+}
+
+/* --------------------------------------*/
+/* Layout responsivo para telas menores */
+/* --------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .loginButton {
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .loginButton {
+        padding: 0 20px;
+        line-height: 50px;
+        margin-top: 3%;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .loginButton {
+        padding: 0 10px;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        line-height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Resolucao para smartphone */
+@media (max-width: 858px) {
+    .loginButton {
+        display: none;
+    }
+
+    .smartphoneLogin {
+        display: block;
+        font-size: 30px;
+        color: #000;
+    }
+    
+    .fa-sign-in-alt {
+        color: #000;
+    }
+}

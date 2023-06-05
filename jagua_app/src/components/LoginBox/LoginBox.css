@@ -83,11 +83,3 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #4E47D2;
 }
-
-/* 
- * A opcao de login nao deve aparecer, pois ja eh esta pagina. Mas os itens devem ocupar o espaco por causa
- * do comportamento do flexbox 
-*/
-.hideItems {
-    visibility: hidden;
-}
