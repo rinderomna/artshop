@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import { StatusContext } from "../../App.js";
 
 import jaguaLogoGray from '../../assets/visual_identity/logo/jagua_logo_gray.png';
 
@@ -77,6 +78,20 @@ const Navbar = () => {
     };
   }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const {
+    status,
+    setStatus
+  } = useContext(StatusContext);
+
+  const handleStatus = () => {
+    if (status.user === null) {
+      setStatus({
+        ...status,
+        type: "loggedOut"
+      });
+    }
+  };
+
   return (
     <header className="myHeader">
       <nav>
@@ -86,7 +101,7 @@ const Navbar = () => {
         </label>
 
         <div className="logoJagua">
-          <Link to="/">
+          <Link to="/" onClick={handleStatus}>
             <img
               src={jaguaLogoGray}
               alt="Logo do site"
@@ -101,6 +116,7 @@ const Navbar = () => {
               className="navLink"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleStatus}
             >
               Home
             </Link>
@@ -111,6 +127,7 @@ const Navbar = () => {
               className="navLink"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleStatus}
             >
               Sobre mim
             </Link>
@@ -121,6 +138,7 @@ const Navbar = () => {
               className="navLink"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleStatus}
             >
               Adesivos
             </Link>
@@ -131,6 +149,7 @@ const Navbar = () => {
               className="navLink"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleStatus}
             >
               Prints
             </Link>
@@ -141,6 +160,7 @@ const Navbar = () => {
               className="navLink"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleStatus}
             >
               Camisetas
             </Link>
