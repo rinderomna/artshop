@@ -18,6 +18,7 @@ import EditProfile from './pages/EditProfile.js';
 import ProductDetails from "./pages/ProductDetails.js";
 import CartDetails from './pages/CartDetails.js';
 import CreateNewProduct from "./pages/CreateNewProduct.js";
+import Purchases from "./pages/Purchases.js";
 
 import NoPage from "./pages/NoPage.js";
 
@@ -58,6 +59,7 @@ function App() {
             <Route path="customer" element={<Customer />} />
             <Route path="cartDetails" element={<CartDetails />} />
             <Route path="editProfile" element={<EditProfile />} />
+            <Route path="purchases" element={<Purchases />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>
