@@ -51,13 +51,22 @@
     top: 3.3em;
 }
 
+.specific-size{
+    position: relative;
+    top: 3.3em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: var(--dark_gray_font);
+    display: block;
+}
+
 .productCard .productSize p {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     color: var(--dark_gray_font);
 }
 
-.productCard .productSize span {
+.name-size {
     width: 2em;
     height: 2em;
     margin: 0.35em;

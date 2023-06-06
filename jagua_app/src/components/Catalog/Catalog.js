@@ -15,6 +15,7 @@ function Catalog(props) {
                         key={product.id}
                         image={product.image}
                         name={product.name}
+                        description={product.description}
                         price={product.price}
                         sizes={product.sizes}
                     />

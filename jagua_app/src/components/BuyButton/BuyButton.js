@@ -4,7 +4,7 @@ import './BuyButton.css';
 
 function BuyButton(props) {
     return (
-        <Link to="/productDetails" className="buyProductButton">
+        <Link to="/productDetails" state={{ product: props }} className="buyProductButton">
         Comprar
         </Link>
     );

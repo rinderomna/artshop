@@ -1,0 +1,12 @@
+.sizeType label{
+    font-family: 'Arvo', serif;
+    color: var(--dark_gray_font);
+    font-size: 0.8em;
+}
+
+.sizeType {
+    font-size: 1em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}

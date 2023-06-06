@@ -1,0 +1,30 @@
+/*botao de adicionar num de itens*/
+#numProducts{
+    width:7em;
+    height: 3em;
+    /*padding: 0.2em 0.1em;*/
+    /*margin-right: var(--button_margin);*/
+    text-align: center;
+
+    border: 0.14em solid var(--light_gray);
+    border-radius: 0.5em;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#btn_more, #btn_less{
+    border: none;
+    color:var(--purple);
+    background-color: white;
+    font-size: 2em;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/*label com o numero de itens*/
+#numProducts #lbl_num{
+    margin: 0.2em;
+    color:var(--dark_gray_font);
+    font-size: 1.5em;
+}
