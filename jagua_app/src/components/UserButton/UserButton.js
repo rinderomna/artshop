@@ -1,7 +1,9 @@
-function UserButton() {
+function UserButton(props) {
+    const { text } = props;
+
     return (
         <div>
-            <p>NavAdminInfo</p>
+            <p>{text}</p>
         </div>
     );
 }

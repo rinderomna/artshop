@@ -11,6 +11,7 @@ import Login from "./pages/Login.js";
 import SignUp from "./pages/SignUp.js";
 import ProductDetails from "./pages/ProductDetails.js";
 import Admin from "./pages/Admin.js";
+import Customer from "./pages/Customer.js";
 
 import NoPage from "./pages/NoPage.js";
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="signUp" element={<SignUp />} />
             <Route path="productDetails" element={<ProductDetails />} />
             <Route path="admin" element={<Admin />} />
+            <Route path="customer" element={<Customer />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>

@@ -39,12 +39,12 @@ function LoginBox(props) {
                         user
                     });
                     navigate("/admin"); // Navega para a rota "/admin"
-                } else if (user.type === "client") {
+                } else if (user.type === "customer") {
                     setStatus({
-                        type: "clientLoggedIn",
+                        type: "customerLoggedIn",
                         user
                     });
-                    navigate("/client"); // Navega para a rota "/client"
+                    navigate("/customer"); // Navega para a rota "/customer"
                 }
             })
             .catch(error => {

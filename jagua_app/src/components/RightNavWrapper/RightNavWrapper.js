@@ -14,8 +14,14 @@ function RightNavWrapper() {
         <>
             {
                 (status.type === "adminLoggedIn") ?
-                    <UserButton />
-                    : <LoginButton hidden={status.type === "transient"}/>
+                    <UserButton text="NavAdminInfo"/> :
+                    (status.type === "customerLoggedIn") ?
+                        <>
+                            <p style={{display: "inline"}}>Carrinho</p>
+                            <UserButton text="NavCustomerInfo"/>
+                        </>
+                         :
+                        <LoginButton hidden={status.type === "transient"}/>
             }
         </>
     );

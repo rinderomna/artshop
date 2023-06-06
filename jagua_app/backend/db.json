@@ -6,7 +6,7 @@
             "password": "admin"
         },
         {
-            "type": "client",
+            "type": "customer",
             "userName": "helio",
             "password": "helio"
         }
