@@ -1,9 +1,9 @@
 function UserButton(props) {
-    const { text } = props;
+    const { userName } = props;
 
     return (
         <div>
-            <p>{text}</p>
+            <p>Olá, {userName}</p>
         </div>
     );
 }

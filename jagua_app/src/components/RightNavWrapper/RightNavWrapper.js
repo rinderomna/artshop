@@ -14,15 +14,15 @@ function RightNavWrapper() {
     return (
         <>
             {
-                (status.type === "adminLoggedIn") ?
-                    <UserButton text="NavAdminInfo"/> :
-                    (status.type === "customerLoggedIn") ?
-                        <>  
-                            <SideBar/>
-                            <UserButton text="NavCustomerInfo"/>
-                        </>
-                         :
-                        <LoginButton hidden={status.type === "transient"}/>
+                (status.type === "customerLoggedIn") ?
+                    <SideBar /> :
+                    <></>
+            }
+
+            {
+                (status.type === "adminLoggedIn" || status.type === "customerLoggedIn") ?
+                    <UserButton userName={status.user.userName}/> :
+                    <LoginButton hidden={status.type === "transient"}/>
             }
         </>
     );
