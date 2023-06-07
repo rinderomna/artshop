@@ -1,9 +1,14 @@
+import "./UserButton.css";
+
 function UserButton(props) {
     const { userName } = props;
 
     return (
-        <div>
-            <p>Olá, {userName}</p>
+        <div className="userRightNavContainer">
+            <span className="userProfileMiniature"></span>
+            <div className="userMessageContainer">
+                <p>Olá, {userName}</p>
+            </div>
         </div>
     );
 }

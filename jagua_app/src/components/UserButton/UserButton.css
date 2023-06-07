@@ -1,0 +1,29 @@
+.userRightNavContainer {
+    display: flex;
+    align-items: center;
+    height: 40%;
+    padding: 10px;
+    margin: auto 2em;
+  }
+  
+.userProfileMiniature {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: lightgrey;
+    margin-right: 1.7em; /* Adicione um espaçamento à direita para separar o círculo da div de mensagem */
+}
+  
+.userMessageContainer {
+    border: 1px solid grey;
+    border-radius: 40px 40px 40px 40px / 50px 50px 50px 50px;  
+    padding: 5px;
+}
+  
+.userMessageContainer p {
+    line-height: 1;
+    margin: 0;
+    padding: 5px 45px;
+    color: grey;
+    font-size: 1.5em;
+}  
