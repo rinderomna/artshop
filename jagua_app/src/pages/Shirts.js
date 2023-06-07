@@ -8,27 +8,44 @@ import camisetaCrowd from "../assets/visual_identity/camisetas/camiseta_crowd.pn
 import camisetaHorrorVacui from "../assets/visual_identity/camisetas/camiseta_horror_vacui.png";
 
 const Shirts = () => {
-    const products = [
+    const shirtSizes = [
+        {
+            name: "P",
+            specific_size: "Pequeno"
+        },
+        {
+            name: "M",
+            specific_size: "Médio"
+        },
+        {
+            name: "G",
+            specific_size: "Grande"
+        }
+    ]
+    const shirtsProducts = [
         {
             id: 12,
             image: camisetaMedusa,
             name: "Camiseta Medusa",
             price: "68,00",
-            sizes: ["P", "M", "G"]
+            description: "Camiseta 100% algodão estampada usando silk screen.",
+            sizes:shirtSizes
         },
         {
             id: 13,
             image: camisetaCrowd,
             name: "Camiseta Crowd",
             price: "68,00",
-            sizes: ["P", "M", "G"]
+            description: "Camiseta 100% algodão estampada em silk screen.",
+            sizes:shirtSizes
         },
         {
             id: 14,
             image: camisetaHorrorVacui,
             name: "Camiseta Horror Vacui",
+            description: "Camiseta composta de 70% poliéster e 30% algodão. Estampada utilizando sublimação.",
             price: "68,00",
-            sizes: ["P", "M", "G"]
+            sizes:shirtSizes
         },
     ];
 
@@ -36,7 +53,7 @@ const Shirts = () => {
         <>
             <HighlightBanner imageSrc={bannerCamisetas} altText="camisetas" />
             <main className="bodyWrapper">
-                <Catalog name="Camisetas" type="shirtsCatalog" products={products} />
+                <Catalog name="Camisetas" type="shirtsCatalog" products={shirtsProducts} />
             </main>
         </>
     );
