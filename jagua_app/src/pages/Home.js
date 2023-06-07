@@ -1,5 +1,10 @@
+import { useContext } from 'react';
+
+import { StatusContext } from '../App.js';
+
 import HighlightBanner from "../components/HighlightBanner/HighlightBanner";
 import bannerNovidades from "../assets/visual_identity/banners/banner_novidades.png";
+import AdminHomeBanner from "../components/AdminHomeBanner/AdminHomeBanner.js";
 
 import Catalog from "../components/Catalog/Catalog";
 
@@ -23,6 +28,8 @@ import camisetaCrowd from "../assets/visual_identity/camisetas/camiseta_crowd.pn
 import camisetaHorrorVacui from "../assets/visual_identity/camisetas/camiseta_horror_vacui.png";
 
 const Home = () => {
+    const { status } = useContext(StatusContext);
+
     const printsSizes = [
         {
             name: "A5",
@@ -184,7 +191,12 @@ const Home = () => {
 
     return (
         <>
-            <HighlightBanner imageSrc={bannerNovidades} altText="novidades" />
+            {
+                (status.user && status.type === "adminLoggedIn" && status.user.type === "admin") ?
+                <AdminHomeBanner /> :
+                <HighlightBanner imageSrc={bannerNovidades} altText="novidades" />
+            }
+
             <main className="bodyWrapper">
                 <Catalog name="Prints em Papel Couchê" type="printsCatalog" products={printsProducts}/>
                 <Catalog name="Adesivos de Vinil" type="stickersCatalog" products={stickersProducts} />

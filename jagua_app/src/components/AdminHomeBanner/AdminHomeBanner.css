@@ -1,0 +1,19 @@
+.centralizeBoard {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 5em;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.createProductButton {
+    padding: 20px 50px;
+    background-color: var(--purple);
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
