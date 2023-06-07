@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { StatusContext } from '../App.js';
+import PermissionDenied from "../components/PermissionDenied/PermissionDenied.js";
 
 const CreateNewProduct = () => {
     const { status } = useContext(StatusContext);
@@ -100,7 +101,7 @@ const CreateNewProduct = () => {
                             <button type="submit" onClick={handleSubmit}>OK</button>
                         </form>
                     </div> :
-                <h1>Acesso de administrador negado</h1>
+                <PermissionDenied userType="administrador" />
             }
         </>
     );
