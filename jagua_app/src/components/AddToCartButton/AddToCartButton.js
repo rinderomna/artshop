@@ -12,7 +12,7 @@ const AddToCartButton = () => {
         <>
             {
                 (status.user && status.type === "customerLoggedIn" && status.user.type === "customer") ?
-                    <Link to="/cartDetails" className="addToCart">
+                    <Link to="/checkOut" className="addToCart">
                         Adicionar ao Carrinho
                     </Link> :
                     <Link to="/login" className="addToCart">

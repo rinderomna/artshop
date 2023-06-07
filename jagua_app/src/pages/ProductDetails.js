@@ -38,7 +38,7 @@ const ProductDetails = () => {
                             <NumProducts />
                         </div>
                         <div className="add-to-cart-container">
-                            <AddToCartButton/>
+                            <AddToCartButton />
                         </div>
                     </div>
                 </div>
