@@ -1,9 +1,10 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 
 import { StatusContext } from '../../App.js';
 
 import UserButton from '../UserButton/UserButton.js';
 import LoginButton from "../LoginButton/LoginButton.js";
+import SideBar from '../SideBar/SideBar.js';
 
 function RightNavWrapper() {
     const {
@@ -16,8 +17,8 @@ function RightNavWrapper() {
                 (status.type === "adminLoggedIn") ?
                     <UserButton text="NavAdminInfo"/> :
                     (status.type === "customerLoggedIn") ?
-                        <>
-                            <p style={{display: "inline"}}>Carrinho</p>
+                        <>  
+                            <SideBar/>
                             <UserButton text="NavCustomerInfo"/>
                         </>
                          :
