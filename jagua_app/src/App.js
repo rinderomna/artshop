@@ -14,7 +14,7 @@ import SignUp from "./pages/SignUp.js";
 import EditProfile from './pages/EditProfile.js';
 
 import ProductDetails from "./pages/ProductDetails.js";
-import CheckOut from './pages/CheckOut.js';
+import Checkout from './pages/Checkout.js';
 import CreateNewProduct from "./pages/CreateNewProduct.js";
 import Purchases from "./pages/Purchases.js";
 
@@ -53,7 +53,7 @@ function App() {
             <Route path="signUp" element={<SignUp />} />
             <Route path="productDetails" element={<ProductDetails />} />
             <Route path="createNewProduct" element={<CreateNewProduct />} />
-            <Route path="checkOut" element={<CheckOut />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="editProfile" element={<EditProfile />} />
             <Route path="purchases" element={<Purchases />} />
 
