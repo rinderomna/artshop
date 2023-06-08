@@ -12,7 +12,11 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 |   Hélio Nogueira Cardoso  |  10310227 |    helionc1999@usp.br      |
 |   Laura Ferré Scotelari   |  12543436 |   laura.scotelari@usp.br   |
 
-Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. As orientações para análise do Milestone 1 estão principalmente nas seções 1, 2, 4 e 6. No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
+Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
+```diff
+! Orientações para avaliação do __Milestone 2__ estão sob a seção 6, especialmente na subseção 6.2.
+```
+No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
 # 1. Requisitos de Software
 Uma artista contratou nossos serviços para criar uma loja online para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos online e recebam em suas residências. Desenvolveremos, por tanto, uma aplicação Web para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
@@ -169,6 +173,7 @@ Pedido:
 Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigi-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
   
 # 6. Procedimentos para execução
+## 6.1. Baixando e entendendo os arquivos
 * Para clonar o repositório, se estiver usando git, utilize o comando:
 ```git clone https://github.com/rinderomna/artshop.git```
 
@@ -185,7 +190,19 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
   * 'visual_identity': imagens utilizadas nas páginas.
  * Pasta 'images&diagrams': aqui há imagens e diagramas pertinentes ao projeto e seu arquivo README.md de descrição.
  * Pasta 'especification': aqui há apenas o arquivo de especificação do projeto da disciplina, com as descrições de cada entrega (Milestones 1, 2 e 3) e as metodologias de avaliação.
+ * Pasta 'jagua_app': aqui está a aplicação react que representa o trabalho que será entregue no final
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
+
+## 6.2. Executando a aplicação React (Milestone 2)
+* Garanta ter instalado o Node.js e npm em suas versões mais recentes
+* Entre na pasta 'jagua_app' (```cd jagua_app```) e execute o comando de instalação de dependências:
+```npm install```
+* Abra uma segunda aba do terminal (na pasta 'jagua_app') para rodar o backend com o comando ```npm run backend```
+* Na aba inicial, dentro da pasta 'jagua_app', execute a aplicação com ```npm start```
+* Se uma aba de seu navegador não tiver aberto, abra o navegador e acesse 'localhost:3000'
+* Sua aplicação iniciará na Home Page em contexto deslogado. Para testar os usuário tipo cliente e tipo administrador, clique no botão 'Entrar' no canto superior direito
+* O perfil padrão de administrador é usuário 'admin' com senha 'admin'. Um perfil de usuário cadastrado para teste é usuário 'helio' com senha 'helio'.
+* Navegue e experimente a aplicação :)
   
 # 7. Problemas
 * Estamos buscando corrigir alguns pequenos detalhes de responsividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes que podem ter passado despercebidos, principalmente para dispositivos de tamanhos unusuais (i.e. telas muito pequenas...).
