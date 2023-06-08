@@ -31,16 +31,15 @@
 }
 
 .purple-text {
-    color: #6C63FF;
+    color: var(--purple);
+    font-family: 'Bree-Serif', serif;
+    font-size: 1.5em;
     font-weight: bold;
-    font-size: 1em;
-    font-family: 'Lato', sans-serif;
 }
 
 .spaced-text {
     margin-top: 1.875em;
-    margin-bottom: 1.875em;
-    font-family: 'Lato', sans-serif;
+    margin-bottom: 1em;
 }
 
 form {
@@ -56,7 +55,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
+input[type="text"], input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 0.625em;
@@ -66,6 +65,11 @@ input[type="password"] {
     box-sizing: border-box;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
+}
+
+input:focus {
+    outline: none; /* Remove o contorno padrão do campo */
+    box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o campo em foco */
 }
 
 button[type="submit"] {
@@ -83,3 +87,15 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #4E47D2;
 }
+
+.error {
+    border: 1px solid red;
+    box-shadow: 0 0 3px red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+  

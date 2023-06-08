@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { StatusContext } from '../../App.js';
 
-import './LoginBox.css';
+import './FormStyle.css';
 
 import loginIcon from '../../assets/visual_identity/icon/login_user_icon.png';
 

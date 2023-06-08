@@ -12,8 +12,6 @@ const ProductDetails = () => {
     const location = useLocation();
     const { product } = location.state;
 
-    console.log(`ProductDetails.js -> props = ${product.name}`);
-    console.log(`ProductDetails.js -> product image = ${product.image}`);
     return (
         <section className="product-container">
             <div className="img-container">
