@@ -1,5 +1,9 @@
+import CheckoutBox from "../components/CheckoutBox/CheckoutBox";
+
 const Checkout = () => {
-    return <h1>Tela de carrinho com detalhes pré-finalização de compra</h1>;
+    return (
+        <CheckoutBox />
+    );
 };
 
 export default Checkout;
