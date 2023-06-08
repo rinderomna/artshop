@@ -205,7 +205,7 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
 * Navegue e experimente a aplicação :)
   
 # 7. Problemas
-* Estamos buscando corrigir alguns pequenos detalhes de responsividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes que podem ter passado despercebidos, principalmente para dispositivos de tamanhos unusuais (i.e. telas muito pequenas...).
+* Estamos buscando corrigir alguns pequenos detalhes de responsividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes que podem ter passado despercebidos, principalmente para dispositivos de tamanhos não-usuais (i.e. telas muito pequenas...).
   
 # 8. Comentários Adicionais
 * Decidimos retirar os footers das telas em código, pois, durante o desenvolvimento, as consideramos desnecessárias. No entanto, o footer ainda está presente no protótipo. Simplesmente desconsiderar.
