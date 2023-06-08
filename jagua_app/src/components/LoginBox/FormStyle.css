@@ -15,6 +15,7 @@
     box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 2em;
+    margin-bottom: 5em;
 }
 
 .user-icon {
@@ -72,20 +73,40 @@ input:focus {
     box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o campo em foco */
 }
 
+select {
+    width: 100%;
+    padding: 0.625em;
+    border: 0.0625em solid #D3D3D3;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF; /* Cor de fundo do dropdown */
+    background-size: 1em; /* Ajuste o tamanho da imagem da seta */
+    padding-right: 1.5em; /* Adicione um espaço para acomodar a imagem da seta */
+}
+
+select:focus {
+    outline: none; /* Remove o contorno padrão do elemento */
+    box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o elemento em foco */
+}
+
 button[type="submit"] {
-    background-color: #6C63FF;
+    background-color: var(--purple);
     color: #FFFFFF;
     border: none;
     border-radius: 1.25em;
-    padding: 0.625em 1.25em;
-    font-size: 1em;
+    padding: .3em 1.8em;
+    font-size: 2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Bree Serif', serif;
+    margin-top: 2em;
 }
 
 button[type="submit"]:hover {
-    background-color: #4E47D2;
+    background-color: black;
 }
 
 .error {
@@ -94,8 +115,12 @@ button[type="submit"]:hover {
 }
 
 .error-message {
+    position: relative;
+    top: -1.5em; /* Ajuste o valor conforme necessário para definir a distância vertical */
+    left: 1em;
     color: red;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
 }
-  

@@ -51,7 +51,7 @@ const SignUp = () => {
                     onBlur={handleBlur} // Limpa o campo em foco
                 />
                 {errors.username && errors.username.type === "required" && (
-                    <span className="error-message">Preencha o campo Nome de usuário</span>
+                    <span className="error-message">Preencha o campo Nome de usuário. Não utilize espaços!</span>
                 )}
                 {errors.username && errors.username.type === "validate" && (
                     <span className="error-message">O primeiro caractere deve ser uma letra</span>
@@ -64,9 +64,12 @@ const SignUp = () => {
                     name="fullname"
                     placeholder="Por exemplo: Laura Scotelari"
                     className={errors.fullname ? "error" : ""}
-                    {...register("fullname", { required: true })}
+                    {...register("fullname", { 
+                        required: true,
+                        pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/
+                    })}
                 />
-                {errors.fullname && <span className="error-message">Preencha o campo Nome completo</span>}
+                {errors.fullname && <span className="error-message">Preencha o campo Nome completo. Apenas caracteres do alfabeto são aceitos!</span>}
                 <label htmlFor="email">E-mail</label>
                 <input
                     type="email"
@@ -89,22 +92,6 @@ const SignUp = () => {
                 />
                 {errors.cellphone && <span className="error-message">Preencha o campo Telefone Celular</span>}
                 <h2 className="purple-text spaced-text">Endereço</h2>
-                <input
-                    type="text"
-                    id="streetAddress"
-                    name="streetAddress"
-                    placeholder="Rua dos Exemplos"
-                    {...register("streetAddress", { required: true })}
-                />
-                {errors.address && <span className="error-message">Preencha o campo Rua</span>}
-                <input
-                    type="text"
-                    id="neighborhoodAddress"
-                    name="neighborhoodAddress"
-                    placeholder=""
-                    {...register("neighborhoodAddress", { required: true })}
-                />
-                {errors.address && <span className="error-message">Preencha o campo Bairro</span>}
                 <label htmlFor="cep">CEP</label>
                 <InputMask
                     mask="99999-999"
@@ -115,12 +102,42 @@ const SignUp = () => {
                     {...register("cep", { required: true })}
                 />
                 {errors.cep && <span className="error-message">Preencha o campo CEP</span>}
+                <label htmlFor="streetAddress">Rua</label>
+                <input
+                    type="text"
+                    id="streetAddress"
+                    name="streetAddress"
+                    placeholder="Rua dos Exemplos"
+                    {...register("streetAddress", { required: true })}
+                />
+                {errors.streetAddress && <span className="error-message">Preencha o campo Rua</span>}
+                <label htmlFor="neighborhoodAddress">Bairro</label>
+                <input
+                    type="text"
+                    id="neighborhoodAddress"
+                    name="neighborhoodAddress"
+                    placeholder="Bairro dos Exemplos"
+                    {...register("neighborhoodAddress", { required: true })}
+                />
+                {errors.neighborhoodAddress && <span className="error-message">Preencha o campo Bairro</span>}
+                <label htmlFor="numberAddress">Número</label>
+                <input
+                    type="text"
+                    id="numberAddress"
+                    name="numberAddress"
+                    placeholder="Por exemplo: 135"
+                    {...register("numberAddress", { 
+                        required: true,
+                        pattern: /^\d+$/
+                    })}
+                />
+                {errors.numberAddress && <span className="error-message">Preencha o campo Número. Apenas dígitos são permitidos!</span>}
                 <label htmlFor="username">Complemento</label>
                 <input
                     type="text"
                     id="complement"
                     name="complement"
-                    placeholder="Complemento"
+                    placeholder="Por exemplo: apto 45. Outra opção é colocar um pt. de referência"
                     {...register("complement")}
                 />
                 <h2 className="purple-text spaced-text">Senha</h2>
@@ -128,7 +145,7 @@ const SignUp = () => {
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="Senha"
+                    placeholder="Sua senha de acesso à conta. Memorize-a!"
                     {...register("password", { required: true })}
                 />
                 {errors.password && <span className="error-message">Preencha o campo Senha</span>}
