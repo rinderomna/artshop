@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { GrCreditCard } from "react-icons/gr";
 import InputMask from "react-input-mask";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -15,19 +13,10 @@ const CheckoutBox = () => {
     register,
     formState: { errors },
   } = useForm();
-  const [focusedField, setFocusedField] = useState("");
 
   const onSubmit = (data) => {
     console.log(data);
     navigate("/myOrders");
-  };
-
-  const handleFocus = (fieldName) => {
-    setFocusedField(fieldName);
-  };
-
-  const handleBlur = () => {
-    setFocusedField("");
   };
 
   const validateCPF = (value) => {
@@ -184,7 +173,7 @@ const CheckoutBox = () => {
           maxLength={100}
           placeholder="O número do seu apto ou uma referência geográfica para o endereço"
           {...register("complement")}
-        />defaultValue
+        />
 
         <h2 className="purple-text spaced-text">Pagamento</h2>
 

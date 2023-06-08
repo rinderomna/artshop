@@ -11,9 +11,17 @@
 }
 
 .createProductButton {
-    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 50px;
     background-color: var(--purple);
     margin-top: 20px;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.createProductButtonIcon {
+    margin-right: 1em;
+    margin-left: -1em;
 }

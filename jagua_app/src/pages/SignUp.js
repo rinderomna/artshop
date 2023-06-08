@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { SlUserFollow } from "react-icons/sl";
@@ -11,6 +11,7 @@ const SignUp = () => {
     register,
     formState: { errors },
   } = useForm();
+  
   const [focusedField, setFocusedField] = useState(""); // Estado para acompanhar o campo em foco
 
   const onSubmit = (data) => {
