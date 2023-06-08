@@ -1,0 +1,11 @@
+.centralizeBoard {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 5em;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

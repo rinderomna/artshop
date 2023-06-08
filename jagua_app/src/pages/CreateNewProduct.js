@@ -90,7 +90,7 @@ const CreateNewProduct = () => {
                             />
                             <h2 className="purple-text spaced-text">Imagem</h2>
                             <input
-                                type="text"
+                                type="file"
                                 id="productimage"
                                 name="productimage"
                                 placeholder="Link para a imagem"

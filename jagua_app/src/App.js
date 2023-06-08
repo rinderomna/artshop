@@ -16,7 +16,8 @@ import EditProfile from './pages/EditProfile.js';
 import ProductDetails from "./pages/ProductDetails.js";
 import Checkout from './pages/Checkout.js';
 import CreateNewProduct from "./pages/CreateNewProduct.js";
-import Purchases from "./pages/Purchases.js";
+import AllOrders from "./pages/AllOrders.js";
+import MyOrders from "./pages/MyOrders.js";
 
 import NoPage from "./pages/NoPage.js";
 
@@ -55,7 +56,8 @@ function App() {
             <Route path="createNewProduct" element={<CreateNewProduct />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="editProfile" element={<EditProfile />} />
-            <Route path="purchases" element={<Purchases />} />
+            <Route path="allOrders" element={<AllOrders />} />
+            <Route path="myOrders" element={<MyOrders />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>
