@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { StatusContext } from '../App.js';
 
@@ -28,7 +28,18 @@ import camisetaCrowd from "../assets/visual_identity/camisetas/camiseta_crowd.pn
 import camisetaHorrorVacui from "../assets/visual_identity/camisetas/camiseta_horror_vacui.png";
 
 const Home = () => {
-    const { status } = useContext(StatusContext);
+    const { status, setStatus } = useContext(StatusContext);
+
+    useEffect(() => {
+        if (!status.user) {
+            setStatus(
+                {
+                    ...status,
+                    type: "loggedOut"
+                }
+            );
+        }
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const printsSizes = [
         {
