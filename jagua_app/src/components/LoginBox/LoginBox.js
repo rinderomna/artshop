@@ -56,6 +56,7 @@ function LoginBox(props) {
         <div className="login-box">
             <div className="user-icon" aria-label="Ícone de usuário">
                 <SlUser size={"6em"} color="var(--purple)" />
+                <h1>Login</h1>
             </div>
             <p className="purple-text spaced-text">Entre suas informações de login:</p>
             <form action="" method="GET">
@@ -63,6 +64,7 @@ function LoginBox(props) {
                     type="text"
                     id="username"
                     name="username"
+                    maxLength={25}
                     placeholder="Nome de usuário"
                     onChange={(e) => setUserName(e.target.value)}
                 />
@@ -70,6 +72,7 @@ function LoginBox(props) {
                     type="password"
                     id="password"
                     name="password"
+                    maxLength={30}
                     placeholder="Senha"
                     onChange={(e) => setPassword(e.target.value)}
                 />

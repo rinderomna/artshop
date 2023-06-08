@@ -13,10 +13,6 @@ const SignUp = () => {
   } = useForm();
   const [focusedField, setFocusedField] = useState(""); // Estado para acompanhar o campo em foco
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Rolando para o topo da página
-  }, []);
-
   const onSubmit = (data) => {
     console.log(data); // Dados do formulário
     navigate("/login"); // Navega para a rota "/login"
@@ -34,6 +30,14 @@ const SignUp = () => {
     return /^[^\d\s].*$/.test(value); // Verifica se o primeiro caractere não é um dígito e não contém espaços
   };
 
+  const validateCellphone = (value) => {
+    return value.replace(/[_\(\)\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
+  };
+
+  const validateCEP = (value) => {
+    return value.replace(/[_\s-]/g, "").length === 8; // Verifica se todos os caracteres da máscara estão preenchidos
+  };
+
   return (
     <div className="login-box">
       <div className="user-icon" aria-label="Ícone de novo usuário">
@@ -48,6 +52,7 @@ const SignUp = () => {
           id="username"
           name="username"
           placeholder="Por exemplo: laura123"
+          maxLength={25} // Limita o campo a 25 caracteres
           className={`${errors.username ? "error" : ""} ${
             focusedField === "username" ? "focus" : ""
           }`}
@@ -74,6 +79,7 @@ const SignUp = () => {
           type="text"
           id="fullname"
           name="fullname"
+          maxLength={100}
           placeholder="Por exemplo: Laura Scotelari"
           className={errors.fullname ? "error" : ""}
           {...register("fullname", {
@@ -92,6 +98,7 @@ const SignUp = () => {
           type="email"
           id="email"
           name="email"
+          maxLength={60}
           placeholder="Por exemplo: teste@hotmail.com"
           className={errors.email ? "error" : ""}
           {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
@@ -109,7 +116,10 @@ const SignUp = () => {
           name="cellphone"
           placeholder="(XX) XXXXX-XXXX"
           className={errors.cellphone ? "error" : ""}
-          {...register("cellphone", { required: true })}
+          {...register("cellphone", { 
+            required: true,
+            validate: validateCellphone, // Validação personalizada para a máscara
+          })}
         />
         {errors.cellphone && (
           <span className="error-message">
@@ -124,7 +134,10 @@ const SignUp = () => {
           id="cep"
           name="cep"
           placeholder="CEP"
-          {...register("cep", { required: true })}
+          {...register("cep", { 
+            required: true,
+            validate: validateCEP, // Validação personalizada para a máscara 
+          })}
         />
         {errors.cep && (
           <span className="error-message">Preencha o campo CEP</span>
@@ -134,6 +147,7 @@ const SignUp = () => {
           type="text"
           id="streetAddress"
           name="streetAddress"
+          maxLength={80}
           placeholder="Rua dos Exemplos"
           {...register("streetAddress", { required: true })}
         />
@@ -145,6 +159,7 @@ const SignUp = () => {
           type="text"
           id="neighborhoodAddress"
           name="neighborhoodAddress"
+          maxLength={60}
           placeholder="Bairro dos Exemplos"
           {...register("neighborhoodAddress", { required: true })}
         />
@@ -156,6 +171,7 @@ const SignUp = () => {
           type="text"
           id="numberAddress"
           name="numberAddress"
+          maxLength={10}
           placeholder="Por exemplo: 135"
           {...register("numberAddress", {
             required: true,
@@ -172,6 +188,7 @@ const SignUp = () => {
           type="text"
           id="complement"
           name="complement"
+          maxLength={100}
           placeholder="Por exemplo: apto 45. Outra opção é colocar um pt. de referência"
           {...register("complement")}
         />
@@ -180,6 +197,7 @@ const SignUp = () => {
           type="password"
           id="password"
           name="password"
+          maxLength={30}
           placeholder="Sua senha de acesso à conta. Memorize-a!"
           {...register("password", { required: true })}
         />
