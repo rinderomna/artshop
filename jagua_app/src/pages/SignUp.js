@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { SlUser } from 'react-icons/sl';
+import { SlUserFollow } from 'react-icons/sl';
 import InputMask from 'react-input-mask';
 
 import "../components/LoginBox/FormStyle.css";
@@ -30,8 +30,8 @@ const SignUp = () => {
 
     return (
         <div className="login-box">
-            <div className="user-icon">
-                <SlUser size={"6em"} color="var(--purple)" />
+            <div className="user-icon" aria-label="Ícone de usuário">
+                <SlUserFollow size={"6em"} color="var(--purple)" />
             </div>
             <h1>Cadastro</h1>
             <h2 className="purple-text spaced-text">Dados pessoais</h2>

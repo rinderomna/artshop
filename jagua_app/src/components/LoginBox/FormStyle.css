@@ -56,6 +56,11 @@ label {
     font-weight: bold;
 }
 
+.underlined {
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
 input[type="text"], input[type="email"],
 input[type="password"] {
     width: 100%;

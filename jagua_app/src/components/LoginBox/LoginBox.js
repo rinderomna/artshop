@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { StatusContext } from '../../App.js';
 
-import './FormStyle.css';
+import { SlUser } from 'react-icons/sl';
 
-import loginIcon from '../../assets/visual_identity/icon/login_user_icon.png';
+import './FormStyle.css';
 
 function LoginBox(props) {
     const [userName, setUserName] = useState("");
@@ -54,8 +54,8 @@ function LoginBox(props) {
 
     return (
         <div className="login-box">
-            <div className="user-icon">
-                <img src={loginIcon} alt="User Icon" />
+            <div className="user-icon" aria-label="Ícone de usuário">
+                <SlUser size={"6em"} color="var(--purple)" />
             </div>
             <p className="purple-text spaced-text">Entre suas informações de login:</p>
             <form action="" method="GET">
@@ -73,7 +73,7 @@ function LoginBox(props) {
                     placeholder="Senha"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <Link to="/signUp" className="spaced-text">Não possuo conta, preciso me cadastrar</Link>
+                <Link to="/signUp" className="spaced-text underlined">Não possuo conta, preciso me cadastrar</Link>
                 <button type="submit" onClick={handleSubmit}>Entrar</button>
             </form>
         </div>
