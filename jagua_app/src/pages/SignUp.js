@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { SlUserFollow } from "react-icons/sl";
 import InputMask from "react-input-mask";
 
-import "../components/LoginBox/FormStyle.css";
-
 const SignUp = () => {
   const navigate = useNavigate();
   const {
@@ -32,39 +30,14 @@ const SignUp = () => {
     setFocusedField(""); // Limpa o campo em foco
   };
 
-    return (
-        <div className="login-box">
-            <div className="user-icon" aria-label="Ícone de usuário">
-                <SlUserFollow size={"6em"} color="var(--purple)" />
-            </div>
-            <h1>Cadastro</h1>
-            <h2 className="purple-text spaced-text">Dados pessoais</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor="username">Nome de usuário</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Por exemplo: laura123"
-                    className={`${errors.username ? "error" : ""} ${focusedField === "username" ? "focus" : ""}`}
-                    {...register("username", {
-                        required: true,
-                        validate: validateUsername // Validação personalizada
-                    })}
-                    onFocus={() => handleFocus("username")} // Define o campo em foco
-                    onBlur={handleBlur} // Limpa o campo em foco
-                />
-                {errors.username && errors.username.type === "required" && (
-                    <span className="error-message">Preencha o campo Nome de usuário. Não utilize espaços!</span>
-                )}
-                {errors.username && errors.username.type === "validate" && (
-                    <span className="error-message">O primeiro caractere deve ser uma letra</span>
-                )}
+  const validateUsername = (value) => {
+    return /^[^\d\s].*$/.test(value); // Verifica se o primeiro caractere não é um dígito e não contém espaços
+  };
 
   return (
     <div className="login-box">
-      <div className="user-icon">
-        <SlUser size={"6em"} color="var(--purple)" />
+      <div className="user-icon" aria-label="Ícone de novo usuário">
+        <SlUserFollow size={"6em"} color="var(--purple)" />
       </div>
       <h1>Cadastro</h1>
       <h2 className="purple-text spaced-text">Dados pessoais</h2>
