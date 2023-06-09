@@ -153,7 +153,8 @@ function App() {
             <Route path="createNewProduct" element={<CreateNewProduct />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="editProfile" element={<EditProfile />} />
-            <Route path="purchases" element={<Purchases />} />
+            <Route path="allOrders" element={<AllOrders />} />
+            <Route path="myOrders" element={<MyOrders />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>

@@ -27,7 +27,9 @@ const ProductDetails = ({handleAddToCart}) => {
     const [size, setSize] = useState("");
     const [flagCart, setFlagCart] = useState(false);
 
-
+    useEffect(() => {
+      window.scrollTo(0, 0); // Rolando para o topo da página
+    }, []);
 
     const handleNumChange = (value) =>{
         setNumProducts(value);
