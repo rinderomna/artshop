@@ -1,0 +1,16 @@
+.buyProductButton {
+    border: 0.13em solid #185424;
+    color: #185424;
+    border-radius: 50px;
+    padding: 0.4em 2em;
+    position: relative;
+    top: 80px;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+}
+
+.buyProductButton:hover {
+    background-color: rgba(24, 84, 36, 0.3);
+}

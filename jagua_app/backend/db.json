@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "type": "admin",
+            "userName": "admin",
+            "password": "admin"
+        },
+        {
+            "type": "customer",
+            "userName": "helio",
+            "password": "helio"
+        }
+    ]
+}

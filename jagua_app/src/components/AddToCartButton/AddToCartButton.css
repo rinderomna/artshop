@@ -1,0 +1,26 @@
+/*estilo botao de adicionar ao carrinho*/
+.addToCart {
+    height: 2.5em;
+    width:100%;
+    padding: 0.7em;
+    border-radius: 5vw;
+
+    color: white;
+    background-color: var(--purple);
+
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Bree Serif', serif;
+    font-weight: 200;
+    
+    position: relative;
+    text-align: center;
+
+    border:none;
+
+}
+
+/*altera cor do botao quando passa o mouse*/
+.addToCart:hover{
+    background-color: var(--light_gray);
+}

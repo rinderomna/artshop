@@ -1,0 +1,118 @@
+/* 
+ * --------------------------------------
+ * CSS PARA O CATALOGO/GRID DE PRODUTOS ||
+ * --------------------------------------
+*/
+
+/* Catalogo incluindo as categorias dos itens ('corpo' da pagina home)*/
+.bodyWrapper {
+    display: block;
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+/* Catalogo de produtos */
+.allProductsCatalog { /* Elemento pai do grid */
+    background-color: #fff;
+    display: grid;
+    min-height: 70vh;
+    padding-top: 30px;
+    border-radius: 2vw;
+    box-shadow: 5px 5px 20px var(--light_gray);
+}
+
+
+.bodyWrapper h1 {
+    font-size: 1.5em;
+    display: block;
+    font-family: 'Bree Serif', serif;
+    font-weight: 100;
+    color: var(--dark_gray_font);
+    padding: 1.5vw;
+    background-color: #fff;
+    border-radius: 1vw;
+}
+
+
+/* Separacao dos cards */
+.printsCatalog, .stickersCatalog, .shirtsCatalog {
+    margin-bottom: 2.5em;
+}
+
+/* ---------------*/
+/* Responsividade */
+/* ---------------*/
+
+@media screen and (min-width: 200px) { /* mobile */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 20px;
+    }
+}
+
+
+/* Aplicar essas propriedades se a tela tiver pelo menos 300px de largura */
+@media screen and (min-width: 300px) { /* mobile */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 20px;
+    }
+}
+
+@media screen and (min-width: 450px) { /* tablet */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 40px;
+    }
+}
+
+@media screen and (min-width: 600px) { /* tablet */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 40px;
+    }
+}
+
+@media screen and (min-width: 850px) { /* desktops */
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* grid */
+    .allProductsCatalog {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* margem do corpo do site */
+    .bodyWrapper {
+        margin: -1px 100px 20px 100px;
+    }
+}

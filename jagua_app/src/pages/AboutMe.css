@@ -1,0 +1,92 @@
+
+/*Section que engloba a imagem e o texto*/
+.content-container{
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px #ccc;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h1, h2, h4, h5{
+    font-family: 'Bree Serif', serif;
+    color:var(--dark_gray_font);
+}
+
+h2, h4, h5{
+    margin-top: 15px;
+}
+
+p{
+    font-family: 'Arvo', serif;
+    color:var(--dark_gray_font);
+    margin-top: 10px;
+}
+
+
+#img-about-us{
+    width:100%;
+    margin-bottom: 1.5vw;
+}
+
+/*div que contem o paragrafo e os titulos*/
+.text-container{
+    padding: 3vw;
+}
+
+/* ---------------*/
+/* Responsividade */
+/* ---------------*/
+
+
+@media screen and (min-width: 200px) { /* mobile */
+    /* grid */
+    .content-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+
+}
+
+@media screen and (min-width: 400px) { /* tablet */
+    /* grid */
+    .content-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: 600px) {
+    /* grid */
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        margin: 40px;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 1200px) {/* computador */
+    /* grid */
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        margin: 30px 80px;
+    }
+
+    #img-about-us{
+        width:600px;
+    }
+    
+
+}
+

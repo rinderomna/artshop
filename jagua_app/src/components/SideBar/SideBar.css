@@ -1,0 +1,63 @@
+.sidebar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/*corpo da sidebar*/
+.nav-menu{
+    display: flex;
+    background-color: white;
+    width:30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    right:-100%;
+    transition: 850ms;
+    z-index: 2;
+}
+
+
+/*Descreve como o menu deve se comportar quando o botao e clicado*/
+.nav-menu.active{
+    right:0;
+    transition: 350ms;
+}
+
+
+.navbar-toggle{
+    width: 100%;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+/* botao para recolher a sidebar*/
+.close-button{
+    margin: 10px;
+    color:var(--light_gray);
+}
+.close-button:hover{
+    color:red;
+}
+
+
+/*div que preenche toda a tela e deve ficar escura quando a sidebar aparece*/ 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1;
+}
+
+/*deixando a div escura*/
+.overlay.visible {
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.4s;
+}

@@ -1,0 +1,86 @@
+/* 
+ * ---------------------------------
+ * BANNER DE ITENS-DESTAQUE       ||
+ * ---------------------------------
+*/
+
+body {
+    width: 100vw;
+    font-size:16px;
+}
+
+/* Banner de novidades */
+.ProductHighlight {
+    display: flex;
+    background-color: #fff;
+    background-repeat: repeat-x;
+    justify-content: left;
+    align-content: center;
+    z-index: 0;
+    position: relative;
+    box-shadow: 2px 1px 1px 1px #bbb;
+}
+
+.ProductImg{
+    width: 100vw;
+}
+
+.ProductHighlight h1 {
+    padding-top: 2%;
+    padding-left: 5%;
+    align-self: center;
+    font-size: 5em;
+    width: 40%;
+}
+
+/* Responsividade do Banner */
+@media screen and (min-width: 300px) { /* mobile */
+    .ProductHighlight {
+        height: 10em;
+    }
+
+    .ProductHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 500px) { /* tablet */
+    .ProductHighlight {
+        height: 15em;
+    }
+
+    .ProductHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 700px) { /* tablet */
+    .ProductHighlight {
+        height: 20em;
+    }
+
+    .ProductHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+
+@media screen and (min-width: 900px) { /* desktops */
+    .ProductHighlight {
+        height: 24em;
+    }
+
+    .ProductHighlight h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .ProductHighlight {
+        height: auto;
+    }
+
+    .ProductHighlight h1 {
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,14 @@
+.buyProductCart {
+    background-color: var(--purple);
+    color: white;
+    border-radius: 50px;
+    padding: 0.4em 2em;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+}
+
+.buyProductCart:hover {
+    background-color: #999;
+}

@@ -1,0 +1,38 @@
+
+
+h4, h3, h1{
+    font-family: 'Bree Serif', serif;
+}
+
+h4, h3{
+    font-weight: 200;
+    margin-top: 2vw;
+}
+
+h1{
+    font-weight: 600;
+}
+
+label{
+    font-family: 'Arvo', serif;
+    color: var(--dark_gray_font);
+    font-size: 1em;
+}
+
+#price{
+    color: var(--purple);
+    font-family: 'Oswald', sans-serif;
+    font-size:2em;
+}
+
+#description{
+    margin-top: 10px;
+}
+
+.product-size{
+    width: 100%;
+    padding-bottom: 2vw;
+    display: flex;
+    justify-content: center;
+}
+

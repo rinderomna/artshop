@@ -1,0 +1,47 @@
+.sizeType label{
+    font-family: 'Arvo', serif;
+    color: var(--dark_gray_font);
+    font-size: 0.8em;
+}
+
+.sizeType {
+    font-size: 1em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/*Circulos com os tipos de tamanho*/
+.sizeType-name {
+    margin: 0.8em 0.8em 0.3em 0.8em;
+    padding: 0.3em 0.9em 0.3em 0.9em;
+    background-color: #fff;
+    border: 0.1em solid #999;
+    border-radius: 1em;
+    top: 5px;
+    
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5em;
+    font-weight:500;
+    
+    display: inline-block;
+    position: relative;
+}
+
+
+.sizeType-name:hover{
+    background-color: var(--light_gray);
+    color: white;
+}
+
+
+.sizeType-name.selected {
+    background-color: var(--purple);
+    color:white;
+    border-color: var(--purple);
+}
+
+
+
+

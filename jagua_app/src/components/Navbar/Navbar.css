@@ -1,0 +1,153 @@
+/* CSS DA BARRA DE NAVEGACAO */
+
+/* Para menu responsivo */
+.toggleResponsiveMenu { 
+  font-size: 30px;
+  color: #000;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+
+  display: none; /* nos desktops e tablets, nao aparece */
+}
+
+
+/* Caixinha do checkbox que ativa ou desativa o menu sanduiche */
+.check { 
+  display: none; /* nos desktops e tablets, nao aparece */
+  float: right;
+}
+
+/* Flex container das divs (1: com a logo e o menu; 2: do botao de entrar) */
+nav { 
+  background-color: #fff;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoJagua {
+  color: #fff;
+  display: inline;
+  margin-left: 4%; 
+  margin-top: -.5em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Acertando imagem na navbar */
+.logoJagua img {
+  height: 130px;
+  z-index: 0; 
+  position: relative;
+}
+
+nav ul {
+  margin-left: 1em;
+  flex-grow: 2; /* Evitar sobreposicao na logo, mas manter distancia */
+  position: relative;
+  top: 25px; /* Aumente para descer a altura dos links da barra de navegacao */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+a.navLink {
+  padding: 20px 20px 5px 20px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 1.6vw;
+  font-family: 'Lato', sans-serif;
+  position: relative; /* Para aplicar z-index */
+  z-index: 1;
+}
+
+nav #highlightNavBar {
+  background-color: #ff9052;
+  position: absolute;
+  height: 4em;
+  top: -10px;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/* --------------------------------------*/
+/* Layout responsivo para telas menores */
+/* --------------------------------------*/
+
+@media screen and (max-width: 1300px) {
+  nav ul {
+      top: 40px;
+  }
+
+  nav #highlightNavBar {
+      height: 2.5em;
+  }
+}
+
+/* Resolucao para tablet */
+@media screen and (max-width: 952px) {    
+  a.navLink {
+      font-size: 1em;
+  }
+}
+
+/* Resolucao para smartphone */
+@media (max-width: 858px) {
+  nav ul {
+    top: 100px;
+    margin-left: 0;
+    position: absolute;
+  }
+
+  nav #highlightNavBar {
+    display: none;
+  }
+
+  .toggleResponsiveMenu {
+    display: block;
+    margin-left: 1em;
+  }
+
+  ul {
+    width: 100%;
+    height: auto;
+    background: var(--coral);
+    top: 0;
+    left: -110%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 5;
+    border-radius: 1%;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 1em 0;
+    line-height: 30px;
+    font-size: 2em;
+    padding: 1em;
+    transition: all .5s;
+    margin: 0;
+    position: relative;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li:hover {
+    background-color: rgb(194, 92, 55);
+  }
+
+  .check:checked ~ ul {
+    left: 0;
+    z-index: 10;
+  }
+}

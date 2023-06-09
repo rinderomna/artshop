@@ -1,0 +1,53 @@
+/*Container para cada produto*/
+.item-container{
+    height: 130px;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 25px 20px;
+    
+}
+
+/*imagem do produto e botao de excluir*/
+.item-container .img-product{
+    height: 100%;
+    border-radius: 5px;
+    justify-self:flex-start;
+}
+.item-container .close-button{
+    align-self:center;
+    justify-self: right;
+}
+
+/*container com informacaoes especificas de cada produto*/
+.item-info-container{
+    height: 100%;
+    width: 80%;
+    display: block;
+    align-items: start;
+    margin-left: 20px;
+}
+
+/*Texto - nome do produto*/
+.item-info-container .product-name{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2em;
+    color: var(--light_gray);
+    font-weight: bold;   
+}
+
+/*Texto - preco do produto*/
+.item-info-container .product-price{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    color: var(--purple);
+    font-weight: bold; 
+}
+
+/*Paragrafo - detalhes do produto*/
+.item-info-container .product-details{
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: var(--light_gray);
+    margin: 0;
+}
+

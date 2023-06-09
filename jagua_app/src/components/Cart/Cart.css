@@ -1,0 +1,109 @@
+
+/*div que engloba todos os elementos do carrinho*/
+.cart-container{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.cart-container h1{
+    font-size: 1.7em;
+    color: var(--light_gray);
+}
+
+.cart-container .buy-button-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.cart-container .title-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: var(--light_gray);
+}
+
+.nullList-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: var(--light_gray);
+
+    height: 400px;
+  }
+  
+
+/*container com a lista dos produtos que serao comprados*/
+.cart-container .productCartList-container{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+/*Container para cada produto*/
+.item-container{
+    height: 130px;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 25px 20px;
+    
+}
+
+/*imagem do produto e botao de excluir*/
+.item-container .img-product{
+    height: 100%;
+    border-radius: 5px;
+    justify-self:flex-start;
+}
+.item-container .close-button{
+    align-self:center;
+    justify-self: right;
+}
+
+
+/*container com informacaoes especificas de cada produto*/
+.item-info-container{
+    height: 100%;
+    width: 80%;
+    display: block;
+    align-items: start;
+    margin-left: 20px;
+}
+
+/*Texto - nome do produto*/
+.item-info-container .product-name{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2em;
+    color: var(--light_gray);
+    font-weight: bold;   
+}
+
+/*Texto - preco do produto*/
+.item-info-container .product-price{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    color: var(--purple);
+    font-weight: bold; 
+}
+
+/*Paragrafo - detalhes do produto*/
+.item-info-container .product-details{
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: var(--light_gray);
+    margin: 0;
+}
+
