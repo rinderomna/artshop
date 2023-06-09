@@ -69,7 +69,6 @@ const Stickers = () => {
         }
     ];
 
-
     return (
         <>
             <HighlightBanner imageSrc={bannerAdesivos} altText="adesivos" />

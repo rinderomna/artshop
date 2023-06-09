@@ -1,0 +1,131 @@
+/* 
+ * ----------------------
+ * TELA DE LOGIN       ||
+ * ----------------------
+*/
+
+.login-box {
+    position: relative;
+    width: 37.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    padding: 3.125em;
+    border-radius: 1.25em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+.user-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.25em;
+}
+
+.user-icon h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.purple-text {
+    color: var(--purple);
+    font-family: 'Bree-Serif', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.spaced-text {
+    margin-top: 1.875em;
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3125em;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+.underlined {
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+input[type="text"], input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.625em;
+    border: 0.0625em solid #D3D3D3;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus {
+    outline: none; /* Remove o contorno padrão do campo */
+    box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o campo em foco */
+}
+
+select {
+    width: 100%;
+    padding: 0.625em;
+    border: 0.0625em solid #D3D3D3;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF; /* Cor de fundo do dropdown */
+    background-size: 1em; /* Ajuste o tamanho da imagem da seta */
+    padding-right: 1.5em; /* Adicione um espaço para acomodar a imagem da seta */
+}
+
+select:focus {
+    outline: none; /* Remove o contorno padrão do elemento */
+    box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o elemento em foco */
+}
+
+button[type="submit"] {
+    background-color: var(--purple);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1.25em;
+    padding: .3em 1.8em;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
+    margin-top: 1.5em;
+}
+
+button[type="submit"]:hover {
+    background-color: black;
+}
+
+.error {
+    border: 1px solid red;
+    box-shadow: 0 0 3px red;
+}
+
+.error-message {
+    position: relative;
+    top: -1.5em; /* Ajuste o valor conforme necessário para definir a distância vertical */
+    left: 1em;
+    color: red;
+    font-size: 12px;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+}

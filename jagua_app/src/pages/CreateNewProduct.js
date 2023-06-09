@@ -1,8 +1,12 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 import { StatusContext } from '../App.js';
 import PermissionDenied from "../components/PermissionDenied/PermissionDenied.js";
+
+import "../components/LoginBox/FormStyle.css";
 
 const CreateNewProduct = () => {
     const { status } = useContext(StatusContext);
@@ -17,8 +21,14 @@ const CreateNewProduct = () => {
     
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const {
+        handleSubmit,
+        register,
+        formState: { errors },
+    } = useForm();
+    
+    const onSubmit = (data) => {
+        console.log(data);
         navigate("/"); // Navega para a rota "/"
     };
 
@@ -29,50 +39,74 @@ const CreateNewProduct = () => {
                     <div className="login-box">
                         <h1>Novo Produto</h1>
                         <h2 className="purple-text spaced-text">Descrição do Produto</h2>
-                        <form action="" method="GET">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <label htmlFor="productname">Nome do produto</label>
                             <input
                                 type="text"
                                 id="productname"
                                 name="productname"
-                                placeholder="Nome do Produto"
+                                maxLength={40}
+                                placeholder="Por exemplo: Print Cogumelo Vermelho"
                                 onChange={(e) => setProductName(e.target.value)}
+                                className={errors.productname ? "error" : ""}
+                                {...register("productname", {required: true})}
                             />
-                            <input
+                            {errors.productname && (
+                                <span className="error-message">
+                                    Preencha o campo Nome do produto
+                                </span>
+                            )}
+                            <label htmlFor="productprice">Preço</label>
+                            <InputMask
+                                mask="R$ 99,99"
                                 type="text"
-                                inputMode="decimal"
                                 id="productprice"
                                 name="productprice"
-                                placeholder="Preço"
-                                pattern="[0-9]*[.,]?[0-9]{0,2}"
+                                placeholder="R$ XX,XX"
                                 onChange={(e) => setProductPrice(e.target.value)}
+                                className={errors.productprice ? "error" : ""}
+                                {...register("productprice", { 
+                                    required: true
+                                })}
                             />
+                            {errors.productprice && (
+                                <span className="error-message">Preencha o campo Preço</span>
+                            )}
+                            
+                            <label htmlFor="productdescription">Descrição</label>
                             <input
                                 type="text"
                                 id="productdescription"
                                 name="productdescription"
-                                placeholder="Descrição"
+                                maxLength={100}
+                                placeholder="Por exemplo: Impressão em papel couchê fosco com gramatura 300."
                                 onChange={(e) => setProductDescription(e.target.value)}
                             />
+                            <label htmlFor="productcategory">Categoria do produto</label>
                             <select
                                 name="productcategory"
                                 id="productcategory"
-                                value={productCategory}
-                                onChange={(e) => setProductCategory(e.target.value)}
+                                {...register("productcategory", { 
+                                    required: true,
+                                    validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
+                                })}
                             >
-                                <option value="" disabled hidden>Categoria</option>
+                                <option value="" defaultValue>Escolha uma categoria...</option>
                                 <option value="adesivo">Adesivo</option>
                                 <option value="camiseta">Camiseta</option>
-                                <option value="chaveiro">Chaveiro</option>
                                 <option value="print">Print</option>
                             </select>
                             <h2 className="purple-text spaced-text">Tamanho</h2>
+                            <label htmlFor="productsizecategory">Tamanho do produto</label>
                             <select
                                 name="productsizecategory"
                                 id="productsizecategory"
-                                value={productSizeCategory}
-                                onChange={(e) => setProductSizeCategory(e.target.value)}
+                                {...register("productsizecategory", { 
+                                    required: true,
+                                    validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
+                                })}
                             >
-                                <option value="" disabled hidden>Categoria de tamanho</option>
+                                <option value="" defaultValue>Escolha um tamanho de produto...</option>
                                 <option value="p">P</option>
                                 <option value="m">M</option>
                                 <option value="g">G</option>
@@ -85,20 +119,21 @@ const CreateNewProduct = () => {
                                 type="text"
                                 id="specificsize"
                                 name="specificsize"
+                                maxLength={30}
                                 placeholder="Tamanho específico"
                                 onChange={(e) => setSpecificSize(e.target.value)}
                             />
                             <h2 className="purple-text spaced-text">Imagem</h2>
+                            <label htmlFor="productimage">Arquivo de imagem</label>
                             <input
-                                type="text"
+                                type="file"
                                 id="productimage"
                                 name="productimage"
-                                placeholder="Link para a imagem"
                                 onChange={(e) => setProductImage(e.target.value)}
-                                // accept="image/png, image/jpg"
+                                accept="image/png, image/jpg"
                             />
 
-                            <button type="submit" onClick={handleSubmit}>OK</button>
+                            <button type="submit">OK</button>
                         </form>
                     </div> :
                 <PermissionDenied userType="administrador" />

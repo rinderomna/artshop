@@ -1,8 +1,8 @@
-import OrdersList from "../components/OrdersList/OrdersList";
+import CheckoutBox from "../components/CheckoutBox/CheckoutBox";
 
 const Checkout = () => {
     return (
-        <OrdersList/>
+        <CheckoutBox />
     );
 };
 

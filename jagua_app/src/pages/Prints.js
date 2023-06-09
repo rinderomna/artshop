@@ -69,7 +69,6 @@ const Prints = () => {
         }
     ];
 
-
     return (
         <>
             <HighlightBanner imageSrc={bannerPrints} altText="prints" />
