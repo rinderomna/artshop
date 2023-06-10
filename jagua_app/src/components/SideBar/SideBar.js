@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import "./SideBar.css"
 import Cart from '../Cart/Cart';
+import ExitButton from '../ExitButton/ExitButton';
 
 
 function SideBar({sideBarType, handleRemoveItemCart, setType}) {
@@ -48,7 +49,7 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
                         {/*Botao 'x' para recolher a sidebar*/}
                         <AiOutlineClose className='close-button' onClick={closeSideBar}/>
                         {(sideBarType === "cart") ? <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : <></>}
-                        {(sideBarType === "user") ? <h1>Perfil do usuário</h1>: <></>}
+                        {(sideBarType === "user") ? <><h1>Perfil do usuário</h1> <ExitButton callBack={closeSideBar}/> </>: <></>}
                 
                 </div>
                 

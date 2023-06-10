@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { StatusContext } from "../../App.js";
 
-const ExitButton = () => {
+const ExitButton = ({callBack}) => {
     const {
         setStatus
     } = useContext(StatusContext);
@@ -16,6 +16,8 @@ const ExitButton = () => {
             cartList: [],
             orders: []
         });
+
+        callBack();
     };
 
     return (
