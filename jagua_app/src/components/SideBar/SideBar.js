@@ -41,7 +41,10 @@ function SideBar({sideBarType, handleRemoveItemCart}) {
             <div className="sidebar">
                 {/*Icone do carrinho */}
                 <IconContext.Provider value={{ className: "shared-class", size: 50, color:"#999"}}>
-                    <AiOutlineShoppingCart onClick={showCart}/> 
+                    <AiOutlineShoppingCart 
+                        onClick={showCart} 
+                        style={{cursor: "pointer"}} 
+                    /> 
                 </IconContext.Provider>
             </div>
 

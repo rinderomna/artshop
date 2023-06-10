@@ -2,10 +2,7 @@
 #numProducts{
     width:7em;
     height: 3em;
-    /*padding: 0.2em 0.1em;*/
-    /*margin-right: var(--button_margin);*/
     text-align: center;
-
     border: 0.14em solid var(--light_gray);
     border-radius: 0.5em;
     display:flex;
@@ -19,6 +16,7 @@
     background-color: white;
     font-size: 2em;
     font-family: 'Bree Serif', serif;
+    cursor: pointer;
 }
 
 

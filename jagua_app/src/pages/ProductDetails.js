@@ -9,7 +9,14 @@ import { StatusContext } from "../App.js";
 
 
 const ProductDetails = ({handleAddToCart}) => {
-    const [newProductAdded, setNewProductAdded] = useState();
+    const [newProductAdded, setNewProductAdded] = useState({
+        id: 0,
+        image: null,
+        name: "",
+        price: 0,
+        qtd: 0,
+        size_name: undefined
+    });
     const [numProducts, setNumProducts] = useState(1);
     const [size, setSize] = useState("");
     const [flagCart, setFlagCart] = useState(false);
@@ -49,13 +56,17 @@ const ProductDetails = ({handleAddToCart}) => {
 
     //define o que acontece quando o usuario clica no botao "adicionar ao carrinho"
     const handleButtonClick = () => {
-        handleAddToCart(newProductAdded);
-        //mostrar carrinho
-        setFlagCart(true);
-        alert("Item adicionado ao carrinho :)");
+        console.log(newProductAdded.size_name);
+        if (newProductAdded.size_name === undefined) {
+            alert("Selecione um tamanho de produto!");
+        }
+        else {
+            handleAddToCart(newProductAdded);
+            //mostrar carrinho
+            setFlagCart(true);
+            alert("Item adicionado ao carrinho :)");
+        }
     }
-
-
 
     return (
         <section className="product-container">

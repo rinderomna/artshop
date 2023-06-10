@@ -100,8 +100,17 @@ function App() {
 
   //---------- Finalizando código apenas p/ teste --------------------
 
+
+  // LOGICA DE STATUS DO USUARIO -- IMPORTANTE!!!
+  /*
+    Type: controla se usuario esta deslogado, transiente ou logado. Se logado, se eh um cliente logado ou um admin logado;
+    User: cada user tem um tipo (admin ou cliente), um nome de usuario e uma senha. Isso eh guardado em db.json.
+    currProduct, cartList e orders: logica de carrinho e de produtos que cliente compra.
+  */
   const [status, setStatus] = useState(() => {
-    const storedStatus = localStorage.getItem("status");
+    // Fornece 'memoria' ao site - permite atualizar pagina e ter dados mantidos ate clicar em sair.
+    const storedStatus = localStorage.getItem("status"); 
+
     return storedStatus ? JSON.parse(storedStatus) : {
       type: "loggedOut",
       user: null,
@@ -109,8 +118,10 @@ function App() {
       cartList: productCartList,
       orders: ordersList
     };
+
   });
-  if(status.orders != null){
+
+  if(status.orders !== null){
     console.log("App.js -> Status: " + status.orders);
   }
 
@@ -118,11 +129,12 @@ function App() {
     localStorage.setItem("status", JSON.stringify(status));
   }, [status]);
 
-  //as funcoes de manipulacao tambem devem ser visiveis por todos os 
-  //componentes (devem estar descritas no componente pai)
+  // -- Logica de carrinho --
+  // As funcoes de manipulacao tambem devem ser visiveis por todos os 
+  // componentes (devem estar descritas no componente pai)
   const handleAddToCart = (productAdded) => {
     const newProductCartList = [...productCartList, {
-      id: productAdded.id, //ver depois
+      id: productAdded.id, // Ver depois
       image: productAdded.image,
       name: productAdded.name,
       price: productAdded.price,
@@ -138,7 +150,7 @@ function App() {
   };
 
   const handleRemoveItemCart = (rem_product) => {
-    //removendo o item do carrinho
+    // Removendo o item do carrinho
     const updatedList = productCartList.filter((product) => product !== rem_product);
     setProductCartList(updatedList);
     setStatus((prevStatus) => ({
@@ -146,12 +158,16 @@ function App() {
       cartList: updatedList
     }));
   }
-  //-----------------------------------
 
+  //---------- Fim da logica de carrinho --------------
+
+  // Visualizando status do usuario
   useEffect(() => {
     console.log(status);
   }, [status]);
 
+  // Controle da aplicacao em geral. Aqui, tem os roteamentos e os contextos necessarios para o bom funcionamento
+  // da navegacao pelo site.
   return (
     <StatusContext.Provider
       value={{
