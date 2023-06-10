@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import "./SideBar.css"
@@ -33,7 +32,6 @@ function SideBar({sideBarType, handleRemoveItemCart}) {
     useEffect(() => {
         showSidebar();
     }, [type]);
-
     
     
     return (
@@ -41,17 +39,18 @@ function SideBar({sideBarType, handleRemoveItemCart}) {
             <div className={`overlay ${sidebar ? 'visible' : ''}`} onClick={showSidebar}/>
 
             <div className="sidebar">
-                <Link to="#" className="menu-bars">
-                    <IconContext.Provider value={{ className: "shared-class", size: 50, color:"#999"}}>
-                        <AiOutlineShoppingCart onClick={showCart}/> 
-                    </IconContext.Provider>
-                </Link>
+                {/*Icone do carrinho */}
+                <IconContext.Provider value={{ className: "shared-class", size: 50, color:"#999"}}>
+                    <AiOutlineShoppingCart onClick={showCart}/> 
+                </IconContext.Provider>
             </div>
 
+            {/*Corpo da sidebar = ja inicia renderizada, porem fica escondida (right: -100%) */}
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 
+                {/*Interior da sidebar */}
                 <div className='navbar-toggle'>
-                    
+                        {/*Botao 'x' para recolher a sidebar*/}
                         <AiOutlineClose className='close-button' onClick={showSidebar}/>
                         {cart ? <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : <></>}
                 

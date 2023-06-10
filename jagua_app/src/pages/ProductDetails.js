@@ -55,10 +55,7 @@ const ProductDetails = ({handleAddToCart}) => {
         alert("Item adicionado ao carrinho :)");
     }
 
-    // useEffect(() => {
-    //     if(flagCart) alert("Item adicionado ao carrinho :)")
-    //     setFlagCart(false);
-    // }, [flagCart]);
+
 
     return (
         <section className="product-container">
@@ -81,10 +78,6 @@ const ProductDetails = ({handleAddToCart}) => {
                         </div>
                         <div className="add-to-cart-container">
                             <AddToCartButton handleClick={handleButtonClick} />
-
-                            { //essa parte nao ta dando certo!!
-                              /*  {(flagCart ? <SideBar type={"cart"}/> : <></>)}*/
-                            }
                         </div>
                     </div>
                 </div>
