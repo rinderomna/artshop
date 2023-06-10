@@ -31,7 +31,7 @@ function LoginBox(props) {
                 ));
 
                 if (!user) {
-                    alert("Usuário não encontrado!");
+                    alert("Usuário não encontrado ou senha incorreta!");
                 } else if (user.type === "admin") {
                     setStatus({
                         type: "adminLoggedIn",

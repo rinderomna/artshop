@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 
 import { StatusContext } from '../../App.js';
 
+import ExitButton from '../ExitButton/ExitButton.js';
 import UserButton from '../UserButton/UserButton.js';
 import LoginButton from "../LoginButton/LoginButton.js";
 import SideBar from '../SideBar/SideBar.js';
@@ -36,7 +37,7 @@ function RightNavWrapper() {
                     ?
                     <>
                         <IconContext.Provider value={{ className: "shared-class", size: 50, color:"#999"}}>
-                            <AiOutlineShoppingCart onClick={handleCartClick}/> 
+                            <AiOutlineShoppingCart onClick={handleCartClick} style={{cursor: "pointer"}}/> 
                         </IconContext.Provider>
                         
                     </>
@@ -46,8 +47,12 @@ function RightNavWrapper() {
 
             {
                 (status.type === "adminLoggedIn" || status.type === "customerLoggedIn") ?
-                    <div onClick={handleUserClick}><UserButton userName={status.user.userName} /></div> :
+                    <> 
+                        <ExitButton />
+                        <div onClick={handleUserClick}><UserButton userName={status.user.userName} /></div> 
+                    </> :
                     <LoginButton hidden={status.type === "transient"}/>
+                    
             }
 
             <SideBar sideBarType={type} setType={setType}/>
