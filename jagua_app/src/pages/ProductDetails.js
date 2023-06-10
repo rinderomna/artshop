@@ -40,7 +40,8 @@ const ProductDetails = () => {
 
     //componentes (devem estar descritas no componente pai)
     const handleAddToCart = (productAdded) => {
-        const newCartList = [...status.cartList, {
+        const cartList = (status.cartList) ? status.cartList : [];
+        const newCartList = [...cartList, {
         id: productAdded.id, //ver depois
         image: productAdded.image,
         name: productAdded.name,
