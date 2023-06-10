@@ -39,12 +39,12 @@ const UserProfileBox = ({callBack}) => {
             <span className="button-container">
                 <Link 
                     to="/editProfile" 
-                    className="edit-profile-button"
+                    className="edit-profile-button button"
                     onClick={callBack}
                 >Editar Perfil</Link>
                 <Link 
                     to="/myOrders" 
-                    className="my-orders-button"
+                    className="my-orders-button button"
                     onClick={callBack}
                 >Meus Pedidos</Link>
             </span>

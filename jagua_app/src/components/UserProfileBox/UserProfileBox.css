@@ -35,6 +35,17 @@
     /* Alteração: adiciona espaçamento horizontal entre os botões */
 }
 
+/* Mudar, pois não está sendo aplicado, por algum motivo */
+.button {
+    border-radius: 1.25em;
+    padding: .3em 1.8em;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
+    margin-top: 1.5em;
+}
+
 .edit-profile-button {
     border: 2px solid var(--light_gray);
     color: var(--light_gray);
