@@ -1,0 +1,18 @@
+.profileBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Alteração: inicia o alinhamento a partir do topo */
+    text-align: center;
+    height: 100vh;
+    /* Define a altura total da página */
+}
+
+.profileBox h1 {
+    margin-bottom: 10px;
+}
+
+.profileBox h2 {
+    margin-bottom: 20px;
+}

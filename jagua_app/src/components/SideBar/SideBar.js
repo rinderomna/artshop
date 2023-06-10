@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import "./SideBar.css"
 import Cart from '../Cart/Cart';
-import ExitButton from '../ExitButton/ExitButton';
+import UserProfileBox from '../UserProfileBox/UserProfileBox';
 
 
 function SideBar({sideBarType, handleRemoveItemCart, setType}) {
@@ -12,7 +12,7 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
     const [cart, setCart] = useState(false);
 
     const showSidebar = () =>{
-        if(sideBarType != undefined){
+        if(sideBarType !== undefined){
              setSidebar(!sidebar) 
     
              if(sideBarType === "cart"){
@@ -33,7 +33,7 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
         if(sideBarType !== "" || sidebar === true){
             showSidebar();
         }
-    }, [sideBarType]);
+    }, [sideBarType]); // eslint-disable-line react-hooks/exhaustive-deps
 
     
     
@@ -54,20 +54,9 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
                                 <></>
                         }
                         {
-                            (sideBarType === "customer") ? 
-                                <>
-                                    <h1>Perfil do cliente</h1> 
-                                    <ExitButton callBack={closeSideBar}/> 
-                                </>: 
-                            <></>
-                        }
-                        {
-                            (sideBarType === "admin") ? 
-                                <>
-                                    <h1>Perfil do administrador</h1> 
-                                    <ExitButton callBack={closeSideBar}/> 
-                                </>: 
-                            <></>
+                            (sideBarType === "customer" || sideBarType === "admin") ? 
+                                <UserProfileBox callBack={closeSideBar} />: 
+                                <></>
                         }
                 </div>
                 

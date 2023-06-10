@@ -12,6 +12,7 @@
     border-radius: 50%;
     background-color: lightgrey;
     margin-right: 1.7em; /* Adicione um espaçamento à direita para separar o círculo da div de mensagem */
+    cursor: pointer;
 }
   
 .userMessageContainer {
@@ -26,4 +27,5 @@
     padding: 5px 45px;
     color: grey;
     font-size: 1.5em;
+    cursor: pointer;
 }  
