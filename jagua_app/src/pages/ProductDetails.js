@@ -9,7 +9,6 @@ import { StatusContext } from "../App.js";
 
 
 const ProductDetails = ({handleAddToCart}) => {
-    
     const [newProductAdded, setNewProductAdded] = useState();
     const [numProducts, setNumProducts] = useState(1);
     const [size, setSize] = useState("");
@@ -51,14 +50,13 @@ const ProductDetails = ({handleAddToCart}) => {
         handleAddToCart(newProductAdded);
         //mostrar carrinho
         setFlagCart(true);
+        alert("Item adicionado ao carrinho :)");
     }
 
-    useEffect(() => {
-        if(flagCart) alert("Item adicionado ao carrinho :)")
-        setFlagCart(false);
-    }, [flagCart]);
-
-
+    // useEffect(() => {
+    //     if(flagCart) alert("Item adicionado ao carrinho :)")
+    //     setFlagCart(false);
+    // }, [flagCart]);
 
     return (
         <section className="product-container">

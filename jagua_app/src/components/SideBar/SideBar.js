@@ -6,7 +6,6 @@ import "./SideBar.css"
 import Cart from '../Cart/Cart';
 
 
-
 function SideBar({sideBarType, handleRemoveItemCart}) {
 
     const [sidebar, setSidebar] = useState(false);
