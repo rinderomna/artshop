@@ -48,9 +48,19 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
                 <div className='navbar-toggle'>
                         {/*Botao 'x' para recolher a sidebar*/}
                         <AiOutlineClose className='close-button' onClick={closeSideBar}/>
-                        {(sideBarType === "cart") ? <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : <></>}
-                        {(sideBarType === "user") ? <><h1>Perfil do usuário</h1> <ExitButton callBack={closeSideBar}/> </>: <></>}
-                
+                        {
+                            (sideBarType === "cart") ? 
+                                <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : 
+                                <></>
+                        }
+                        {
+                            (sideBarType === "user") ? 
+                                <>
+                                    <h1>Perfil do usuário</h1> 
+                                    <ExitButton callBack={closeSideBar}/> 
+                                </>: 
+                            <></>
+                        }
                 </div>
                 
             </nav>
