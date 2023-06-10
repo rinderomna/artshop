@@ -1,0 +1,18 @@
+.exit-button {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    /* Texto vermelho */
+    border: 2px solid red;
+    /* Borda vermelha */
+    border-radius: 10px;
+    /* Cantos redondos */
+    padding: 10px 20px;
+}
+
+.exit-button:hover {
+    background-color: red;
+    /* Cor de fundo vermelha ao passar o mouse */
+    color: white;
+    /* Texto branco ao passar o mouse */
+}
