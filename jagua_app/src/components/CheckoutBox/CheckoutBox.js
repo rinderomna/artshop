@@ -1,22 +1,61 @@
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import InputMask from "react-input-mask";
 
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { StatusContext } from "../../App.js";
 
 import "../../components/LoginBox/FormStyle.css";
+import Cart from "../Cart/Cart";
+import OrdersList from "../OrdersList/OrdersList.js";
 
 const CheckoutBox = () => {
+  const { status, setStatus } = useContext(StatusContext);
   const navigate = useNavigate();
+
+
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
+  
 
   const onSubmit = (data) => {
     console.log(data);
+
+    //gerando novo pedido
+    if (status.cartList !== null) {
+      const newOrder = {
+        id: parseInt(Math.random() * 200),
+        date: new Date().toLocaleString(),
+        productList: status.cartList,
+        status: "Aguardando Postagem",
+        code: null
+      };
+      
+      setStatus((prevStatus) => {
+        if (prevStatus.orders) {
+          return {
+            ...prevStatus,
+            orders: [...prevStatus.orders, newOrder]
+          };
+        } else {
+          return {
+            ...prevStatus,
+            orders: [newOrder]
+          };
+        }
+      });
+    }
+
+    console.log("Compra realizada com sucesso!");
+
+    if(status.orders != null){
+      console.log("CheckoutBox.js -> Status Orders: " + status.orders);
+    }
     navigate("/myOrders");
+    
   };
 
   const validateCPF = (value) => {
@@ -46,12 +85,7 @@ const CheckoutBox = () => {
 
   return (
     <div className="login-box">
-      <div className="user-icon" aria-label="Ícone de usuário">
-        <AiOutlineShoppingCart size={"6em"} color="var(--dark_gray_font)" />
-      </div>
-      <h1>Seu Carrinho</h1>
-      <h1>&lt;Produtos no carrinho aqui&gt;</h1>
-      <hr />
+      <Cart flagBuyBtn={false}/>
       <h2 className="purple-text spaced-text">Dados pessoais</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="fullname">Nome completo</label>
@@ -251,8 +285,9 @@ const CheckoutBox = () => {
           </span>
         )}
 
-        <button type="submit">Finalizar Compra</button>
+        <button type="submit" >Finalizar Compra</button>
       </form>
+
     </div>
   );
 };

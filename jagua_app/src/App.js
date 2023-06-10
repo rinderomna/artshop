@@ -95,6 +95,9 @@ function App() {
     cartList: productCartList,
     orders: ordersList
   });
+  if(status.orders != null){
+    console.log("App.js -> Status: " + status.orders);
+  }
 
 
   //as funcoes de manipulacao tambem devem ser visiveis por todos os 

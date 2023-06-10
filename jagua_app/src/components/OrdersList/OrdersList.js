@@ -23,7 +23,7 @@ function OrdersList() {
                                 <p className="order-date">{order.date}</p>
                             </div>
 
-                            <h3 className="order-status">{order.status}</h3>
+                            <h3 className={`order-status ${order.status === "Aguardando Postagem" ? "red" : "green"}`}>{order.status}</h3>
                         </div>
 
                         

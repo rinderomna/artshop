@@ -28,13 +28,15 @@ const ProductDetails = ({handleAddToCart}) => {
     }
 
     const { status } = useContext(StatusContext);
+    console.log("ProductDetails.js -> Status: " + status);
+
 
     //status para pegar as informacoes do porduto que o usuario quer 
     //visualizar com mais detalhe -> é armazenado no status quando o BuyButton 
     //é clicado
     useEffect(() => {
       const productAdded = {
-        id: 1,
+        id: parseInt(Math.random() * 200),
         image: status.currProduct.image,
         name: status.currProduct.name,
         price: status.currProduct.price,

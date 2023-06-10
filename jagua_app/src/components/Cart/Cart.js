@@ -8,6 +8,8 @@ import "./Cart.css";
 
 function Cart({flagBuyBtn, handleRemoveItemCart }) {
   const { status } = useContext(StatusContext);
+  console.log("Cart.js -> Status: " + status);
+
   const handleRemoveClick = (rem_product) => {
     handleRemoveItemCart(rem_product);
   };
@@ -45,10 +47,9 @@ function Cart({flagBuyBtn, handleRemoveItemCart }) {
                     <p className="product-details">Tamanho: {product.size_name}</p>
                     <p className="product-price">R$ {parseFloat(product.price)*parseFloat(product.qtd)}</p>
                     </div>
-                    {console.log(typeof product.price)}
-                    {console.log(typeof product.qtd)}
 
-                    <AiOutlineClose className="close-button" onClick={() => handleRemoveClick(product)} />
+                    {(flagBuyBtn ? <AiOutlineClose className="close-button" onClick={() => handleRemoveClick(product)} /> : <></>)}
+                    
                 </div>
                 ))}
             </div>

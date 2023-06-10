@@ -11,6 +11,7 @@ function Catalog(props) {
             <h1>{name}</h1>
             <article className={`allProductsCatalog ${type}`}>
                 {products.map((product) => (
+                    
                     <ProductCard product={product}/>
                 ))}
             </article>

@@ -7,7 +7,7 @@
     justify-content: space-between;
     box-shadow: 5px 5px 25px #b7b7b7;
     border-radius: 20px;
-    padding: 15px;
+    padding: 20px;
 }
 
 .order-info-container{
@@ -17,7 +17,7 @@
     align-items:bottom;
 }   
 
-.order-status{
+.order-status.red{
     border: 3px solid tomato;
     color: tomato;
     border-radius: 15px;
@@ -25,6 +25,16 @@
     align-self: end; 
     margin-bottom: 20px;
     margin-right: 15px;
+}
+
+.order-status.green{
+  border: 3px solid green;
+  color: green;
+  border-radius: 15px;
+  padding: 3px 15px;
+  align-self: end; 
+  margin-bottom: 20px;
+  margin-right: 15px;
 }
   
   .date-container {
