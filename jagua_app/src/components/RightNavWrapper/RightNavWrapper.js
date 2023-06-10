@@ -2,6 +2,7 @@ import { useContext } from 'react';
 
 import { StatusContext } from '../../App.js';
 
+import ExitButton from '../ExitButton/ExitButton.js';
 import UserButton from '../UserButton/UserButton.js';
 import LoginButton from "../LoginButton/LoginButton.js";
 import SideBar from '../SideBar/SideBar.js';
@@ -23,7 +24,8 @@ function RightNavWrapper({handleRemoveItemCart}) {
 
             {
                 (status.type === "adminLoggedIn" || status.type === "customerLoggedIn") ?
-                    <UserButton userName={status.user.userName}/> :
+                    <> <ExitButton />
+                    <UserButton userName={status.user.userName}/> </> :
                     <LoginButton hidden={status.type === "transient"}/>
             }
         </>
