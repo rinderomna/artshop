@@ -54,9 +54,17 @@ function SideBar({sideBarType, handleRemoveItemCart, setType}) {
                                 <></>
                         }
                         {
-                            (sideBarType === "user") ? 
+                            (sideBarType === "customer") ? 
                                 <>
-                                    <h1>Perfil do usuário</h1> 
+                                    <h1>Perfil do cliente</h1> 
+                                    <ExitButton callBack={closeSideBar}/> 
+                                </>: 
+                            <></>
+                        }
+                        {
+                            (sideBarType === "admin") ? 
+                                <>
+                                    <h1>Perfil do administrador</h1> 
                                     <ExitButton callBack={closeSideBar}/> 
                                 </>: 
                             <></>

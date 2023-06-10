@@ -42,12 +42,12 @@ const ProductDetails = () => {
     const handleAddToCart = (productAdded) => {
         const cartList = (status.cartList) ? status.cartList : [];
         const newCartList = [...cartList, {
-        id: productAdded.id, //ver depois
-        image: productAdded.image,
-        name: productAdded.name,
-        price: productAdded.price,
-        qtd: productAdded.qtd,
-        size_name: productAdded.size_name
+            id: productAdded.id, //ver depois
+            image: productAdded.image,
+            name: productAdded.name,
+            price: productAdded.price,
+            qtd: productAdded.qtd,
+            size_name: productAdded.size_name
         }];
 
         setStatus((prevStatus) => ({
