@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useLocation } from 'react-router-dom'
 import ProductImage from "../components/ProductImage/ProductImage";
 import ProductInfo from "../components/ProductInfo/ProductInfo";
 
@@ -7,28 +6,17 @@ import "./ProductDetails.css";
 import NumProducts from "../components/NumProducts/NumProducts";
 import AddToCartButton from "../components/AddToCartButton/AddToCartButton";
 import { StatusContext } from "../App.js";
-import SideBar from "../components/SideBar/SideBar";
 
 
 const ProductDetails = ({handleAddToCart}) => {
-    //Pegar a informação de qual botao de compra o usuario esta vindo (qual produto quer comprar)
-    const location = useLocation();
-    const { status } = useContext(StatusContext);
-
-    //caso nao seja possivel pegar o contexto do ultimo botao de compra no catalogo clicado,
-    //pega a informação do ultimo produto visitado (armazenado no status)
-    if (location.state != null){
-        const { product } = location.state;
-        status.currProduct = product;
-    }
-
+    
     const [newProductAdded, setNewProductAdded] = useState();
     const [numProducts, setNumProducts] = useState(1);
     const [size, setSize] = useState("");
     const [flagCart, setFlagCart] = useState(false);
 
     useEffect(() => {
-      window.scrollTo(0, 0); // Rolando para o topo da página
+        window.scrollTo(0, 0); // Rolando para o topo da página
     }, []);
 
     const handleNumChange = (value) =>{
@@ -38,19 +26,25 @@ const ProductDetails = ({handleAddToCart}) => {
     const handleSizeClick = (chosen_size) =>{
         setSize(chosen_size);
     }
-    
+
+    const { status } = useContext(StatusContext);
+
+    //status para pegar as informacoes do porduto que o usuario quer 
+    //visualizar com mais detalhe -> é armazenado no status quando o BuyButton 
+    //é clicado
     useEffect(() => {
-        const productAdded ={
-            id: 1,
-            image: status.currProduct.image,
-            name: status.currProduct.name,
-            price: status.currProduct.price,
-            qtd: numProducts,
-            size_name: size.name
-        }
-        console.log("ProductDetails.js -> preço: " + status.currProduct.price);
-        setNewProductAdded(productAdded);
-    }, [size, numProducts]);    
+      const productAdded = {
+        id: 1,
+        image: status.currProduct.image,
+        name: status.currProduct.name,
+        price: status.currProduct.price,
+        qtd: numProducts,
+        size_name: size.name
+      };
+      setNewProductAdded(productAdded);
+      
+      // This effect can also depend on status.currProduct.price if needed
+    }, [size, numProducts, status.currProduct]);  
 
     //define o que acontece quando o usuario clica no botao "adicionar ao carrinho"
     const handleButtonClick = () => {
