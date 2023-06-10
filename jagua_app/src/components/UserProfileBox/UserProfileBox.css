@@ -16,3 +16,41 @@
 .profileBox h2 {
     margin-bottom: 20px;
 }
+
+.profileBox .button-container {
+    display: flex;
+    /* Alteração: exibe os botões em uma linha */
+    justify-content: center;
+    /* Alteração: centraliza os botões horizontalmente */
+    margin-bottom: 10px;
+    /* Alteração: adiciona espaçamento inferior entre os botões */
+}
+
+.profileBox .button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+    /* Alteração: adiciona espaçamento horizontal entre os botões */
+}
+
+.edit-profile-button {
+    border: 2px solid var(--light_gray);
+    color: var(--light_gray);
+    background-color: white;
+}
+
+.edit-profile-button:hover {
+    color: white;
+    background-color: var(--light_gray);
+}
+
+.my-orders-button {
+    color: white;
+    background-color: var(--purple);
+}
+
+.my-orders-button:hover {
+    background-color: var(--dark_purple);
+}
