@@ -5,14 +5,17 @@ import ProductInfo from "../components/ProductInfo/ProductInfo";
 import "./ProductDetails.css";
 import NumProducts from "../components/NumProducts/NumProducts";
 import AddToCartButton from "../components/AddToCartButton/AddToCartButton";
+import SideBar from "../components/SideBar/SideBar";
 import { StatusContext } from "../App.js";
 
 
-const ProductDetails = ({handleAddToCart}) => {
+const ProductDetails = () => {
     const [newProductAdded, setNewProductAdded] = useState();
     const [numProducts, setNumProducts] = useState(1);
     const [size, setSize] = useState("");
-    const [flagCart, setFlagCart] = useState(false);
+
+    const [type, setType] = useState("");
+
 
     useEffect(() => {
         window.scrollTo(0, 0); // Rolando para o topo da página
@@ -26,8 +29,24 @@ const ProductDetails = ({handleAddToCart}) => {
         setSize(chosen_size);
     }
 
-    const { status } = useContext(StatusContext);
-    console.log("ProductDetails.js -> Status: " + status);
+    const { status, setStatus } = useContext(StatusContext);
+
+    //componentes (devem estar descritas no componente pai)
+    const handleAddToCart = (productAdded) => {
+        const newCartList = [...status.cartList, {
+        id: productAdded.id, //ver depois
+        image: productAdded.image,
+        name: productAdded.name,
+        price: productAdded.price,
+        qtd: productAdded.qtd,
+        size_name: productAdded.size_name
+        }];
+
+        setStatus((prevStatus) => ({
+        ...prevStatus,
+        cartList: newCartList
+        }));
+    };
 
 
     //status para pegar as informacoes do porduto que o usuario quer 
@@ -51,10 +70,11 @@ const ProductDetails = ({handleAddToCart}) => {
     const handleButtonClick = () => {
         handleAddToCart(newProductAdded);
         //mostrar carrinho
-        setFlagCart(true);
-        alert("Item adicionado ao carrinho :)");
-    }
+        /*setFlagCart(true);
+        alert("Item adicionado ao carrinho :)");*/
 
+        setType("cart");
+    }
 
 
     return (
@@ -84,6 +104,7 @@ const ProductDetails = ({handleAddToCart}) => {
 
             </div>
 
+        <SideBar sideBarType={type} setType={setType}/>
 
 
         </section>

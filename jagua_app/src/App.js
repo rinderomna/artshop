@@ -106,35 +106,6 @@ function App() {
     localStorage.setItem("status", JSON.stringify(status));
   }, [status]);
 
-  //as funcoes de manipulacao tambem devem ser visiveis por todos os 
-  //componentes (devem estar descritas no componente pai)
-  const handleAddToCart = (productAdded) => {
-    const newProductCartList = [...productCartList, {
-      id: productAdded.id, //ver depois
-      image: productAdded.image,
-      name: productAdded.name,
-      price: productAdded.price,
-      qtd: productAdded.qtd,
-      size_name: productAdded.size_name
-    }];
-
-    setProductCartList(newProductCartList);
-    setStatus((prevStatus) => ({
-      ...prevStatus,
-      cartList: newProductCartList
-    }));
-  };
-
-  const handleRemoveItemCart = (rem_product) => {
-    //removendo o item do carrinho
-    const updatedList = productCartList.filter((product) => product !== rem_product);
-    setProductCartList(updatedList);
-    setStatus((prevStatus) => ({
-      ...prevStatus,
-      cartList: updatedList
-    }));
-  }
-  //-----------------------------------
 
   useEffect(() => {
     console.log(status);
@@ -149,7 +120,7 @@ function App() {
     >
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar handleRemoveItemCart={handleRemoveItemCart} />}>
+          <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="aboutMe" element={<AboutMe />} />
             <Route path="prints" element={<Prints />} />
@@ -157,7 +128,7 @@ function App() {
             <Route path="shirts" element={<Shirts />} />
             <Route path="login" element={<Login />} />
             <Route path="signUp" element={<SignUp />} />
-            <Route path="productDetails" element={<ProductDetails handleAddToCart={handleAddToCart} />} />
+            <Route path="productDetails" element={<ProductDetails />} />
             <Route path="createNewProduct" element={<CreateNewProduct />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="editProfile" element={<EditProfile />} />

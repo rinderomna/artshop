@@ -6,13 +6,24 @@ import BuyButtonCart from "../BuyButtonCart/BuyButtonCart";
 import { StatusContext } from "../../App.js";
 import "./Cart.css";
 
-function Cart({flagBuyBtn, handleRemoveItemCart }) {
-  const { status } = useContext(StatusContext);
+function Cart({ flagBuyBtn }) {
+  const { status, setStatus } = useContext(StatusContext);
   console.log("Cart.js -> Status: " + status);
+
+  const handleRemoveItemCart = (rem_product) => {
+    //removendo o item do carrinho
+    const updatedList = status.cartList.filter((product) => product !== rem_product);
+
+    setStatus((prevStatus) => ({
+      ...prevStatus,
+      cartList: updatedList
+    }));
+  }
 
   const handleRemoveClick = (rem_product) => {
     handleRemoveItemCart(rem_product);
   };
+
 
   return (
     <div className="cart-container">

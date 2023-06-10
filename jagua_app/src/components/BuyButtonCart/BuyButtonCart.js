@@ -7,7 +7,6 @@ function BuyButtonCart() {
   const { status, setStatus } = useContext(StatusContext);  
 
 
-
   return (
     <>
       <Link to="/checkout" state={{ product: status.cartList }} className="buyProductCart" >
