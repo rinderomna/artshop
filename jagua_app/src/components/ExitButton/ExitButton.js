@@ -21,8 +21,8 @@ const ExitButton = ({ callBack }) => {
   };
 
   return (
-    <Link to="/" onClick={handleOnClick} className="exit-button"> {/* Aplicando a classe "exit-button" */}
-      <h1>Sair</h1>
+    <Link to="/" onClick={handleOnClick} className="exit-button">
+      Sair
     </Link>
   );
 };

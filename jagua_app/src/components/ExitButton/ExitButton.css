@@ -1,15 +1,22 @@
 .exit-button {
-    display: inline-block;
+    display: flex;
     text-decoration: none;
-    color: red; 
-    /* Texto vermelho */
     border: 2px solid red;
-    /* Borda vermelha */
-    border-radius: 10px;
-    /* Cantos redondos */
+    color: red;
+    border-radius: 1.25em;
     padding: 5px 30px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 2em;    
+    font-family: 'Bree Serif', serif;
 }
 
 .exit-button:hover {
     border-color: rgb(216, 10, 10);
+    background-color: red;
+    color: white;
 }

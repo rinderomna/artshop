@@ -13,7 +13,7 @@ const UserProfileBox = ({callBack}) => {
             <SlUser 
                 size={"4em"} 
                 color={"var(--light_gray)"}
-                style={{marginBottom: "20px"}}
+                className="profileIcon"
             />
             <h1>{`Perfil de ${status.user.userName}`}</h1>
             <h2>Nome Completo</h2>
@@ -42,11 +42,12 @@ const UserProfileBox = ({callBack}) => {
                     className="edit-profile-button button"
                     onClick={callBack}
                 >Editar Perfil</Link>
+                
                 <Link 
-                    to="/myOrders" 
+                    to="/myOrders"
                     className="my-orders-button button"
                     onClick={callBack}
-                >Meus Pedidos</Link>
+                >{status.user && (status.type === "adminLoggedIn") ? "Ver" : "Meus"} Pedidos</Link>
             </span>
 
             <ExitButton callBack={callBack} />
