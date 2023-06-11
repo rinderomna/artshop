@@ -29,6 +29,33 @@ label{
     margin-top: 10px;
 }
 
+.stock-container{
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.stock-container h2{
+    margin: 0;
+    color: var(--purple);
+    margin-right: 20px;
+}
+
+.stock-info{
+    display: block;
+}
+
+.stock-info label{
+    font-size: 0.8em;
+}
+
+.stock{
+    padding: 10px;
+    border: 2px solid var(--light_gray);
+    border-radius: 10px;
+    
+}
+
 .product-size{
     width: 100%;
     padding-bottom: 2vw;

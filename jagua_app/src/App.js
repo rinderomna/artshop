@@ -10,6 +10,28 @@ import { createContext, useState, useEffect } from 'react';
 // abaixo dela (com o <Outlet />).
 import Navbar from "./components/Navbar/Navbar.js";
 
+// Depois isto estara em um JSON para simularmos dados armazenados no BD...
+// Colocando os dados aqui no momento para verificar verossimilhanca em relacao aos mockups
+import printOvelhaNegra from "./assets/visual_identity/prints/print_ovelha.png";
+import printBesouro from "./assets/visual_identity/prints/print_besouro.png";
+import printFundoDoMar from "./assets/visual_identity/prints/print_concha.png";
+import printEspelho from "./assets/visual_identity/prints/print_celular.png";
+import printAbducao from "./assets/visual_identity/prints/print_irmas.png";
+
+import adesivoArcoIris from "./assets/visual_identity/adesivos/adesivo_arco_iris.png";
+import adesivoRa from "./assets/visual_identity/adesivos/adesivo_sapo.png";
+import adesivoVasoAzul from "./assets/visual_identity/adesivos/adesivo_planta.png";
+import adesivoCoracao from "./assets/visual_identity/adesivos/adesivo_cabelo_coracao.png";
+import adesivoBesouroPreto from "./assets/visual_identity/adesivos/adesivo_besouro_preto.png";
+import adesivoBesouro from "./assets/visual_identity/adesivos/adesivo_besouro.png";
+
+import camisetaMedusa from "./assets/visual_identity/camisetas/camiseta_medusa.png";
+import camisetaCrowd from "./assets/visual_identity/camisetas/camiseta_crowd.png";
+import camisetaHorrorVacui from "./assets/visual_identity/camisetas/camiseta_horror_vacui.png";
+
+
+
+
 // Paginas do site
 import Home from "./pages/Home.js";
 import AboutMe from "./pages/AboutMe.js";
@@ -36,11 +58,200 @@ import NoPage from "./pages/NoPage.js";
 export const StatusContext = createContext();
 
 function App() {
-  // Criando controle de estado para o carrinho do cliente
-  //const [productCartList, setProductCartList] = useState([]);
+  const printsSizes = [
+        {
+            name: "A5",
+            specific_size: "27cm x 10cm"
+        },
+        {
+            name: "A4",
+            specific_size: "27cm x 20cm"
+        },
+        {
+            name: "A3",
+            specific_size: "27cm x 30cm"
+        }
+    ]
 
-  // Lista de listas de produtos: quando uma compra é finalizada, a productCartList
-  // é adicionada na ordersList.
+    const stickerSizes = [
+        {
+            name: "Tam. Único",
+            specific_size: "2cm x 3,5cm"
+        },
+
+    ]
+
+    const shirtSizes = [
+        {
+            name: "P",
+            specific_size: "Pequeno"
+        },
+        {
+            name: "M",
+            specific_size: "Médio"
+        },
+        {
+            name: "G",
+            specific_size: "Grande"
+        }
+    ]
+
+    const productList = [
+        {
+            id: 7,
+            image: printOvelhaNegra,
+            name: "Print Ovelha Negra",
+            price: "8.50",
+            description: "Impressão em papel couchê fosco com gramatura 300.",
+            type: "print",
+            sizes: printsSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 8,
+            image: printBesouro,
+            name: "Print Besouro",
+            price: "8.50",
+            description: "Impressão em papel couchê fosco com gramatura 300.",
+            type: "print",
+            sizes: printsSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 9,
+            image: printFundoDoMar,
+            name: "Print Fundo do Mar",
+            price: "8.50",
+            description: "Impressão em papel couchê fosco com gramatura 300.",
+            type: "print",
+            sizes: printsSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 10,
+            image: printEspelho,
+            name: "Print Espelho",
+            price: "8.50",
+            description: "Impressão em papel couchê fosco com gramatura 300.",
+            type: "print",
+            sizes: printsSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 11,
+            image: printAbducao,
+            name: "Print Abdução",
+            price: "8.50",
+            description: "Impressão em papel couchê fosco com gramatura 300.",
+            type: "print",
+            sizes: printsSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 1,
+            image: adesivoArcoIris,
+            name: "Adesivo Arco-íris",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 6,
+            sales: 0
+        },
+        {
+            id: 2,
+            image: adesivoRa,
+            name: "Adesivo Rã",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 5,
+            sales: 0
+        },
+        {
+            id: 3,
+            image: adesivoVasoAzul,
+            name: "Adesivo Vaso Azul",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 4,
+            sales: 0
+        },
+        {
+            id: 4,
+            image: adesivoCoracao,
+            name: "Adesivo Coração",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 2,
+            sales: 0
+        },
+        {
+            id: 5,
+            image: adesivoBesouroPreto,
+            name: "Adesivo Besouro Preto",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 4,
+            sales: 0
+        },
+        {
+            id: 6,
+            image: adesivoBesouro,
+            name: "Adesivo Besouro",
+            price: "2.90",
+            description: "Adesivo de vinil à prova-d'água.",
+            type: "sticker",
+            sizes: stickerSizes,
+            stock: 5,
+            sales: 0
+        },
+        {
+            id: 12,
+            image: camisetaMedusa,
+            name: "Camiseta Medusa",
+            price: "68.00",
+            description: "Camiseta 100% algodão estampada usando silk screen.",
+            type: "shirt",
+            sizes:shirtSizes,
+            stock: 15,
+            sales: 0
+        },
+        {
+            id: 13,
+            image: camisetaCrowd,
+            name: "Camiseta Crowd",
+            price: "68.00",
+            description: "Camiseta 100% algodão estampada em silk screen.",
+            type: "shirt",
+            sizes:shirtSizes,
+            stock: 5,
+            sales: 0
+        },
+        {
+            id: 14,
+            image: camisetaHorrorVacui,
+            name: "Camiseta Horror Vacui",
+            price: "68.00",
+            description: "Camiseta composta de 70% poliéster e 30% algodão. Estampada utilizando sublimação.",
+            type: "shirt",
+            sizes:shirtSizes,
+            stock: 12,
+            sales: 0
+        },
+    ];
 
   
 
@@ -57,6 +268,7 @@ function App() {
     return storedStatus ? JSON.parse(storedStatus) : {
       type: "loggedOut",
       user: null,
+      products: productList,
       currProduct: null,
       currOrder: null,
       cartList: [],
@@ -65,9 +277,7 @@ function App() {
 
   });
 
-  if(status.orders !== null){
-    console.log("App.js -> Status: " + status.orders);
-  }
+
 
   useEffect(() => {
     localStorage.setItem("status", JSON.stringify(status));

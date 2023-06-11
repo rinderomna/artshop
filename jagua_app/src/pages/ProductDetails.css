@@ -29,6 +29,11 @@
     align-items: center;
 }
 
+.out-of-stock-message{
+    color:tomato;
+    font-weight: 600;
+}
+
 /*Responsividade*/
 @media screen and (min-width: 300px) { /* mobile */
     /* grid */

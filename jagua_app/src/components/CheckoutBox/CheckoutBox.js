@@ -55,8 +55,25 @@ const CheckoutBox = () => {
         code: null
       };
 
-      console.log("CheckoutBox.js -> Order: " + newOrder);
-      
+
+      //fazendo o update da quantidade de itens em estoque
+      const updatedProducts = status.products.map((product) => {
+        const matchingCartProduct = status.cartList.find((cartProduct) => cartProduct.name === product.name);
+        if (matchingCartProduct) {
+          return {
+            ...product,
+            stock: product.stock - matchingCartProduct.qtd,
+            sales: product.sales + matchingCartProduct.qtd 
+          };
+        }
+        return product;
+      });
+      setStatus((prevStatus) => ({
+        ...prevStatus,
+        products: updatedProducts
+      }));
+
+
       setStatus((prevStatus) => {
         if (prevStatus.orders) {
           return {
@@ -67,7 +84,8 @@ const CheckoutBox = () => {
         } else {
           return {
             ...prevStatus,
-            orders: [newOrder]
+            orders: [newOrder],
+            cartList: []
           };
         }
       });

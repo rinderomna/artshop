@@ -38,22 +38,36 @@ const ProductDetails = () => {
 
     const { status, setStatus } = useContext(StatusContext);
 
+    //apenas para teste
+    if(status.products != null){
+        const clicked_prod = status.products.filter((product) => product.name === status.currProduct.name);
+        console.log("ProductDetails.js -> estoque do produto: " + clicked_prod[0].stock);
+    }else{
+        console.log("ProductDetails.js -> estoque do produto: não foi possivel pegar");
+    }
+
+
     //componentes (devem estar descritas no componente pai)
     const handleAddToCart = (productAdded) => {
-        const cartList = (status.cartList) ? status.cartList : [];
-        const newCartList = [...cartList, {
-            id: productAdded.id, //ver depois
-            image: productAdded.image,
-            name: productAdded.name,
-            price: productAdded.price,
-            qtd: productAdded.qtd,
-            size_name: productAdded.size_name
-        }];
+        if(productAdded.qtd <= status.currProduct.stock){
+            const cartList = (status.cartList) ? status.cartList : [];
+            const newCartList = [...cartList, {
+                id: productAdded.id, //ver depois
+                image: productAdded.image,
+                name: productAdded.name,
+                price: productAdded.price,
+                qtd: productAdded.qtd,
+                size_name: productAdded.size_name
+            }];
+    
+            setStatus((prevStatus) => ({
+            ...prevStatus,
+            cartList: newCartList
+            }));
+        }else{
+            alert("Estoque insuficiente!");
+        }
 
-        setStatus((prevStatus) => ({
-        ...prevStatus,
-        cartList: newCartList
-        }));
     };
 
 
@@ -107,7 +121,11 @@ const ProductDetails = () => {
                             <NumProducts handleNumChange={handleNumChange}/>
                         </div>
                         <div className="add-to-cart-container">
-                            <AddToCartButton handleClick={handleButtonClick} />
+                            {(status.currProduct.stock > 0) ?
+                                <AddToCartButton handleClick={handleButtonClick} />
+                                :
+                                <p className="out-of-stock-message">Item indisponível no estoque</p>
+                            }
                         </div>
                     </div>
                 </div>
