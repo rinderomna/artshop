@@ -6,6 +6,8 @@ import InputMask from "react-input-mask";
 import { StatusContext } from '../../App.js';
 import PermissionDenied from "../PermissionDenied/PermissionDenied.js";
 
+import { Link } from 'react-router-dom';
+
 import "../LoginBox/FormStyle.css";
 
 const ProductEditionBox = () => {
@@ -46,7 +48,7 @@ const ProductEditionBox = () => {
                                 id="productname"
                                 name="productname"
                                 maxLength={40}
-                                placeholder="Por exemplo: Print Cogumelo Vermelho"
+                                placeholder={status.currProduct.name}
                                 onChange={(e) => setProductName(e.target.value)}
                                 className={errors.productname ? "error" : ""}
                                 {...register("productname", {required: true})}
@@ -62,7 +64,7 @@ const ProductEditionBox = () => {
                                 type="text"
                                 id="productprice"
                                 name="productprice"
-                                placeholder="R$ XX,XX"
+                                placeholder={`R$    ${status.currProduct.price}`}
                                 onChange={(e) => setProductPrice(e.target.value)}
                                 className={errors.productprice ? "error" : ""}
                                 {...register("productprice", { 
@@ -79,7 +81,7 @@ const ProductEditionBox = () => {
                                 id="productdescription"
                                 name="productdescription"
                                 maxLength={100}
-                                placeholder="Por exemplo: Impressão em papel couchê fosco com gramatura 300."
+                                placeholder={status.currProduct.description}
                                 onChange={(e) => setProductDescription(e.target.value)}
                             />
                             <label htmlFor="productcategory">Categoria do produto</label>
@@ -120,15 +122,17 @@ const ProductEditionBox = () => {
                                 id="specificsize"
                                 name="specificsize"
                                 maxLength={30}
-                                placeholder="Tamanho específico"
+                                placeholder="Digite o tamanho específico."
                                 onChange={(e) => setSpecificSize(e.target.value)}
                             />
 
                             <h2 className="purple-text spaced-text">Quantidade em Estoque</h2>
 
+                            <h2 className="stock">{status.currProduct.stock}</h2>
+
                             <h2 className="purple-text spaced-text">Imagem</h2>
                             <label htmlFor="productimage">Arquivo de imagem</label>
-                            <h3>&le;Colocar imagem atual do produto aqui&ge;</h3>
+                            <h3><img width="200px" src={status.currProduct.image}/></h3>
                             <input
                                 type="file"
                                 id="productimage"
@@ -137,7 +141,12 @@ const ProductEditionBox = () => {
                                 accept="image/png, image/jpg"
                             />
 
-                            <button type="submit">OK</button>
+                            <Link 
+                                className="link-button"
+                                to="/productDetails"
+                            > OK</Link>
+
+    
                         </form>
                     </div> :
                 <PermissionDenied userType="administrador" />

@@ -97,6 +97,24 @@ select:focus {
     box-shadow: 0 0 3px var(--purple); /* Define uma sombra roxa para o elemento em foco */
 }
 
+.link-button{
+    background-color: var(--purple);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1.25em;
+    padding: .3em 1.8em;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
+    margin-top: 1.5em;
+}
+
+.link-button:hover{
+    background-color: var(--dark_purple);
+}
+
+
 button[type="submit"] {
     background-color: var(--purple);
     color: #FFFFFF;

@@ -5,11 +5,12 @@
     height: 100vh;
     /* Define a altura total da página */
     overflow: scroll;
+    padding-bottom: 50px;
 }
 
 .profileIcon {
     display: flex;
-    margin: 0 auto 1em auto;
+    margin: 0 auto 0.5em auto;
 }
 
 .profileBox h1 {
@@ -48,7 +49,7 @@
 .button {
     border-radius: 1.25em;
     padding: .3em 1.8em;
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Bree Serif', serif;

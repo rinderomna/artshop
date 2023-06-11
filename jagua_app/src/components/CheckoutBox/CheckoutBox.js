@@ -96,7 +96,7 @@ const CheckoutBox = () => {
     if(status.orders != null){
       console.log("CheckoutBox.js -> Status Orders: " + status.orders);
     }
-    navigate("/myOrders");
+    navigate("/productOrders");
     
   };
 

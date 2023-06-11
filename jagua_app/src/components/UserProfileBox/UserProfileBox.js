@@ -5,11 +5,13 @@ import { useContext } from 'react';
 import { SlUser } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
 
+
 const UserProfileBox = ({callBack}) => {
     const { status } = useContext(StatusContext);
 
     return (
         <div className="profileBox">
+            
             <SlUser 
                 size={"4em"} 
                 color={"var(--light_gray)"}
@@ -44,7 +46,7 @@ const UserProfileBox = ({callBack}) => {
                 >Editar Perfil</Link>
                 
                 <Link 
-                    to="/myOrders"
+                    to="/productOrders"
                     className="my-orders-button button"
                     onClick={callBack}
                 >{status.user && (status.type === "adminLoggedIn") ? "Ver" : "Meus"} Pedidos</Link>

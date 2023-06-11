@@ -8,6 +8,9 @@ import AddToCartButton from "../components/AddToCartButton/AddToCartButton";
 import SideBar from "../components/SideBar/SideBar";
 import { StatusContext } from "../App.js";
 
+import { Link } from 'react-router-dom';
+
+
 
 const ProductDetails = () => {
     const [newProductAdded, setNewProductAdded] = useState({
@@ -121,11 +124,26 @@ const ProductDetails = () => {
                             <NumProducts handleNumChange={handleNumChange}/>
                         </div>
                         <div className="add-to-cart-container">
-                            {(status.currProduct.stock > 0) ?
+                        {(status.type === "customerLoggedIn") ?
+                        
+                            (status.currProduct.stock > 0 ) ? 
                                 <AddToCartButton handleClick={handleButtonClick} />
                                 :
                                 <p className="out-of-stock-message">Item indisponível no estoque</p>
-                            }
+                            :
+                            <span className="button-container">
+                                <Link 
+                                    to="/editProduct" 
+                                    className="edit-product-button button"
+                                >Editar Produto</Link>
+                                
+                                <Link 
+                                    to="/"
+                                    className="exit-button"
+                                > Excluir</Link>
+                            </span>
+                    
+                        }
                         </div>
                     </div>
                 </div>

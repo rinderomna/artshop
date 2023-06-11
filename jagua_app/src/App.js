@@ -47,8 +47,7 @@ import ProductDetails from "./pages/ProductDetails.js";
 import Checkout from './pages/Checkout.js';
 import CreateNewProduct from "./pages/CreateNewProduct.js";
 import EditProduct from "./pages/EditProduct.js";
-import AllOrders from "./pages/AllOrders.js";
-import MyOrders from "./pages/MyOrders.js";
+import ProductOrders from "./pages/ProductOrders.js";
 
 import NoPage from "./pages/NoPage.js";
 
@@ -315,8 +314,7 @@ function App() {
             <Route path="editProduct" element={<EditProduct />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="editProfile" element={<EditProfile />} />
-            <Route path="allOrders" element={<AllOrders />} />
-            <Route path="myOrders" element={<MyOrders />} />
+            <Route path="productOrders" element={<ProductOrders />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>

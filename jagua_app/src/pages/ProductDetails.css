@@ -34,6 +34,52 @@
     font-weight: 600;
 }
 
+
+
+.edit-product-button {
+    border: 2px solid var(--light_gray);
+    color: var(--light_gray);
+    background-color: white;
+}
+
+.edit-product-button:hover {
+    color: white;
+    background-color: var(--light_gray);
+}
+
+.exit-button {
+    display: flex;
+    text-decoration: none;
+    border: 2px solid red;
+    color: red;
+    border-radius: 1.25em;
+    padding: 5px 30px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.5em;    
+    font-family: 'Bree Serif', serif;
+}
+
+.exit-button:hover {
+    border-color: rgb(216, 10, 10);
+    background-color: red;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    /* exibe os botões em uma linha */
+    justify-content: center;
+    /* centraliza os botões horizontalmente */
+    margin-top: 2em;
+    margin-bottom: 1em;
+    /* adiciona espaçamento inferior entre os botões */
+}
+
 /*Responsividade*/
 @media screen and (min-width: 300px) { /* mobile */
     /* grid */

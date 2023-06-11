@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StatusContext } from "../App.js";
-import OrdersBanner from "../components/OrdersBanner/OrdersBanner";
-import OrdersList from "../components/OrdersList/OrdersList"
+import OrdersBanner from "../components/OrdersBanner/OrdersBanner.js";
+import OrdersList from "../components/OrdersList/OrdersList.js"
 import NoOrders from "../components/NoOrders/NoOrders.js";
 const MyOrders = () => {
 
