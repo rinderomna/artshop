@@ -7,6 +7,7 @@
     text-align: center;
     height: 100vh;
     /* Define a altura total da página */
+    overflow: scroll;
 }
 
 .profileBox h1 {

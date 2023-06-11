@@ -3,12 +3,22 @@
         {
             "type": "admin",
             "userName": "admin",
-            "password": "admin"
+            "password": "admin",
+            "fullName": "Laura Ferré Scotelari",
+            "email": "laura.scotelari@usp.br",
+            "phone": "(17) 99192-9256"
+
         },
         {
             "type": "customer",
             "userName": "helio",
-            "password": "helio"
+            "password": "helio",
+            "fullName": "Hélio Nogueira Cardoso",
+            "email": "helionc1999@usp.br",
+            "address": "Rua das Ruas - Jardim das Oliveiras - Nº 235",
+            "cep": "13620-100",
+            "phone": "(16) 99192-9256"
+
         }
     ]
 }
