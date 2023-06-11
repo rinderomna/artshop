@@ -36,7 +36,7 @@ function Cart({ flagBuyBtn }) {
       </div>
       
       {
-        (status.cartList == null || status.cartList == "") 
+        (status.cartList === null || status.cartList === "") 
         ? <div className="nullList-container">
             <IconContext.Provider value={{ className: "shared-class", size: 40, color: "var(--light_gray)" }}>
             <SlGhost />

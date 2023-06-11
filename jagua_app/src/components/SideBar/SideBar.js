@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import "./SideBar.css"
 import Cart from '../Cart/Cart';
-import ExitButton from '../ExitButton/ExitButton';
 import OrderDetails from '../OrderDetails/OrderDetails';
 import UserProfileBox from '../UserProfileBox/UserProfileBox';
 

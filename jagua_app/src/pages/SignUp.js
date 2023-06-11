@@ -32,7 +32,7 @@ const SignUp = () => {
   };
 
   const validateCellphone = (value) => {
-    return value.replace(/[_\(\)\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
+    return value.replace(/[_()\\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
   };
 
   const validateCEP = (value) => {

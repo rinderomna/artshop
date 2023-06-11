@@ -6,9 +6,10 @@ import { SlUser } from 'react-icons/sl';
 
 import './FormStyle.css';
 
-function LoginBox(props) {
+function LoginBox() {
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
+    
     const navigate = useNavigate();
 
     const { setStatus } = useContext(StatusContext);

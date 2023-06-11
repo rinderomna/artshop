@@ -15,6 +15,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
 ```diff
 ! Orientações para avaliação do __Milestone 2__ estão sob a seção 6, especialmente na subseção 6.2.
+! Lá há o procedimento de execução. Também na seção 4.2 há um plano de testes para a aplicação.
 ```
 No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
@@ -168,9 +169,31 @@ Pedido:
 * Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). <ins> Obs.: Lembre-se de que, na tela de login do protótipo, o botão 'Entrar' foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o login de um cliente. Clicando do lado direito do botão 'Entrar', você estará simulando o login de um administrador. </ins>
 * Quando o conjunto total de telas estiver implementado em código (segundo milestone do projeto), a mesma ideia de utilizar o diagrama de navegação como referência para testar o fluxo de navegação pode ser utilizada.
   
+## 4.2. Plano de teste para a aplicação React (Milestone 2)
+Tendo seguido o procedimento de execução da seção 6.2, com o backend e o frontend rodando, pode-se seguir para o teste da aplicação. Para esta segunda entrega, nos propomos a ter todas as telas de funcionalidade local respondendo a inputs de usuário, mas não necessariamente fazendo ainda algo de útil, pois o backend ainda é "fake" (mock). Os testes vão se basear em funcionalidades do comprador e do administrador. Deve-se portanto poder logar como ambos. Há um perfil para cada:
+* Comprador >>  helio : helio
+* Administrador >> admin : admin
+  
+Pode-se então testar:
+* Deslogado, tente entrar em cada uma das seções da barra de navegação e veja se o site se comporta como uma SPA (Single Page Application). Na verdade, todo o fluxo de navegação deve funcionar dentro de uma única página renderizada dinâmicamente. Observação: você verá que o texto da barra de navegação do navegador irá mudar, pois a utilizamos para fazer roteamentos dentro da mesma página, mas isto não significa que a página está sendo recarregada.
+* Deslogado, clique em um produto para "comprar" e tente adicionar ao carrinho. Como está deslogado, a aplicação deve te levar para a tela de login.
+* Logado como um cliente (helio : helio), tente agora adicionar um produto ao carrinho sem ter selecionado um tamanho. A aplicação deve te avisar que é necessário especificar um tamanho. 
+* Logado como cliente e tendo selecionado o tamanho para um produto, adicione-o ao carrinho em certa quantidade. A aplicação deve automaticamente abrir a barra lateral de carrinho com os produtos adicionador até então. Você pode testar adicionar vários produtos e também deletá-los do carrinho pela barra lateral.
+* Logado como cliente, você pode pelo carrinho proceder para a finalização da compra. Teste a validação de todos os campos do formulário com seus respectivos formatos de dados. Ao finalizar a compra, você terá disponível o pedido com status de envio pendente na seção de "Meus Pedidos", que também é alcançável através da barra lateral de perfil de usuário (que é aberta ao se clicar no canto superior direito na imagem de usuário ou sobre a mensagem de boas vingas ao usuário).
+* Como cliente logado, você pode testar deslogar pelo botão de sair disponível na barra lateral de perfil de usuário.
+* Logado como administrador (admin : admin), você deverá ser levado à Homepage com visão de administrador, com uma funcionalidade de adicionar novo produto diretamente visível abaixo da barra de navegação nesta Homepage. 
+* Logado como administrador na homepage, ao clicar em "Novo Item", você deve ser levado a uma página em que pode preencher as informações para um novo produto. Preenchendo o formulário de novo produto e o enviando, você será levado para a homepage. Na aplicação completa, o novo item deverá estar disponível dentre os produtos listados na Homepage e nas seções filtradas. Porém, para a Milestone 2, nenhum produto novo será ainda de fato adicionado.
+* Como administrador, você pode clicar em "ver mais" em qualquer produto, o que o deve levar para uma tela de detalhes de produto, em que deve ter as opções para editá-lo ou excluí-lo. Clicando em editar, deve ir para uma tela de edição do produto. Clicando em excluir, deve voltar para a Homepage. Repito que os efeitos pretendidos destas funcionalidade ainda não devem estar funcionais para o Milestone 2, mas respondem corretamente às entradas de usuário.
+* Como administrador, você pode também acessar pela barra lateral de perfil (que abre ao clicar sobre a imagem de usuário ou sobre a mensagem de boas-vindas) opções para editar perfil, deslogar ("sair"), além de uma opção para ver todos os pedidos ("Pedidos").
+* Como administrador, na tela para ver todos os pedidos, você deve ver todos os pedidos de todos os usuários, sejam com seu stataus pendente ou enviado. Naturalmente, como administrador, você pode clicar em cada um destes card de pedido para poder cadastrar o código de rastreio e a transpostador para pedidos de status pendente, o que deev mudar o status do pedido para enviado.
+* De qualquer estado da aplicação, você pode tentar acessar pela barra de navegação uma rota que não está prevista (exemplo: "localhost:3000/rota_qualquer"), de forma que deve lhe ser mostrada uma tela de erro devidamente formatada, como uma imagem personalizada de erro 404.
+  
 # 5. Resultados dos Testes
 ## 5.1. Teste manual da navegação no protótipo Marvel
 Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como auxílio para testar a navegação do [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238), assim como descrito no plano de teste, seção 4.1. Iterativamente foram sendo encontrados erros, de forma a corrigi-los. Este processo foi repetido até que não se encontrasse mais erros de navegação. O teste deve idealmente ser também realizado pelo grupo revisor, para garantir a consistência do protótipo.
+
+## 5.2. Teste manual da aplicação React
+Os desenvolvedores seguiram constantemente os passos descritos no plano de teste especificados na seção 4.2 para testar a aplicação. Estes testes serviram como guia ao longo do desenvolvimento para sempre chegar quando uma nova funcionalide era adicionada que nenhuma das outras tinha quebrado e, se por acaso quebrou, era uma indicação para o que tínhamos de consertar. Idealmente, o grupo avaliador deve seguir também estes passos e outros que acharem válidos para testar nossa aplicação.
   
 # 6. Procedimentos para execução
 ## 6.1. Baixando e entendendo os arquivos
@@ -208,5 +231,8 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
 * Estamos buscando corrigir alguns pequenos detalhes de responsividade. Muito foi feito para adicionar comportamentos responsivos na aplicação, mas restam alguns detalhes que podem ter passado despercebidos, principalmente para dispositivos de tamanhos não-usuais (i.e. telas muito pequenas...).
   
 # 8. Comentários Adicionais
+# 8.1. Comentários no Milestone 1
 * Decidimos retirar os footers das telas em código, pois, durante o desenvolvimento, as consideramos desnecessárias. No entanto, o footer ainda está presente no protótipo. Simplesmente desconsiderar.
 * Alguns códigos foram feitos em JS para modelar alguns estilos CSS em relação a determinados eventos de usuário, principalmente no que diz respeito ao menu de navegação e na seleção de quantidade de produtos para compra. Para esta primeira entrega, no entanto, não foi feita a lógica de selecionar tamanho de produto (na página detalhada de produto) ao clique do usuário, pois faltou tempo para isso e não compromete o escopo da entrega.
+# 8.2. Comentários no Milestone 2
+* Do Milestone 1 para o 2, convertemos todas as telas que haviamos feito em HTML e CSS para React com JavaScript, além de completar com todas as outras telas restantes para aplicação e suas funcionalidades. É importante observar que, apesar de dados já terem começado a serem tratados de forma dinâmica, ainda há alguns dados que estão codificados direto no código para o teste da funcionalidade da interface. Do Milestone 2 para o 3, quando implementarmos as funcionalidades do servidor, poderemos então passar estes dados para o backend, de forma que as funcionalidades da aplicação trabalhem dinâmicamente com os dados e funcionem de maneira mais completa.

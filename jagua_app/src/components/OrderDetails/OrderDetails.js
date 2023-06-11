@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { StatusContext } from "../../App.js";
 import Order from "../Order/Order.js";
 
@@ -46,7 +46,7 @@ function OrderDetails() {
                 <p>Nº {status.currOrder.address.number}</p>
                 <p>Complemento: {status.currOrder.address.complement}</p>
 
-                {(status.currOrder.status == "Postado para Envio" && !shppingInput) ? 
+                {(status.currOrder.status === "Postado para Envio" && !shppingInput) ? 
                 <>
                   <hr/>
                   <h2>Informações do Envio</h2>
@@ -57,7 +57,7 @@ function OrderDetails() {
                   <h3>Código de Rastreio:</h3>
                   <p className="shipping-code">{status.currOrder.code}</p>
 
-                  { (status.type == "adminLoggedIn") ? 
+                  { (status.type === "adminLoggedIn") ? 
                     <div className="button-container">
                       <button className="btn-editar-envio" onClick={handleAddShipping}>Editar Envio</button> 
                     </div>
@@ -67,7 +67,7 @@ function OrderDetails() {
                 
                 </>:
 
-                status.type == "adminLoggedIn" ? 
+                status.type === "adminLoggedIn" ? 
                   <div className="shipping-info-container">
                     {shppingInput ? <ShippingForm setShippingInput={setShippingInput}/> : <div className="button-container"><button className="btn-editar-envio" onClick={handleAddShipping}>Adicionar Envio</button></div>}
                   </div>
