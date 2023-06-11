@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import "./NoOrders.css"
 
 function NoOrders() {
+  console.log("NoOrders.js -> Não há pedidos!")
   return (
     <div className='no-orders-container'>
         <IconContext.Provider value={{ className: "shared-class", size: 40, color: "var(--light_gray)" }}>

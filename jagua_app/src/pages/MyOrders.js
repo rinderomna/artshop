@@ -7,22 +7,24 @@ const MyOrders = () => {
 
     const { status } = useContext(StatusContext);
 
-    //para nenhum pedido ser filtrado
-    let filt_condition = null;
-    if(status.type === "customerLoggedIn"){
-        filt_condition = status.user.userName;
+    let filtered_list = null;
+
+    if (status.orders != null) {
+
+        //filtered_list recebe apenas os pedidos do usuario ou todos os pedidos registrados (caso seja o admin)
+        filtered_list =
+        status.type === "customerLoggedIn"
+            ? status.orders.filter((order) => order.buyer.user_name === status.user.userName)
+            : status.orders;
     }
 
-    let filtered_list = null;
-    if (status.orders != null){
-        filtered_list =  status.orders.filter((order) => order.buyer.user_name === filt_condition);
-    }
+    console.log("MyOrders.js -> filteredList: " + filtered_list);
     
     return (
         <>
             <OrdersBanner />
             
-            {(filtered_list != null) ? 
+            {(filtered_list != null && filtered_list != "" ) ? 
             
                 (status.type === "customerLoggedIn") ? 
                     //se for um usuario, deve mostrar a lista filtrada so com os pedidos feitos por 

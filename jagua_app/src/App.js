@@ -41,13 +41,13 @@ export const StatusContext = createContext();
 
 function App() {
   // Criando controle de estado para o carrinho do cliente
-  const [productCartList, setProductCartList] = useState([]);
+  //const [productCartList, setProductCartList] = useState([]);
 
   // Lista de listas de produtos: quando uma compra é finalizada, a productCartList
   // é adicionada na ordersList.
 
   // Mudar depois --------------------------- apenas p/ teste
-  const productOrderList1 = [{
+  /*const productOrderList1 = [{
       id: 7,
       image: printOvelhaNegra,
       name: "Print Ovelha Negra",
@@ -96,7 +96,7 @@ function App() {
       status: "Postado para envio",
       code: "AbcdeXy023"
     }
-  ]);
+  ]);*/
 
   //---------- Finalizando código apenas p/ teste --------------------
 
@@ -116,8 +116,8 @@ function App() {
       user: null,
       currProduct: null,
       currOrder: null,
-      cartList: productCartList,
-      orders: ordersList
+      cartList: [],
+      orders: []
     };
 
   });

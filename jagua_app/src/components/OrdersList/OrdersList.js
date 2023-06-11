@@ -25,6 +25,11 @@ function OrdersList({filtered_list}) {
 
     }
 
+    useEffect(() => {
+        // renderiza novamente a lista de componentes quando a lista de pedidos é alterada
+        setUserOrders(filtered_list);
+      }, [filtered_list]);
+
 
     return (
         <div className="orders-container">
