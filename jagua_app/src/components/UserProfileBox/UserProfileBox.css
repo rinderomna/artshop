@@ -1,39 +1,47 @@
 .profileBox {
+    margin: 0 3em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    /* Alteração: inicia o alinhamento a partir do topo */
-    text-align: center;
     height: 100vh;
     /* Define a altura total da página */
     overflow: scroll;
 }
 
+.profileIcon {
+    display: flex;
+    margin: 0 auto 1em auto;
+}
+
 .profileBox h1 {
     margin-bottom: 10px;
+    align-self: center;
 }
 
 .profileBox h2 {
-    margin-bottom: 20px;
+    align-self: left;
+}
+
+.profileBox p {
+    margin: .5em 0 1.5em 0;
+    font-size: 1.1em;
 }
 
 .profileBox .button-container {
     display: flex;
-    /* Alteração: exibe os botões em uma linha */
+    /* exibe os botões em uma linha */
     justify-content: center;
-    /* Alteração: centraliza os botões horizontalmente */
-    margin-bottom: 10px;
-    /* Alteração: adiciona espaçamento inferior entre os botões */
+    /* centraliza os botões horizontalmente */
+    margin-top: 2em;
+    margin-bottom: 1em;
+    /* adiciona espaçamento inferior entre os botões */
 }
 
 .profileBox .button-container a {
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
     margin: 0 5px;
-    /* Alteração: adiciona espaçamento horizontal entre os botões */
+    /* adiciona espaçamento horizontal entre os botões */
 }
 
 /* Mudar, pois não está sendo aplicado, por algum motivo */
