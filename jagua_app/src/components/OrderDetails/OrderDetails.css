@@ -1,0 +1,73 @@
+.order-details-container{
+    display: block;
+    overflow: scroll;
+    padding: 10px ;
+    height: 95vh;
+}
+
+.order-details-info-container{
+    padding: 10px 40px;
+}
+
+.order-details-info-container .button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.order-details-container h1{
+    font-size: 1.6em;
+    color: var(--light_gray);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.order-details-container h2{
+    font-size: 1.4em;
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.order-details-container h3{
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: var(--light_gray);
+}
+
+.order-details-container button{
+    color: var(--light_gray);
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2em;
+    border: 3px solid var(--light_gray);
+    border-radius: 25px;    
+    padding: 6px;
+    width: 70%;
+    margin: 20px;
+}
+
+.order-details-container hr{
+    margin-top: 20px;
+    color: var(--light_gray);
+}
+
+
+.shipping-info-container{
+    margin-top: 35px;
+}
+
+.shipping-code{
+    border: 1px solid var(--light_gray);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message-container{
+    margin-top: 10px;
+    padding: 30px 0px;
+}
+.no-shipping-message{
+    margin-top: 20px;
+    color: tomato;
+    text-align: center;
+}
