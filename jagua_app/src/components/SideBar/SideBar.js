@@ -52,7 +52,7 @@ function SideBar({sideBarType, setType}) {
                         <AiOutlineClose className='close-button' onClick={closeSideBar}/>
                         {
                             (sideBarType === "cart") ? 
-                                <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : 
+                                <Cart flagBuyBtn={true} /> : 
                                 <></>
                         }
                         {

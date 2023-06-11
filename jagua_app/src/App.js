@@ -30,11 +30,6 @@ import MyOrders from "./pages/MyOrders.js";
 
 import NoPage from "./pages/NoPage.js";
 
-// Mudar depois -----------------------------
-import printOvelhaNegra from "./assets/visual_identity/prints/print_ovelha.png";
-import adesivoArcoIris from "./assets/visual_identity/adesivos/adesivo_arco_iris.png";
-import printFundoDoMar from "./assets/visual_identity/prints/print_concha.png";
-//-------------------------------------------
 
 // Criando contexto que mantem dados de usuario e repassa para componentes que necessitem dessa
 // informacao.
@@ -47,60 +42,7 @@ function App() {
   // Lista de listas de produtos: quando uma compra é finalizada, a productCartList
   // é adicionada na ordersList.
 
-  // Mudar depois --------------------------- apenas p/ teste
-  /*const productOrderList1 = [{
-      id: 7,
-      image: printOvelhaNegra,
-      name: "Print Ovelha Negra",
-      price: "8,50",
-      qtd: 1,
-      size_name: "A3"
-  },
-  {
-      id: 1,
-      image: adesivoArcoIris,
-      name: "Adesivo Arco-íris",
-      price: "2,90",
-      qtd: 3,
-      size_name: "2cm x 3,5cm"
-  },
-  {
-      id: 9,
-      image: printFundoDoMar,
-      name: "Print Fundo do Mar",
-      price: "8,50",
-      qtd: 2,
-      size_name: "A5"
-  }];
-
-  const productOrderList2 = [{
-    id: 10,
-    image: printFundoDoMar,
-    name: "Print Fundo do Mar",
-    price: "8,50",
-    qtd: 1,
-    size_name: "A5"
-  }];
-
-  const [ordersList, setOrdersList] = useState([
-    {
-      id: 1,
-      date: "25/03/23",
-      productList: productOrderList1,
-      status: "Aguardando Postagem",
-      code: null
-    },
-    {
-      id: 2,
-      date: "07/02/23",
-      productList: productOrderList2,
-      status: "Postado para envio",
-      code: "AbcdeXy023"
-    }
-  ]);*/
-
-  //---------- Finalizando código apenas p/ teste --------------------
-
+  
 
   // LOGICA DE STATUS DO USUARIO -- IMPORTANTE!!!
   /*
