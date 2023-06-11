@@ -29,3 +29,10 @@
     font-size: 1.5em;
     cursor: pointer;
 }  
+
+@media screen and (max-width: 1250px) {
+    .userMessageContainer p {
+        padding: 5px 10px;
+        font-size: 1.5em;
+    }  
+}

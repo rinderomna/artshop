@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import InputMask from "react-input-mask";
@@ -7,7 +7,6 @@ import { StatusContext } from "../../App.js";
 
 import "../../components/LoginBox/FormStyle.css";
 import Cart from "../Cart/Cart";
-import OrdersList from "../OrdersList/OrdersList.js";
 
 const CheckoutBox = () => {
   const { status, setStatus } = useContext(StatusContext);
@@ -84,11 +83,11 @@ const CheckoutBox = () => {
   };
 
   const validateCPF = (value) => {
-    return value.replace(/[_\.\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
+    return value.replace(/[_.\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
   };
 
   const validateCellphone = (value) => {
-    return value.replace(/[_\(\)\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
+    return value.replace(/[_()\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
   };
 
   const validateCEP = (value) => {

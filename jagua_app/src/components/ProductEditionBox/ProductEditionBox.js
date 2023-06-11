@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 
-import { StatusContext } from '../App.js';
-import PermissionDenied from "../components/PermissionDenied/PermissionDenied.js";
+import { StatusContext } from '../../App.js';
+import PermissionDenied from "../PermissionDenied/PermissionDenied.js";
 
-import "../components/LoginBox/FormStyle.css";
+import "../LoginBox/FormStyle.css";
 
-const CreateNewProduct = () => {
+const ProductEditionBox = () => {
     const { status } = useContext(StatusContext);
 
     const [productName, setProductName] = useState("");
@@ -29,7 +29,7 @@ const CreateNewProduct = () => {
     
     const onSubmit = (data) => {
         console.log(data);
-        navigate("/"); // Navega para a rota "/"
+        navigate("/productDetails"); // Navega para a rota "/productDetails" do produto que acabou de ser editado
     };
 
     return  (
@@ -37,7 +37,7 @@ const CreateNewProduct = () => {
             {
                 (status.user && status.type === "adminLoggedIn" && status.user.type === "admin") ?
                     <div className="login-box">
-                        <h1>Novo Produto</h1>
+                        <h1>Editar Produto</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h2 className="purple-text spaced-text">Descrição do Produto</h2>
                             <label htmlFor="productname">Nome do produto</label>
@@ -123,8 +123,12 @@ const CreateNewProduct = () => {
                                 placeholder="Tamanho específico"
                                 onChange={(e) => setSpecificSize(e.target.value)}
                             />
+
+                            <h2 className="purple-text spaced-text">Quantidade em Estoque</h2>
+
                             <h2 className="purple-text spaced-text">Imagem</h2>
                             <label htmlFor="productimage">Arquivo de imagem</label>
+                            <h3>&le;Colocar imagem atual do produto aqui&ge;</h3>
                             <input
                                 type="file"
                                 id="productimage"
@@ -142,4 +146,4 @@ const CreateNewProduct = () => {
     );
 };
 
-export default CreateNewProduct;
+export default ProductEditionBox;

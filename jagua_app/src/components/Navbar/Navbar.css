@@ -91,15 +91,8 @@ nav #highlightNavBar {
   }
 }
 
-/* Resolucao para tablet */
-@media screen and (max-width: 952px) {    
-  a.navLink {
-      font-size: 1em;
-  }
-}
-
 /* Resolucao para smartphone */
-@media (max-width: 858px) {
+@media screen and (max-width: 1140px) {
   nav ul {
     top: 100px;
     margin-left: 0;
