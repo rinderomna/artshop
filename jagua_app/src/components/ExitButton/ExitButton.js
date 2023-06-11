@@ -8,14 +8,16 @@ const ExitButton = ({callBack}) => {
         setStatus
     } = useContext(StatusContext);
 
+    //testando alteracoes
     const handleOnClick = () => {
-        setStatus({
+        //mudanca -> nao setar orders para null (ainda nao funciona)
+        setStatus((prevStatus) =>({
+            ...prevStatus,
             type: "loggedOut",
             user: null,
             currProduct: null,
-            cartList: [],
-            orders: []
-        });
+            cartList: []
+        }));
 
         callBack();
     };

@@ -26,19 +26,44 @@ const CheckoutBox = () => {
 
     //gerando novo pedido
     if (status.cartList !== null) {
+      
+      const newBuyerInfo = {
+        id: parseInt(Math.random() * 200),
+        name: data.fullname,
+        cpf: data.cpf,
+        email: status.user,
+        cellphone: data.cellphone,
+        user_name: status.user.userName
+      }
+
+      const newBuyerAddress = {
+        id: parseInt(Math.random() * 200),
+        street: data.streetAddress,
+        neighborhood: data.neighborhoodAddress,
+        complement: data.complement,
+        number: data.numberAddress,
+        cep: data.cep
+      }
+
       const newOrder = {
         id: parseInt(Math.random() * 200),
         date: new Date().toLocaleString(),
         productList: status.cartList,
         status: "Aguardando Postagem",
+        buyer: newBuyerInfo,
+        address: newBuyerAddress,
+        shipping_company: null,
         code: null
       };
+
+      console.log("CheckoutBox.js -> Order: " + newOrder);
       
       setStatus((prevStatus) => {
         if (prevStatus.orders) {
           return {
             ...prevStatus,
-            orders: [...prevStatus.orders, newOrder]
+            orders: [...prevStatus.orders, newOrder],
+            cartList: []
           };
         } else {
           return {

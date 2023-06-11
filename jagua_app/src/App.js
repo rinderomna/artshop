@@ -115,6 +115,7 @@ function App() {
       type: "loggedOut",
       user: null,
       currProduct: null,
+      currOrder: null,
       cartList: productCartList,
       orders: ordersList
     };

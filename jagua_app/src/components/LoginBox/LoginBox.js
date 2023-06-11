@@ -33,16 +33,18 @@ function LoginBox(props) {
                 if (!user) {
                     alert("Usuário não encontrado ou senha incorreta!");
                 } else if (user.type === "admin") {
-                    setStatus({
+                    setStatus((prevStatus) =>({//mudar aqui tambem?
+                        ...prevStatus,
                         type: "adminLoggedIn",
                         user
-                    });
+                    }));
                     navigate("/"); // Navega para a rota "/"
                 } else if (user.type === "customer") {
-                    setStatus({
+                    setStatus((prevStatus) =>({//mudar aqui tambem?
+                        ...prevStatus,
                         type: "customerLoggedIn",
                         user
-                    });
+                    }));
                     navigate("/"); // Navega para a rota "/"
                 }
             })

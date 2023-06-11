@@ -8,7 +8,6 @@ import "./Cart.css";
 
 function Cart({ flagBuyBtn }) {
   const { status, setStatus } = useContext(StatusContext);
-  console.log("Cart.js -> Status: " + status);
 
   const handleRemoveItemCart = (rem_product) => {
     //removendo o item do carrinho
