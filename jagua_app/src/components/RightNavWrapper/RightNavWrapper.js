@@ -27,7 +27,13 @@ function RightNavWrapper() {
 
     const handleUserClick = () => {
         console.log("Clicou no user button!");
-        setType("user");
+        if (status.user && status.user.type == "customer") {
+            setType("customer");
+        }
+
+        else if (status.user && status.user.type == "admin") {
+            setType("admin");
+        }
     }
 
     return (

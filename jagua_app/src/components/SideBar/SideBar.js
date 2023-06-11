@@ -5,6 +5,7 @@ import "./SideBar.css"
 import Cart from '../Cart/Cart';
 import ExitButton from '../ExitButton/ExitButton';
 import OrderDetails from '../OrderDetails/OrderDetails';
+import UserProfileBox from '../UserProfileBox/UserProfileBox';
 
 
 function SideBar({sideBarType, setType}) {
@@ -14,7 +15,7 @@ function SideBar({sideBarType, setType}) {
 
 
     const showSidebar = () =>{
-        if(sideBarType != undefined){
+        if(sideBarType !== undefined){
              setSidebar(!sidebar) 
     
              if(sideBarType === "cart"){
@@ -35,7 +36,7 @@ function SideBar({sideBarType, setType}) {
         if(sideBarType !== "" || sidebar === true){
             showSidebar();
         }
-    }, [sideBarType]);
+    }, [sideBarType]); // eslint-disable-line react-hooks/exhaustive-deps
 
     
     
@@ -50,10 +51,17 @@ function SideBar({sideBarType, setType}) {
                 <div className='navbar-toggle'>
                         {/*Botao 'x' para recolher a sidebar*/}
                         <AiOutlineClose className='close-button' onClick={closeSideBar}/>
-                        {(sideBarType === "cart") ? <Cart flagBuyBtn={true} /> : <></>}
+                        {
+                            (sideBarType === "cart") ? 
+                                <Cart flagBuyBtn={true} handleRemoveItemCart={handleRemoveItemCart}/> : 
+                                <></>
+                        }
+                        {
+                            (sideBarType === "customer" || sideBarType === "admin") ? 
+                                <UserProfileBox callBack={closeSideBar} />: 
+                                <></>
+                        }
                         {(sideBarType === "order") ? <OrderDetails /> : <></>}
-                        {(sideBarType === "user") ? <><h1>Perfil do usuário</h1> <ExitButton callBack={closeSideBar}/> </>: <></>}
-                
                 </div>
                 
             </nav>
