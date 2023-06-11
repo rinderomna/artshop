@@ -34,12 +34,18 @@
     font-weight: 600;
 }
 
-
-
 .edit-product-button {
     border: 2px solid var(--light_gray);
     color: var(--light_gray);
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: 'Bree Serif', serif;
+    border-radius: 1.25em;
 }
 
 .edit-product-button:hover {
@@ -73,11 +79,21 @@
 .button-container {
     display: flex;
     /* exibe os botões em uma linha */
-    justify-content: center;
+    justify-content: space-between;
     /* centraliza os botões horizontalmente */
     margin-top: 2em;
     margin-bottom: 1em;
     /* adiciona espaçamento inferior entre os botões */
+}
+
+.button-container .edit-product-button,
+.button-container .exit-button {
+  flex: 1;
+  /* faz os botões ocuparem a mesma largura */
+  height: 80px;
+  /* define uma altura fixa para os botões */
+  margin-right: 10px;
+  /* adiciona um espaçamento à direita entre os botões */
 }
 
 /*Responsividade*/

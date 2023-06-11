@@ -10,8 +10,6 @@ import { StatusContext } from "../App.js";
 
 import { Link } from 'react-router-dom';
 
-
-
 const ProductDetails = () => {
     const [newProductAdded, setNewProductAdded] = useState({
         id: 0,
@@ -134,7 +132,7 @@ const ProductDetails = () => {
                             <span className="button-container">
                                 <Link 
                                     to="/editProduct" 
-                                    className="edit-product-button button"
+                                    className="edit-product-button"
                                 >Editar Produto</Link>
                                 
                                 <Link 
