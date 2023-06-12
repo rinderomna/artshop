@@ -44,8 +44,18 @@ const CheckoutBox = () => {
         cep: data.cep
       }
 
+      //gerando um id unico para as orders
+      let newOrder_id;
+      const ordersIds = status.orders.map(order => order.id);
+
+      //mudar depois -> limite maximo de Ids = 500
+      do {
+        newOrder_id = parseInt(Math.random() * 500);
+      } while (ordersIds.includes(newOrder_id));
+
+
       const newOrder = {
-        id: parseInt(Math.random() * 200),
+        id: newOrder_id,
         date: new Date().toLocaleString(),
         productList: status.cartList,
         status: "Aguardando Postagem",
