@@ -15,16 +15,16 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
 ```diff
 ! Orientações para avaliação do __Milestone 2__ estão sob a seção 6, especialmente na subseção 6.2.
-! Lá há o procedimento de execução. Também na seção 4.2 há um plano de testes para a aplicação.
+! Lá, há o procedimento de execução. Ademais, na seção 4.2, há um plano de testes para a aplicação.
 ```
 No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
 # 1. Requisitos de Software
-Uma artista contratou nossos serviços para criar uma loja online para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos online e recebam em suas residências. Desenvolveremos, por tanto, uma aplicação Web para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
+Uma artista contratou nossos serviços para criar uma loja *online* para ela. Nesta loja, ela disponibilizará seus produtos artísticos, como prints de artes, adesivos e camisetas, para que seus clientes possam adquirir estes artigos *online* e os recebam em suas residências. Desenvolveremos, portanto, uma aplicação *Web* para esta loja. Os usuários da aplicação serão os clientes da loja, que poderão consultar e comprar os produtos, e os administradores, que serão responsáveis por gerenciar o cadastro e envio dos itens de venda. Para tanto, o sistema possuirá os seguintes requisitos funcionais:
 
-* O sistema deve possuir uma conta padrão de administrador inicial (nome de usuário 'admin' com senha 'admin'). O administrador poderá alterar suas informações, como nome, CPF, telefone, e e-mail, assim como seu nome de usuário e sua senha.
-* O sistema deve permitir que o administrador cadastre, remova e edite produtos. As informações do produto devem incluir nome, id, imagem, descrição, preço, quantidade em estoque e quantidade vendida.
-* O sistema deve permitir que os clientes se cadastrem com suas informações (nome, CPF, endereço, telefone, e-mail, além de nome de usuário e senha para login).
+* O sistema deve possuir uma conta padrão de administrador inicial (nome de usuário '*admin*' com senha '*admin*'). O administrador poderá alterar suas informações, como nome, CPF, telefone, e *e-mail*, assim como seu nome de usuário e sua senha.
+* O sistema deve permitir que o administrador cadastre, remova e edite produtos. As informações do produto devem incluir nome, *id*, imagem, descrição, preço, quantidade em estoque e quantidade vendida.
+* O sistema deve permitir que os clientes se cadastrem com suas informações (nome, CPF, endereço, telefone, *e-mail*, além de nome de usuário e senha para login).
 * O sistema deve permitir que os clientes e os administradores entrem no sistema com os seus cadastros (nome de usuário e senha). Cada um deles possuirá visões diferentes.
 * Para melhor compreensão dos requisitos de dados, ler seção '2.3. Análise dos elementos que deverão ser guardados no Banco de Dados'.
 * O sistema deve permitir que os clientes visualizem os produtos disponíveis para compra, com imagem, descrição e preço. O sistema também mostrará para os clientes, de forma distinta, os produtos que existem mas estão fora de estoque, também com imagem, descrição e preço.
