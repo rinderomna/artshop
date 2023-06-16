@@ -122,7 +122,7 @@ const ProductDetails = () => {
                             <NumProducts handleNumChange={handleNumChange}/>
                         </div>
                         <div className="add-to-cart-container">
-                        {(status.type === "customerLoggedIn") ?
+                        {(status.type ==="loggedOut" || status.type === "customerLoggedIn") ?
                         
                             (status.currProduct.stock > 0 ) ? 
                                 <AddToCartButton handleClick={handleButtonClick} />
