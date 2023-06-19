@@ -122,13 +122,7 @@ const ProductDetails = () => {
                             <NumProducts handleNumChange={handleNumChange}/>
                         </div>
                         <div className="add-to-cart-container">
-                        {(status.type ==="loggedOut" || status.type === "customerLoggedIn") ?
-                        
-                            (status.currProduct.stock > 0 ) ? 
-                                <AddToCartButton handleClick={handleButtonClick} />
-                                :
-                                <p className="out-of-stock-message">Item indisponível no estoque</p>
-                            :
+                        {(status.type === "adminLoggedIn") ?
                             <span className="button-container">
                                 <Link 
                                     to="/editProduct" 
@@ -140,6 +134,11 @@ const ProductDetails = () => {
                                     className="exit-button"
                                 > Excluir</Link>
                             </span>
+                            :
+                            (status.currProduct.stock > 0 ) ? 
+                                <AddToCartButton handleClick={handleButtonClick} />
+                                :
+                                <p className="out-of-stock-message">Item indisponível no estoque</p>
                     
                         }
                         </div>
