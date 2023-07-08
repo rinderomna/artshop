@@ -247,9 +247,7 @@ const loadProducts = async () => {
 };
 
 const saveUser = async (user) => {
-  let slug = uid(22);
-  console.log("AHHHHH", slug);
-  user.slug = slug;
+  user.slug = uid(22);
 
   try {
     const response = await axios.post("http://127.0.0.1:3001/users/", user);
@@ -266,5 +264,5 @@ const loadUsers = async () => {
   }
 };
 
-//loadProducts();
+loadProducts();
 loadUsers();
