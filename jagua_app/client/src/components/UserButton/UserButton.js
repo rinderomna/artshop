@@ -2,13 +2,13 @@ import "./UserButton.css";
 import userIcon from "../../assets/visual_identity/icon/user_icon.png"
 
 function UserButton(props) {
-    const { userName } = props;
+    const { username } = props;
 
     return (
         <div className="userRightNavContainer">
             <img src={userIcon} alt="Miniatura usuário" className="userProfileMiniature"/>
             <div className="userMessageContainer">
-                <p>Olá, {userName}</p>
+                <p>Olá, {username}</p>
             </div>
         </div>
     );

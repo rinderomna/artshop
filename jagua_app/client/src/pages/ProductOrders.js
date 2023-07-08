@@ -14,7 +14,7 @@ const MyOrders = () => {
         //filtered_list recebe apenas os pedidos do usuario ou todos os pedidos registrados (caso seja o admin)
         filtered_list =
         status.type === "customerLoggedIn"
-            ? status.orders.filter((order) => order.buyer.user_name === status.user.userName)
+            ? status.orders.filter((order) => order.buyer.user_name === status.user.username)
             : status.orders;
     }
 

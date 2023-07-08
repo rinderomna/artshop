@@ -55,7 +55,7 @@ function RightNavWrapper() {
                 (status.type === "adminLoggedIn" || status.type === "customerLoggedIn") ?
                     <> 
                         
-                        <div onClick={handleUserClick}><UserButton userName={status.user.userName} /></div> 
+                        <div onClick={handleUserClick}><UserButton username={status.user.username} /></div> 
                     </> :
                     <LoginButton hidden={status.type === "transient"}/>
                     

@@ -7,7 +7,7 @@ import { SlUser } from 'react-icons/sl';
 import './FormStyle.css';
 
 function LoginBox() {
-    const [userName, setUserName] = useState("");
+    const [username, setUserName] = useState("");
     const [password, setPassword] = useState("");
     
     const navigate = useNavigate();
@@ -15,19 +15,19 @@ function LoginBox() {
     const { setStatus } = useContext(StatusContext);
 
     useEffect(() => {
-        console.log(userName, password);
-    }, [userName, password]);
+        console.log(username, password);
+    }, [username, password]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:8000/users')
+        fetch('http://localhost:3001/users')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
 
                 const user = data.find(item => (
-                    item.userName === userName.trim() &&
+                    item.username === username.trim() &&
                     item.password === password
                 ));
 

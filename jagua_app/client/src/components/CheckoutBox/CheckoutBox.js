@@ -32,7 +32,7 @@ const CheckoutBox = () => {
         cpf: data.cpf,
         email: status.user,
         cellphone: data.cellphone,
-        user_name: status.user.userName
+        user_name: status.user.username
       }
 
       const newBuyerAddress = {

@@ -17,9 +17,9 @@ const UserProfileBox = ({callBack}) => {
                 color={"var(--light_gray)"}
                 className="profileIcon"
             />
-            <h1>{`Perfil de ${status.user.userName}`}</h1>
+            <h1>{`Perfil de ${status.user.username}`}</h1>
             <h2>Nome Completo</h2>
-            <p>{status.user.fullName}</p>
+            <p>{status.user.fullname}</p>
             <h2>E-mail</h2>
             <p>{status.user.email}</p>
 
