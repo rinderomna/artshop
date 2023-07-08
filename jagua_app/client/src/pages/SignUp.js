@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { SlUserFollow } from "react-icons/sl";
 import InputMask from "react-input-mask";
+import { uid } from "uid";
+import axios from "axios";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -11,11 +13,37 @@ const SignUp = () => {
     register,
     formState: { errors },
   } = useForm();
-  
+
   const [focusedField, setFocusedField] = useState(""); // Estado para acompanhar o campo em foco
+
+  const saveUser = async (user) => {
+    user.slug = uid(22);
+
+    try {
+      const response = await axios.post("http://127.0.0.1:3001/users/", user);
+      console.log("User saved successfully!");
+      console.log("User ID:", response.data);
+    } catch (error) {
+      console.error("Error saving the user:", error.message);
+    }
+  };
 
   const onSubmit = (data) => {
     console.log(data); // Dados do formulário
+
+    const newUser = {};
+    newUser.slug = uid(22);
+    newUser.type = "customer";
+    newUser.username = data.username;
+    newUser.password = data.password;
+    newUser.fullname = data.fullname;
+    newUser.address = `${data.streetAddress} - ${data.neighborhoodAddress} - Nº ${data.numberAddress}`;
+    newUser.cep = data.cep;
+    newUser.email = data.email;
+    newUser.phone = data.cellphone;
+
+    saveUser(newUser);
+
     navigate("/login"); // Navega para a rota "/login"
   };
 
@@ -32,7 +60,7 @@ const SignUp = () => {
   };
 
   const validateCellphone = (value) => {
-    return value.replace(/[_()\\s-]/g, "").length === 11; // Verifica se todos os caracteres da máscara estão preenchidos
+    return value.replace(/[_()\\s-]/g, "").length === 12; // Verifica se todos os caracteres da máscara estão preenchidos
   };
 
   const validateCEP = (value) => {
@@ -117,7 +145,7 @@ const SignUp = () => {
           name="cellphone"
           placeholder="(XX) XXXXX-XXXX"
           className={errors.cellphone ? "error" : ""}
-          {...register("cellphone", { 
+          {...register("cellphone", {
             required: true,
             validate: validateCellphone, // Validação personalizada para a máscara
           })}
@@ -135,9 +163,9 @@ const SignUp = () => {
           id="cep"
           name="cep"
           placeholder="CEP"
-          {...register("cep", { 
+          {...register("cep", {
             required: true,
-            validate: validateCEP, // Validação personalizada para a máscara 
+            validate: validateCEP, // Validação personalizada para a máscara
           })}
         />
         {errors.cep && (
