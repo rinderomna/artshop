@@ -19,11 +19,6 @@ const productSchema = new Schema({
     required: true,
     trim: true,
   },
-  id: {
-    type: Number,
-    required: [true, "The id is required"],
-    unique: true,
-  },
   slug: {
     type: String,
     required: [true, "The slug is required"],

@@ -25,7 +25,7 @@ controller.create = async (req, res) => {
     console.log("Saved successfully!");
     res.send(doc._id);
   } catch (error) {
-    console.log("AHHHH", error, "AHHHH");
+    console.log(error);
     res.status(500).send("Error occurred while saving the product.");
   }
 };

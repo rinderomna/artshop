@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 // Carregar as rotas
 import index from "./routes/index-route.js";
 import products from "./routes/product-route.js";
+import users from "./routes/user-route.js";
 
 // Define paths
 import { fileURLToPath } from "url";
@@ -52,8 +53,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", index);
 app.use("/products", products);
+app.use("/users", users);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
   console.log(`API running on port ${port}`);

@@ -220,18 +220,18 @@ Os desenvolvedores seguiram constantemente os passos descritos no plano de teste
  * Pasta 'jagua_app': aqui está a aplicação react que representa o trabalho que será entregue no final
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
 
-## 6.2. Executando a aplicação *React* (*Milestone* 2)
+## 6.2. Executando a aplicação *React* (*Milestone* 3)
 * Garanta ter instalado o Node.js e npm em suas versões mais recentes
-* Entre na pasta 'jagua_app' (```cd jagua_app```) e execute o comando de instalação de dependências:
+* Entre na pasta 'jagua_app/client' e execute o comando de instalação de dependências:
 ```npm install```
-* Abra uma segunda aba do terminal (na pasta 'jagua_app') para rodar o *backend* com o comando ```npm run backend```
-* Na aba inicial, dentro da pasta 'jagua_app', execute a aplicação com ```npm start```
+* Entre na pasta 'jagua_app/server' e execute o comando de instalação de dependências:
+```npm install```
+* Em uma aba do terminal, dentro da parta 'jagua_app/server', rode ```node app.js```
+* Na aba inicial, dentro da pasta 'jagua_app/client', execute a aplicação com ```npm start```
 * Se uma aba de seu navegador não tiver aberto, abra o navegador e acesse 'localhost:3000'
 * Sua aplicação iniciará na *Home Page* em contexto deslogado. Para testar os usuário tipo cliente e tipo administrador, clique no botão 'Entrar' no canto superior direito
 * O perfil padrão de administrador é usuário 'admin' com senha 'admin'. Um perfil de usuário cadastrado para teste é usuário 'helio' com senha 'helio'.
 * Navegue e experimente a aplicação :) Se houver qualquer dúvida aqui não englobada, sinta-se à vontade para contatar os desenvolvedores para qualquer auxílio.
-
-Observação: para o *Milestone* 2, para simulação do servidor e do armazenamento de dados, utilizou-se *json-server* (alguns dados no arquivo db.json dentro de jagua_app/backend). O json-server simula o tempo de resposta do servidor. Outro ponto importante sobre o armazenamento de dados é que foi utilizado o armazenamento local por ora para que a aplicação 'guardasse memória' do usuário (permitindo, desse modo, a atualização da página, caso necessário, sem desfazer o *login*, por exemplo). Se o testador, por acaso, desejar testar a aplicação em seu estado inicial, ele deve remover os dados do armazenamento local em seu navegador para que eles nao interfiram nos testes.
   
 # 7. Problemas
 * Foram identificados três *warnings* exibidos no console (ao pressionar F12 no navegador quando estiver na aplicação *React*). São eles:

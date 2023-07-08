@@ -29,13 +29,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Rotas
-router.post("/", upload.single("image"), controller.create); // Cria um novo produto
 router.get("/", controller.getAll); // Retorna todos os produtos
-router.get("/slug/:slug", controller.getBySlug); // Pegar produto por slug
+router.post("/", upload.single("image"), controller.create); // Cria um novo produto
 router.get("/:id", controller.getOne); // Retorna um produto específico
-router.put("/slug/:slug", controller.updateBySlug); // Atualiza um produto por slug
 router.put("/:id", controller.update); // Atualiza um produto
-router.delete("/slug/:slug", controller.deleteBySlug); // Deleta um produto por slug
 router.delete("/:id", controller.delete); // Deleta um produto
+router.get("/slug/:slug", controller.getBySlug); // Pegar produto por slug
+router.put("/slug/:slug", controller.updateBySlug); // Atualiza um produto por slug
+router.delete("/slug/:slug", controller.deleteBySlug); // Deleta um produto por slug
 
 export default router;
