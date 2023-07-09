@@ -247,7 +247,7 @@ Os desenvolvedores seguiram constantemente os passos descritos no plano de teste
 * Se uma aba de seu navegador não tiver aberto, abra o navegador e acesse 'localhost:3000'
 * Sua aplicação iniciará na *Home Page* em contexto deslogado. Para testar os usuário tipo cliente e tipo administrador, clique no botão 'Entrar' no canto superior direito
 * O perfil padrão de administrador é usuário 'admin' com senha 'admin'. Um perfil de usuário cadastrado para teste é usuário 'helio' com senha 'helio'.
-* Navegue e experimente a aplicação :) Se houver qualquer dúvida aqui não englobada, sinta-se à vontade para contatar os desenvolvedores para qualquer auxílio.
+* Navegue e experimente a aplicação :) Se houver qualquer dúvida aqui não englobada, sinta-se à vontade para contatar os desenvolvedores para auxílio.
   
 # 7. Problemas
 * Foram identificados três *warnings* exibidos no console (ao pressionar F12 no navegador quando estiver na aplicação *React*). São eles:
