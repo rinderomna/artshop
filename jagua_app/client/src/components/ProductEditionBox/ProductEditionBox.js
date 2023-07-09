@@ -82,6 +82,15 @@ const ProductEditionBox = () => {
             product
         );
         console.log("Product updated successfully!");
+        setTimeout(() => {
+            setStatus((prevStatus) => ({
+              ...prevStatus,
+              //flag para sinalizar que um novo produto foi adicionado e, portanto,
+              //sera necessario fazer um get do banco de dados (atualizar o catalogo)
+              flagNewProduct: !status.flagNewProduct
+            }));
+          
+        }, 500);
         } catch (error) {
         console.error("Error updating the product:", error.message);
         }
@@ -92,7 +101,7 @@ const ProductEditionBox = () => {
         let sizes = [];
         if(data.productcategory === "print"){
             sizes = printsSizes;
-        }else if(data.productcategory === "adesivo"){
+        }else if(data.productcategory === "sticker"){
             stickerSizes[0] = {
                 ...stickerSizes[0],
                 specific_size: data.specificsize
@@ -213,8 +222,9 @@ const ProductEditionBox = () => {
                                 id="specificsize"
                                 name="specificsize"
                                 maxLength={30}
-                                placeholder="Digite o tamanho específico."
+                                placeholder="Tamanho específico"
                                 onChange={(e) => setSpecificSize(e.target.value)}
+                                {...register("specificsize", {required: false})}
                             />
 
                             <label htmlFor="productstock">Quantidade em Estoque</label>

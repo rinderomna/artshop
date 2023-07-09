@@ -85,7 +85,7 @@ const CreateNewProduct = () => {
         let sizes = [];
         if(data.productcategory === "print"){
             sizes = printsSizes;
-        }else if(data.productcategory === "adesivo"){
+        }else if(data.productcategory === "sticker"){
             stickerSizes[0] = {
                 ...stickerSizes[0],
                 specific_size: data.specificsize
@@ -235,6 +235,7 @@ const CreateNewProduct = () => {
                                 maxLength={30}
                                 placeholder="Tamanho específico"
                                 onChange={(e) => setSpecificSize(e.target.value)}
+                                {...register("specificsize", {required: false})}
                             />
 
                             <label htmlFor="productstock">Estoque</label>
