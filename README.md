@@ -15,7 +15,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
 ```diff
 ! Orientações para avaliação do __Milestone 3__ estão sob a seção 6, especialmente na subseção 6.2.
-! Lá, há o procedimento de execução. Ademais, na seção 4.2, há um plano de testes para a aplicação.
+! Lá, há o procedimento de execução. Ademais, nas seções 4.2 e 4.3 há planos de testes.
 ```
 No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
