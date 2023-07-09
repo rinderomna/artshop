@@ -14,7 +14,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
 ```diff
-! Orientações para avaliação do __Milestone 2__ estão sob a seção 6, especialmente na subseção 6.2.
+! Orientações para avaliação do __Milestone 3__ estão sob a seção 6, especialmente na subseção 6.2.
 ! Lá, há o procedimento de execução. Ademais, na seção 4.2, há um plano de testes para a aplicação.
 ```
 No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
@@ -221,12 +221,15 @@ Os desenvolvedores seguiram constantemente os passos descritos no plano de teste
  * Arquivo 'README.md': este é o arquivo principal de descrição e documentação do projeto.
 
 ## 6.2. Executando a aplicação *React* (*Milestone* 3)
-* Garanta ter instalado o Node.js e npm em suas versões mais recentes
+* Garanta ter instalado o Node.js e npm em suas versões mais recentes.
+* É também importante ter uma instância do MongoDB rodando na porta padrão 27017 do localhost (127.0.0.1).
+* No MongoDB, crie uma base de dados chamada 'online-store' e crie duas coleções: 'products' e 'users'.
 * Entre na pasta 'jagua_app/client' e execute o comando de instalação de dependências:
 ```npm install```
 * Entre na pasta 'jagua_app/server' e execute o comando de instalação de dependências:
 ```npm install```
-* Em uma aba do terminal, dentro da parta 'jagua_app/server', rode ```node app.js```
+* Em uma aba do terminal, dentro da parta 'jagua_app/server', rode ```node app.js``` para executar o servidor que se conecta com o banco de dados
+* Para carregar os dados iniciais, entre no diretório 'jagua_app/server/load' e execute ```node load_initial_data.js```
 * Na aba inicial, dentro da pasta 'jagua_app/client', execute a aplicação com ```npm start```
 * Se uma aba de seu navegador não tiver aberto, abra o navegador e acesse 'localhost:3000'
 * Sua aplicação iniciará na *Home Page* em contexto deslogado. Para testar os usuário tipo cliente e tipo administrador, clique no botão 'Entrar' no canto superior direito
