@@ -29,6 +29,7 @@ function RightNavWrapper() {
         console.log("Clicou no user button!");
         if (status.user && status.user.type == "customer") {
             setType("customer");
+            console.log(type);
         }
 
         else if (status.user && status.user.type == "admin") {
@@ -53,8 +54,7 @@ function RightNavWrapper() {
 
             {
                 (status.type === "adminLoggedIn" || status.type === "customerLoggedIn") ?
-                    <> 
-                        
+                    <>  
                         <div onClick={handleUserClick}><UserButton username={status.user.username} /></div> 
                     </> :
                     <LoginButton hidden={status.type === "transient"}/>

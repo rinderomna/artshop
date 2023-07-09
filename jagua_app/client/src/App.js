@@ -277,8 +277,6 @@ function App() {
 
   });
 
-
-
   useEffect(() => {
     localStorage.setItem("status", JSON.stringify(status));
   }, [status]);

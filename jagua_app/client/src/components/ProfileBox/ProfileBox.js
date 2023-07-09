@@ -47,6 +47,7 @@ const ProfileBox = () => {
     console.log(status.user);
 
     const newUserData = {
+      ...status.user,
       slug: status.user.slug,
       email: data.email,
       fullname: data.fullname,
