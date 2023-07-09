@@ -39,14 +39,6 @@ const ProductDetails = () => {
 
     const { status, setStatus } = useContext(StatusContext);
 
-    //apenas para teste
-    if(status.products != null){
-        const clicked_prod = status.products.filter((product) => product.name === status.currProduct.name);
-        console.log("ProductDetails.js -> estoque do produto: " + clicked_prod[0].stock);
-    }else{
-        console.log("ProductDetails.js -> estoque do produto: não foi possivel pegar");
-    }
-
 
     //componentes (devem estar descritas no componente pai)
     const handleAddToCart = (productAdded) => {

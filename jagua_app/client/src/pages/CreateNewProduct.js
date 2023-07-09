@@ -12,7 +12,6 @@ import "../components/LoginBox/FormStyle.css";
 
 const CreateNewProduct = () => {
     const FormData = require('form-data');
-    const fs = require('fs');
     const { status, setStatus } = useContext(StatusContext);
 
     const [productName, setProductName] = useState("");
@@ -73,7 +72,6 @@ const CreateNewProduct = () => {
     const saveProduct = async (data) => {
         const formData = new FormData();
         
-        //problemas com o fs -> nao esta sendo reconhecido
         formData.append("image", data.productimage);
         formData.append("name", data.productname);
         formData.append("slug", uid(20));
@@ -207,8 +205,8 @@ const CreateNewProduct = () => {
                                 })}
                             >
                                 <option value="" defaultValue>Escolha uma categoria...</option>
-                                <option value="adesivo">Adesivo</option>
-                                <option value="camiseta">Camiseta</option>
+                                <option value="sticker">Adesivo</option>
+                                <option value="shirt">Camiseta</option>
                                 <option value="print">Print</option>
                             </select>
                             <h2 className="purple-text spaced-text">Tamanho</h2>
