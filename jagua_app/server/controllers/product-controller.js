@@ -17,7 +17,7 @@ controller.create = async (req, res) => {
     sizes: req.body.sizes,
     stock: req.body.stock,
     sales: req.body.sales,
-    image: req.file.filename
+    image: req.body.image
   });
 
   try {

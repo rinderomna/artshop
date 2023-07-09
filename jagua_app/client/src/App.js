@@ -267,7 +267,8 @@ function App() {
     return storedStatus ? JSON.parse(storedStatus) : {
       type: "loggedOut",
       user: null,
-      products: productList,
+      products: [],
+      flagNewProduct: false,
       currProduct: null,
       currOrder: null,
       cartList: [],
@@ -282,6 +283,26 @@ function App() {
     localStorage.setItem("status", JSON.stringify(status));
   }, [status]);
 
+  useEffect(() =>{
+    //atualizando o catalogo com os produtos salvos o banco de dados
+    fetch('http://localhost:3001/products')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+            setStatus((prevStatus) => ({
+                ...prevStatus,
+                //flag para sinalizar que um novo produto foi adicionado e, portanto,
+                //sera necessario fazer um get do banco de dados (atualizar o catalogo)
+                products: data
+            }));
+        })
+        .catch(error => {
+            console.log('Erro na requisição:', error);
+        });
+
+
+},[status.flagNewProduct]);
 
   //---------- Fim da logica de carrinho --------------
 
