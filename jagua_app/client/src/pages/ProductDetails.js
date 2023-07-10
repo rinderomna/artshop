@@ -39,7 +39,7 @@ const ProductDetails = () => {
 
   const { status, setStatus } = useContext(StatusContext);
 
-  //componentes (devem estar descritas no componente pai)
+  //logica de adicionar um novo item no carrinho
   const handleAddToCart = (productAdded) => {
     if (productAdded.qtd <= status.currProduct.stock) {
       const cartList = status.cartList ? status.cartList : [];
@@ -55,6 +55,7 @@ const ProductDetails = () => {
         },
       ];
 
+      //atualizando o status
       setStatus((prevStatus) => ({
         ...prevStatus,
         cartList: newCartList,
@@ -64,6 +65,7 @@ const ProductDetails = () => {
     }
   };
 
+  //funcao assincrona para deletar um produto
   const deleteProduct = async () => {
     try {
       const response = await axios.delete(
@@ -127,14 +129,24 @@ const ProductDetails = () => {
           />
 
           <div className="num-and-cart-container">
-            <div className="adjuster-container">
-              <NumProducts handleNumChange={handleNumChange} />
-            </div>
+
+            {
+            //botao de ajustar quantidade deve aparecer apenas para o usuario
+            status.type === "customerLoggedIn" ? 
+                <div className="adjuster-container">
+                <NumProducts handleNumChange={handleNumChange} />
+                </div>
+            :
+                <>
+                </>
+            }
             <div className="add-to-cart-container">
-              {status.type === "adminLoggedIn" ? (
+              {
+                //botoes de editar e excluir devem ser visiveis apenas para o administrador
+                status.type === "adminLoggedIn" ? (
                 <span className="button-container">
                   <Link to="/editProduct" className="edit-product-button">
-                    Editar Produto
+                    Editar
                   </Link>
 
                   <Link to="/" className="exit-button" onClick={deleteProduct}>
@@ -143,6 +155,8 @@ const ProductDetails = () => {
                   </Link>
                 </span>
               ) : status.currProduct.stock > 0 ? (
+                //botao de adicionar ao carrinho deve aparecer apenas para o usuario
+                //e so quando a quantidade em estoque for maior que zero
                 <AddToCartButton handleClick={handleButtonClick} />
               ) : (
                 <p className="out-of-stock-message">

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { uid } from "uid";
@@ -17,13 +17,16 @@ const ProductEditionBox = () => {
     const [productPrice, setProductPrice] = useState("0.00");
     const [productDescription, setProductDescription] = useState("");
     const [productStock, setProductStock] = useState("");
-    const [productCategory, setProductCategory] = useState("");
+    const [productCategory, setProductCategory] = useState(null);
     const [productSizeCategory, setProductSizeCategory] = useState("");
     const [specificSize, setSpecificSize] = useState("");
     const [productImage, setProductImage] = useState("");
+
+    //logica para mostrar o input de tamanho especifico
+    const [showSizeInput, setShowSizeInput] = useState(true);
     
     const navigate = useNavigate();
-    // Adicione esta linha para definir os valores iniciais dos campos
+    // linha para definir os valores iniciais dos campos
     const defaultValues = {
         productimage: status.currProduct.image,
         productname: status.currProduct.name,
@@ -38,6 +41,7 @@ const ProductEditionBox = () => {
         formState: { errors },
     } = useForm({ defaultValues });
 
+    //lista de tamanhos para cada tipo especifico de produto
     const printsSizes = [
         {
           name: "A5",
@@ -75,6 +79,7 @@ const ProductEditionBox = () => {
         },
     ];
 
+    //funcao assincrona para salvar um produto no banco de dados
     const updateProduct = async (product) => {
         try {
         const response = await axios.put(
@@ -96,8 +101,8 @@ const ProductEditionBox = () => {
         }
       };
     
+      //funcao executada quando o usuario aperta o botao de confirmar 
       const onSubmit = (data) => {
-
         let sizes = [];
         if(data.productcategory === "print"){
             sizes = printsSizes;
@@ -111,6 +116,7 @@ const ProductEditionBox = () => {
             sizes = shirtSizes;
         }
 
+        //objeto com os valores lidos do formulario
         const newProductData = {
             ...status.currProduct,
             image: data.productimage,
@@ -122,6 +128,7 @@ const ProductEditionBox = () => {
             sizes: sizes
           };
 
+          //atualizando o produto atual no localstorage
           setStatus({   
               ...status,
               currProduct: newProductData
@@ -132,6 +139,19 @@ const ProductEditionBox = () => {
     
         navigate("/productDetails"); // Navega para a rota "/productDetails" do produto que acabou de ser editado
       };
+
+    //logica para salvar a categoria de produto escolhida
+    const handleInputCategory = (selectedOption) =>{
+        setProductCategory(selectedOption);
+        console.log(`Option selected:`, selectedOption);
+    }
+
+    useEffect(() => {
+        if(productCategory){
+            console.log("Categoria digitada pelo usuario: " + productCategory);
+            setShowSizeInput(productCategory === "sticker");
+        }
+    },[productCategory]);
 
 
     return  (
@@ -183,11 +203,19 @@ const ProductEditionBox = () => {
                                 maxLength={100}
                                 placeholder={status.currProduct.description}
                                 onChange={(e) => setProductDescription(e.target.value)}
+                                className={errors.productdescription ? "error" : ""}
+                                {...register("productdescription", { 
+                                    required: true
+                                })}
                             />
+                            {errors.productdescription && (
+                                <span className="error-message">Preencha o campo Descrição</span>
+                            )}
                             <label htmlFor="productcategory">Categoria do produto</label>
                             <select
                                 name="productcategory"
                                 id="productcategory"
+                                onChange={(e) => handleInputCategory(e.target.value)}
                                 {...register("productcategory", { 
                                     required: true,
                                     validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
@@ -199,33 +227,21 @@ const ProductEditionBox = () => {
                                 <option value="print">Print</option>
                             </select>
                             <h2 className="purple-text spaced-text">Tamanho</h2>
-                            <label htmlFor="productsizecategory">Tamanho do produto</label>
-                            <select
-                                name="productsizecategory"
-                                id="productsizecategory"
-                                {...register("productsizecategory", { 
-                                    required: true,
-                                    validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
-                                })}
-                            >
-                                <option value="" defaultValue>Escolha um tamanho de produto...</option>
-                                <option value="p">P</option>
-                                <option value="m">M</option>
-                                <option value="g">G</option>
-                                <option value="singlesize">Tam. Único</option>
-                                <option value="a5">A5</option>
-                                <option value="a4">A4</option>
-                                <option value="a3">A3</option>
-                            </select>
-                            <input
-                                type="text"
-                                id="specificsize"
-                                name="specificsize"
-                                maxLength={30}
-                                placeholder="Tamanho específico"
-                                onChange={(e) => setSpecificSize(e.target.value)}
-                                {...register("specificsize", {required: false})}
-                            />
+                            {
+                                showSizeInput ? 
+                                <input
+                                    type="text"
+                                    id="specificsize"
+                                    name="specificsize"
+                                    maxLength={30}
+                                    placeholder="Tamanho específico"
+                                    onChange={(e) => setSpecificSize(e.target.value)}
+                                    {...register("specificsize", {required: false})}
+                                />
+                                :
+                                <>
+                                </>
+                            }
 
                             <label htmlFor="productstock">Quantidade em Estoque</label>
                             <input

@@ -13,24 +13,26 @@ import "../components/LoginBox/FormStyle.css";
 const CreateNewProduct = () => {
     const FormData = require('form-data');
     const { status, setStatus } = useContext(StatusContext);
-
-    const [productName, setProductName] = useState("");
-    const [productPrice, setProductPrice] = useState("0.00");
-    const [productStock, setProductStock] = useState("");
-    const [productDescription, setProductDescription] = useState("");
-    const [productCategory, setProductCategory] = useState("");
-    const [productSizeCategory, setProductSizeCategory] = useState("");
-    const [specificSize, setSpecificSize] = useState("");
-    const [productImage, setProductImage] = useState("");
-    
     const navigate = useNavigate();
 
+    const [setProductPrice] = useState("0.00");
+    const [setProductStock] = useState("");
+    const [setProductDescription] = useState("");
+    const [productCategory, setProductCategory] = useState("");
+    const [setSpecificSize] = useState("");
+    const [setProductImage] = useState("");
+
+    //logica para mostrar o input de tamanho especifico
+    const [showSizeInput, setShowSizeInput] = useState(true);
+    
+    //hook do formulario
     const {
         handleSubmit,
         register,
         formState: { errors },
     } = useForm();
 
+    //lista de tamanhos para cada tipo especifico de produto
     const printsSizes = [
         {
           name: "A5",
@@ -68,7 +70,21 @@ const CreateNewProduct = () => {
         },
       ];
 
+    //logica para salvar a categoria de produto escolhida
+    const handleInputCategory = (selectedOption) =>{
+        setProductCategory(selectedOption);
+        console.log(`Option selected:`, selectedOption);
+    }
 
+    useEffect(() => {
+        if(productCategory){
+            console.log("Categoria digitada pelo usuario: " + productCategory);
+            setShowSizeInput(productCategory === "sticker");
+        }
+    },[productCategory]);
+
+
+    //funcao assincrona para salvar um produto no banco de dados
     const saveProduct = async (data) => {
         const formData = new FormData();
         
@@ -82,6 +98,7 @@ const CreateNewProduct = () => {
         console.log("Form Data");
         console.log(formData);
 
+        //dependendo do tipo de produto escolhido, uma lista de tamanhos deve ser salva
         let sizes = [];
         if(data.productcategory === "print"){
             sizes = printsSizes;
@@ -128,13 +145,13 @@ const CreateNewProduct = () => {
     };
 
 
-
+    //funcao executada quando o usuario aperta o botao de confirmar 
     const onSubmit = (data) => {
         console.log("Dados do formulario");
         console.log(data);
         saveProduct(data);
 
-        navigate("/"); // Navega para a rota "/"
+        navigate("/"); // Navega para a rota "/" (home)
     };
 
     return  (
@@ -199,6 +216,7 @@ const CreateNewProduct = () => {
                             <select
                                 name="productcategory"
                                 id="productcategory"
+                                onChange={(e) => handleInputCategory(e.target.value)}
                                 {...register("productcategory", { 
                                     required: true,
                                     validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
@@ -210,33 +228,22 @@ const CreateNewProduct = () => {
                                 <option value="print">Print</option>
                             </select>
                             <h2 className="purple-text spaced-text">Tamanho</h2>
-                            <label htmlFor="productsizecategory">Tamanho do produto</label>
-                            <select
-                                name="productsizecategory"
-                                id="productsizecategory"
-                                {...register("productsizecategory", { 
-                                    required: true,
-                                    validate: (value) => value !== "", // Verifica se o valor é diferente do valor padrão 
-                                })}
-                            >
-                                <option value="" defaultValue>Escolha um tamanho de produto...</option>
-                                <option value="p">P</option>
-                                <option value="m">M</option>
-                                <option value="g">G</option>
-                                <option value="singlesize">Tam. Único</option>
-                                <option value="a5">A5</option>
-                                <option value="a4">A4</option>
-                                <option value="a3">A3</option>
-                            </select>
-                            <input
-                                type="text"
-                                id="specificsize"
-                                name="specificsize"
-                                maxLength={30}
-                                placeholder="Tamanho específico"
-                                onChange={(e) => setSpecificSize(e.target.value)}
-                                {...register("specificsize", {required: false})}
-                            />
+       
+                            {
+                                showSizeInput ? 
+                                <input
+                                    type="text"
+                                    id="specificsize"
+                                    name="specificsize"
+                                    maxLength={30}
+                                    placeholder="Tamanho específico"
+                                    onChange={(e) => setSpecificSize(e.target.value)}
+                                    {...register("specificsize", {required: false})}
+                                />
+                                :
+                                <>
+                                </>
+                            }
 
                             <label htmlFor="productstock">Estoque</label>
                             <input
