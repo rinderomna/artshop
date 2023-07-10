@@ -15,7 +15,7 @@ Este é o repositório destinado ao projeto final desenvolvido para a disciplina
 Se você está revisando nosso projeto e precisa entrar em contato conosco, mande um e-mail para os endereços acima. 
 ```diff
 ! Orientações para avaliação do __Milestone 3__ estão sob a seção 6, especialmente na subseção 6.2.
-! Lá, há o procedimento de execução. Ademais, na seção 4.2, há um plano de testes para a aplicação.
+! Lá, há o procedimento de execução. Ademais, nas seções 4.2 e 4.3 há planos de testes.
 ```
 No entanto, todas as seções contêm informações importantes para a completa compreensão do projeto.
 
@@ -167,7 +167,7 @@ Pedido:
  ![Responsividade 4](images&diagrams/toggle_menu_on.jpg)
  
 # 4. Plano de Teste
-## 4.1. Plano de teste para o esquema de navegação
+## 4.1. Plano de teste para o esquema de navegação (*Milestone* 1)
 * Para testar o esquema de navegação do protótipo, utilize o [diagrama de navegação](images&diagrams/DiagramadeNavegacao_Jaguar.pdf) como referência para navegar no [protótipo feito no Marvel](https://marvelapp.com/prototype/884i1de/screen/91326238). <ins> Obs.: Lembre-se de que, na tela de *login* do protótipo, o botão 'Entrar' foi divido ao meio para prover ambas as navegações possíveis: uma para cliente, outra para administrador. Clicando do lado esquerdo do botão 'Entrar', você estará simulando o *login* de um cliente. Clicando do lado direito do botão 'Entrar', você estará simulando o *login* de um administrador. </ins>
 * Quando o conjunto total de telas estiver implementado em código (segundo *milestone* do projeto), a mesma ideia de utilizar o diagrama de navegação como referência para testar o fluxo de navegação pode ser utilizada.
   
@@ -191,6 +191,16 @@ Pode-se então testar:
 * Como administrador, na tela para ver todos os pedidos, você deve ver todos os pedidos de todos os usuários, sejam com seu *status* pendente ou enviado. Naturalmente, como administrador, você pode clicar em cada um destes *cards* de pedido para poder cadastrar o código de rastreio e a transportadora para pedidos de *status* pendente, o que deve mudar o *status* do pedido para enviado.
 * De qualquer estado da aplicação, você pode tentar acessar pela barra de navegação uma rota que não está prevista (exemplo: "localhost:3000/rota_qualquer"), de forma que deve lhe ser mostrada uma tela de erro devidamente formatada, como uma imagem personalizada de erro 404 (a qual obtivemos do site educativo sobre códigos HTTP, http.cat, para fins de estudos de desenvolvimento *web* dentro da disciplina).
 * Foram realizados alguns tratamentos de possível entrada de dados pelo usuário diretamente na URL (por exemplo - um usuário que não é administrador não consegue acessar, ao digitar 'localhost:3000/createNewProduct', rota na qual um produto novo pode ser criado). Por enquanto, nem todas as rotas possíveis foram tratadas para evitar esse acesso indesejado que compromete a segurança da aplicação quando ela estiver realmente em produção, mas pretende-se fazer isso para próximos incrementos de desenvolvimento. De qualquer modo, é possível fazer esse teste com êxito para o exemplo aqui fornecido neste tópico.
+
+## 4.3. Plano de teste para a base de dados MongoDB (*Milestone* 3)
+* Deslogado você pode:
+  * Criar uma conta: clique no botão 'Entrar' para ir para a tela de login. Clique na opção que diz que você não tem conta e precisa se cadastrar. Isto deve te levar para a tela de cadastro. Preencha o formulário e confirma. Isto te levará de volta para a tela de login. Use suas novas credenciais para logar em sua conta. O efeito desejado é que seja possível entrar na sua visão de cliente logado.
+* Logado como administrador você pode testar a:
+   * Inclusão de um novo item: na home da visão de administrador (admin:admin), clique no botão para adicionar novo item. Cadastre as informações do novo produto. Atenção à imagem, que deve ser incluída como um link válido para a uma imagem de tamanho razoável disponível na internet. Adicione o produto. Ele deve depois estar disponível dentre os produtos de sua categoria. Ele deve também poder ser visualizado no banco de dados.
+   * Edição de um item: ao clicar em um produto para ver detalhes, é possível selecionar a opção de edição. Alguns campos estarão com seus valores atuais preenchidos, outros precisarão ser preenchidos. Os efeitos devem ser observados tanto da visão de detalhes deste produto como no banco de dados.
+   * Remoção de um item: ao clicar em um produto para ver detalhes, é possível selecionar a opção de excluir. Automaticamente o produto não deve estar mais disponível em nenhuma visão, nem no banco de dados.
+* Logado tanto como cliente (helio:helio, ou cadastro), como administrador (admin:admin):
+    * Edição de perfil: clique no ícone de usuário no canto inferior direito para abrir o menu lateral. Neste menu deve ser possível clicar na opção de edição de perfil. A tela de edição de perfil é semelhante à de cadastro, mas começará com alguns valores atuais completados, mas outros precisarão ainda ser preenchidos. Após a edição, os efeitos devem poder ser observados tanto no menu lateral do perfil, no ícone de usuário, assim como no banco de dados.
   
 # 5. Resultados dos Testes
 ## 5.1. Teste manual da navegação no protótipo *Marvel*
@@ -198,6 +208,9 @@ Os membros desenvolvedores utilizaram o [diagrama de navegação](images&diagram
 
 ## 5.2. Teste manual da aplicação *React*
 Os desenvolvedores seguiram constantemente os passos descritos no plano de teste especificado na seção 4.2 para testar a aplicação. Estes testes serviram como guia ao longo do desenvolvimento para sempre enxergar, quando uma nova funcionalidade era adicionada, que nenhuma das outras estavam comprometidas e, se estivessem, isto era uma indicação para o que tínhamos de consertar, dedicando mais tempo de desenvolvimento. Idealmente, o grupo avaliador deve seguir também estes passos e outros que acharem válidos para testar nossa aplicação. 
+
+## 5.3. Teste manual do Banco de Dados
+Os desenvolvedores seguiram constantemente os passos descritos no plano de teste especificado na seção 4.3 para testar a interação da aplicação com o banco de dados. Estes testes serviram como guia ao longo do desenvolvimento para sempre enxergar, quando uma nova funcionalidade era adicionada, que nenhuma das outras estavam comprometidas e, se estivessem, isto era uma indicação para o que tínhamos de consertar, dedicando mais tempo de desenvolvimento. Idealmente, o grupo avaliador deve seguir também estes passos e outros que acharem válidos para testar nossa aplicação. 
   
 # 6. Procedimentos para execução
 ## 6.1. Baixando e entendendo os arquivos
@@ -234,7 +247,7 @@ Os desenvolvedores seguiram constantemente os passos descritos no plano de teste
 * Se uma aba de seu navegador não tiver aberto, abra o navegador e acesse 'localhost:3000'
 * Sua aplicação iniciará na *Home Page* em contexto deslogado. Para testar os usuário tipo cliente e tipo administrador, clique no botão 'Entrar' no canto superior direito
 * O perfil padrão de administrador é usuário 'admin' com senha 'admin'. Um perfil de usuário cadastrado para teste é usuário 'helio' com senha 'helio'.
-* Navegue e experimente a aplicação :) Se houver qualquer dúvida aqui não englobada, sinta-se à vontade para contatar os desenvolvedores para qualquer auxílio.
+* Navegue e experimente a aplicação :) Se houver qualquer dúvida aqui não englobada, sinta-se à vontade para contatar os desenvolvedores para auxílio.
   
 # 7. Problemas
 * Foram identificados três *warnings* exibidos no console (ao pressionar F12 no navegador quando estiver na aplicação *React*). São eles:
@@ -256,3 +269,5 @@ Os desenvolvedores seguiram constantemente os passos descritos no plano de teste
 * Como o grupo de desenvolvedores não tinha conhecimento prévio em *frameworks JavaScript*, além de o projeto seguir um cronograma apertado, o desenvolvimento em *React* não prosseguiu da forma mais eficiente possível, isto é, há muitos trechos de código que não satisfazem as melhores soluções possíveis, neste momento. Pretendemos, assim, refatorá-los quando possível. Destaca-se, nesta seção, a estrutura de diretórios de 'jagua_app', a qual será ainda melhorada (no diretório '/pages', pretende-se separar os arquivos .css dos .js, por exemplo, colocando-os em uma pasta 'utils'. Alguns trechos de códigos de componentes estão replicados, os quais pretendemos identificar e modularizar posteriormente, em um momento em que obtivermos maior entendimento sobre *React*.
 * É cabível comentar sobre a aparência da aplicação em dispositivos móveis. Na primeira entrega, dedicou-se maior tempo a isso; contudo, neste momento de transição para *React*, ainda não conseguimos adaptar todo o conteúdo do *front-end* em termos de responsividade. Assim, temos ciência de que nem todos os componentes responderão bem ao redimensionar as páginas; pretende-se consertar isso futuramente. 
 * Um último comentário recai sobre a aparência do site em determinados dispositivos. O grupo pretende checar o uso de unidades relativas como 'em' no CSS, pois, por vezes, esse uso faz com que componentes tenham um tamanho maior do que deveriam em certos dispositivos, gerando aparência indesejada em alguns componentes. Pretende-se analisar esse aspecto futuramente para padronizar a experiência de todos os usuários.
+# 8.3. Comentários no *Milestone 3*
+* Fechamos o ciclo de estudo da disciplina passando por aspectos de desenvolvimento Web desde o front-end até o back-end. Foi possível praticar cada um dos aspectos no nosso projeto. No entanto, pela falta de tempo, a integração com o banco de dados não pode ser feita em sua totalidade. O fluxo da aplicação proposto nos requisitos é coberto em sua totalidade pela aplcação desenvolvida. Contudo, seria ideal para um possível futuro deste projeto, integrar o módulo de pedidos ao banco de dados para torná-lo mais realista.
