@@ -3,6 +3,7 @@ import { StatusContext } from "../App";
 
 import LoginBox from "../components/LoginBox/LoginBox";
 
+// Administra login de usuario
 const Login = () => {
     const {
         status,

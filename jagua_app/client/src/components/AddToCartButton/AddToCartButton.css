@@ -1,4 +1,4 @@
-/*estilo botao de adicionar ao carrinho*/
+/* Estilo botao de adicionar ao carrinho */
 .addToCart {
     height: 2.5em;
     width: 100%;
@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-/*altera cor do botao quando passa o mouse*/
+/* Altera cor do botao quando passa o mouse */
 .addToCart:hover{
     background-color: var(--light_gray);
 }

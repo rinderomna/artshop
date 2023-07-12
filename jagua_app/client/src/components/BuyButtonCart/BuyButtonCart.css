@@ -9,6 +9,7 @@
     font-weight: 500;
 }
 
+/* Passando mouse */
 .buyProductCart:hover {
     background-color: #999;
 }

@@ -6,6 +6,7 @@ import InputMask from "react-input-mask";
 import { uid } from "uid";
 import axios from "axios";
 
+// Cadastrar usuario
 const SignUp = () => {
   const navigate = useNavigate();
   const {
@@ -31,6 +32,7 @@ const SignUp = () => {
   const onSubmit = (data) => {
     console.log(data); // Dados do formulário
 
+    // Construindo novo usuario
     const newUser = {};
     newUser.slug = uid(22);
     newUser.type = "customer";

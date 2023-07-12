@@ -64,7 +64,7 @@ function App() {
   }, [status]);
 
   useEffect(() =>{
-    //atualizando o catalogo com os produtos salvos o banco de dados
+    // Atualizando o catalogo com os produtos salvos o banco de dados
     fetch('http://localhost:3001/products')
         .then(response => response.json())
         .then(data => {
@@ -72,8 +72,8 @@ function App() {
 
             setStatus((prevStatus) => ({
                 ...prevStatus,
-                //flag para sinalizar que um novo produto foi adicionado e, portanto,
-                //sera necessario fazer um get do banco de dados (atualizar o catalogo)
+                // Flag para sinalizar que um novo produto foi adicionado e, portanto,
+                // Sera necessario fazer um get do banco de dados (atualizar o catalogo)
                 products: data
             }));
         })

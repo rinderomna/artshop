@@ -8,6 +8,8 @@ import AdminHomeBanner from "../components/AdminHomeBanner/AdminHomeBanner.js";
 
 import Catalog from "../components/Catalog/Catalog";
 
+// A home carrega seu banner e todos os catalogos de produtos categorizados. Tambem checa se o 
+// usuario esta logado para pequenas mudancas no visual do site
 const Home = () => {
     const { status, setStatus } = useContext(StatusContext);
 

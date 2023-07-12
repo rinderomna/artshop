@@ -1,4 +1,3 @@
-import fs from "fs";
 import axios from "axios";
 import FormData from "form-data";
 import { uid } from "uid";

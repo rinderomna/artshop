@@ -4,6 +4,7 @@ import ProductEditionBox from "../components/ProductEditionBox/ProductEditionBox
 
 import PermissionDenied from '../components/PermissionDenied/PermissionDenied.js';
 
+// Checa se usuario eh admin logado para permitir edicao de produtos no site
 const EditProduct = () => {
     const { status } = useContext(StatusContext);
 

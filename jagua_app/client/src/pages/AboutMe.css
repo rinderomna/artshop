@@ -1,5 +1,5 @@
 
-/*Section que engloba a imagem e o texto*/
+/* Section que engloba a imagem e o texto*/
 .content-container{
     display: grid;
     background-color: white;
@@ -32,7 +32,7 @@ p{
     margin-bottom: 1.5vw;
 }
 
-/*div que contem o paragrafo e os titulos*/
+/* div que contem o paragrafo e os titulos*/
 .text-container{
     padding: 3vw;
 }

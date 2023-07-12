@@ -1,6 +1,7 @@
-import HTTPCat404 from "../assets/http_cat/404.jpeg";
-import "./specialPaths.css";
+import HTTPCat404 from "../assets/http_cat/404.jpeg"; // Imagem para mostrar ao usuario que nao achou pagina
+import "./specialPaths.css"; // Estilo para mensagens semanticas de paginas nao encontradas
 
+// Usuario cai nesta pagina se acessar dominio invalido no site
 const NoPage = () => {
   return (
     <div className="blankAndCentered">

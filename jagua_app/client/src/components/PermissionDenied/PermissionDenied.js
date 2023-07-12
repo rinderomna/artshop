@@ -1,6 +1,7 @@
 import HTTPCat401 from "../../assets/http_cat/401.jpeg";
-import "../../pages/specialPaths.css";
+import "../../pages/specialPaths.css"; 
 
+// Para lidar com situacoes de permissao superior necessaria... Exibir mensagem semantica ao usuario
 const PermissionDenied = (props) => {
   const { userType } = props;
 

@@ -6,7 +6,7 @@ import Catalog from "../components/Catalog/Catalog";
 import { useContext } from 'react';
 import { StatusContext } from '../App.js';
 
-
+// Pagina de adesivos, carregando banner e catalogo de produtos so com adesivos
 const Stickers = () => {
     const { status } = useContext(StatusContext);
 

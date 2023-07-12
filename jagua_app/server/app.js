@@ -9,14 +9,14 @@ import index from "./routes/index-route.js";
 import products from "./routes/product-route.js";
 import users from "./routes/user-route.js";
 
-// Define paths
+// Definir paths
 import { fileURLToPath } from "url";
 import path from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Cria app express
+// Criar app express
 const app = express();
 
 // Configurar cabeçalhos CORS

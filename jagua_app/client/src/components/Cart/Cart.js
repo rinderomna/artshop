@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
-import { IconContext } from "react-icons";
+import React, { useContext } from "react"; 
+import { IconContext } from "react-icons"; // Icones
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import { SlGhost } from "react-icons/sl";
-import BuyButtonCart from "../BuyButtonCart/BuyButtonCart";
-import { StatusContext } from "../../App.js";
-import "./Cart.css";
 
+import BuyButtonCart from "../BuyButtonCart/BuyButtonCart"; // Botao para usar no carrinho
+import { StatusContext } from "../../App.js";
+import "./Cart.css"; // Estilo
+
+// Administrando remocao e insercao no carrinho
 function Cart({ flagBuyBtn }) {
   const { status, setStatus } = useContext(StatusContext);
 
@@ -23,7 +25,9 @@ function Cart({ flagBuyBtn }) {
     handleRemoveItemCart(rem_product);
   };
 
-
+  // Icone de carrinho, fantasminhas para quando nao ha nada no carrinho.
+  // Tem varias condicionais que lidam com a nao existencia de produtos ou a existencia. Neste caso,
+  // exibe infos de cada produto
   return (
     <div className="cart-container">
       <div className="title-container">

@@ -3,9 +3,9 @@
 import express from 'express';
 const router = express.Router();
 
-//criando rota
+// Criando rota
 const route = router.get('/', (req, res, next) => {
-    //status code 200 = ok
+    // Status code 200 = ok
     res.status(200).send({
         title: "Node Store API",
         version: "0.0.2"
